@@ -627,7 +627,7 @@ export default function PujaDetailPage() {
               {inclusions.map((item, idx) => (
                 <div key={idx} className="bg-white rounded-lg overflow-hidden border border-[#E8D8C5] shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3.5">
-                    <div className="relative aspect-[4/3] sm:aspect-auto sm:h-48 w-full overflow-hidden bg-slate-100 rounded-t-lg">
+                    <div className="relative aspect-square sm:aspect-auto sm:h-44 w-full overflow-hidden bg-slate-100 rounded-t-lg">
                       <img
                         src={item.img}
                         alt={item.title}
@@ -797,7 +797,7 @@ export default function PujaDetailPage() {
               {benefitsWithImages.map((item, idx) => (
                 <div key={idx} className="rounded-lg overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3">
-                    <div className="relative aspect-[4/3] sm:aspect-auto sm:h-36 w-full overflow-hidden bg-slate-100 rounded-t-lg">
+                    <div className="relative aspect-square sm:aspect-auto sm:h-44 w-full overflow-hidden bg-slate-100 rounded-t-lg">
                       <img
                         src={item.img}
                         alt={item.title}
@@ -838,7 +838,7 @@ export default function PujaDetailPage() {
               {stepsWithImages.map((step, idx) => (
                 <div key={idx} className="rounded-lg overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3">
-                    <div className="relative aspect-[4/3] sm:aspect-auto sm:h-36 w-full overflow-hidden bg-[#F6E1C6]/30 rounded-t-lg">
+                    <div className="relative aspect-square sm:aspect-auto sm:h-44 w-full overflow-hidden bg-[#F6E1C6]/30 rounded-t-lg">
                       <img
                         src={step.img}
                         alt={step.title}
