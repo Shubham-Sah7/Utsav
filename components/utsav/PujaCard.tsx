@@ -26,7 +26,7 @@ export function PujaCard({ puja }: PujaCardProps) {
             {puja.categoryLabel}
           </span>
           {puja.badge && (
-            <span className="bg-[#EA5C26] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+            <span className="bg-[#EA5C26] text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-xs">
               {puja.badge}
             </span>
           )}
@@ -34,7 +34,7 @@ export function PujaCard({ puja }: PujaCardProps) {
 
         {/* Bottom Temple Overlay */}
         <div className="absolute bottom-3 left-3 right-3 text-white">
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-[#FFF9EF]">
+          <div className="flex items-center gap-1.5 text-xs font-medium text-[#FFF9EF]">
             <MapPin className="w-3.5 h-3.5 text-[#FAA531] shrink-0" />
             <span>{puja.templeName}</span>
           </div>
@@ -44,12 +44,12 @@ export function PujaCard({ puja }: PujaCardProps) {
       {/* Card Content */}
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
         <div>
-          <h3 className="font-heading text-lg font-bold text-[#6D1344] group-hover:text-[#EA5C26] transition-colors leading-snug line-clamp-2">
+          <h3 className="font-heading text-lg font-semibold text-[#6D1344] group-hover:text-[#EA5C26] transition-colors leading-snug line-clamp-2">
             {puja.title}
           </h3>
 
           {/* Date & Tithi */}
-          <div className="mt-2.5 flex items-center gap-2 text-xs font-medium text-[#7A676E] bg-[#FFF9EF] p-2.5 rounded-xl border border-[#E8D8C5]">
+          <div className="mt-2.5 flex items-center gap-2 text-xs font-medium text-[#7A676E] bg-slate-50 p-2.5 rounded-xl border border-[#E8D8C5]">
             <Calendar className="w-4 h-4 text-[#EA5C26] shrink-0" />
             <span>{puja.date}</span>
           </div>
@@ -69,9 +69,9 @@ export function PujaCard({ puja }: PujaCardProps) {
         <div className="flex items-center justify-between text-xs text-[#7A676E] pt-2 border-t border-[#E8D8C5]/60">
           <span className="flex items-center gap-1">
             <Users className="w-3.5 h-3.5 text-[#EA5C26]" />
-            <strong className="text-[#6D1344]">{puja.devoteesBooked.toLocaleString()}</strong> devotees participated
+            <strong className="text-[#6D1344] font-semibold">{puja.devoteesBooked.toLocaleString()}</strong> devotees participated
           </span>
-          <span className="flex items-center gap-1 text-[11px] text-[#6D1344] font-semibold">
+          <span className="flex items-center gap-1 text-[11px] text-[#6D1344] font-medium">
             <ShieldCheck className="w-3.5 h-3.5 text-[#EA5C26]" /> Prasad Delivery
           </span>
         </div>
@@ -79,8 +79,8 @@ export function PujaCard({ puja }: PujaCardProps) {
         {/* Pricing & CTA */}
         <div className="flex items-center justify-between gap-3 pt-2">
           <div>
-            <span className="text-[10px] uppercase font-semibold text-[#7A676E] block">Dakshina from</span>
-            <span className="font-heading text-xl font-bold text-[#6D1344]">
+            <span className="text-[10px] uppercase font-medium text-[#7A676E] block">Dakshina from</span>
+            <span className="font-heading text-xl font-semibold text-[#6D1344]">
               ₹{puja.startingPrice}
             </span>
           </div>
@@ -88,7 +88,7 @@ export function PujaCard({ puja }: PujaCardProps) {
           <Button
             asChild
             size="sm"
-            className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-bold text-xs min-h-[44px] px-5 rounded-xl shadow-xs transition-colors"
+            className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs min-h-[44px] px-5 rounded-xl shadow-xs transition-colors"
           >
             <Link href="/puja/ganesh-sahastra-archan">
               <span>Participate</span>

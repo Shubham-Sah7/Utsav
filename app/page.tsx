@@ -167,13 +167,13 @@ export default function HomePage() {
                 />
               </div>
 
-              <span className="text-xs sm:text-sm font-semibold text-[#6D1344] tracking-tight whitespace-nowrap">
-                Trusted by <span className="font-bold text-[#EA5C26]">100,000+</span> devotees
+              <span className="text-xs sm:text-sm font-medium text-[#6D1344] tracking-tight whitespace-nowrap">
+                Trusted by <span className="font-semibold text-[#EA5C26]">100,000+</span> devotees
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-[#6D1344] tracking-tight leading-[1.15]">
+            <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#6D1344] tracking-tight leading-[1.15]">
               Connecting Devotees to Sacred Shrines across{" "}
               <span className="text-[#EA5C26]">India 🛕</span>
             </h1>
@@ -184,14 +184,14 @@ export default function HomePage() {
             </p>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-[#6D1344]">
+            <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-medium text-[#6D1344]">
               <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                 <Star className="w-3.5 h-3.5 fill-[#FAA531] text-[#FAA531]" />
-                <span className="font-bold text-[#6D1344]">4.8 Rating</span>
+                <span className="font-semibold text-[#6D1344]">4.8 Rating</span>
               </span>
               <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#EA5C26]" />
-                <span className="font-bold text-[#6D1344]">100k+ Devotees Blessed</span>
+                <span className="font-semibold text-[#6D1344]">100k+ Devotees Blessed</span>
               </span>
             </div>
 
@@ -201,7 +201,7 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full sm:w-auto bg-[#EA5C26] hover:bg-[#D44B17] text-white font-bold text-sm sm:text-base min-h-[48px] px-8 rounded-xl shadow-xs transition-all"
+                  className="w-full sm:w-auto bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-sm sm:text-base min-h-[48px] px-8 rounded-xl shadow-xs transition-all"
                 >
                   <Link href="#discover-pujas">
                     <span>Participate in Puja</span>
@@ -213,7 +213,7 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full sm:w-auto bg-white hover:bg-[#F6E1C6]/50 text-[#6D1344] border border-[#6D1344]/30 font-bold text-sm sm:text-base min-h-[48px] px-8 rounded-xl shadow-xs transition-all"
+                  className="w-full sm:w-auto bg-white hover:bg-[#F6E1C6]/50 text-[#6D1344] border border-[#6D1344]/30 font-semibold text-sm sm:text-base min-h-[48px] px-8 rounded-xl shadow-xs transition-all"
                 >
                   <Link href="#download-banner" className="flex items-center gap-2">
                     <Download className="w-4 h-4 text-[#6D1344] stroke-[2.5]" />
@@ -316,10 +316,10 @@ export default function HomePage() {
             {/* Header & Filter Tabs */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-3.5 text-center md:text-left">
-                <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
+                <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-medium uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
                   <span>Auspicious Rituals</span>
                 </div>
-                <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#6D1344] leading-tight">
+                <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight">
                   Upcoming <span className="text-[#EA5C26]">Sacred Temple Pujas</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-[#7A676E] font-normal max-w-xl pt-1">
@@ -332,7 +332,7 @@ export default function HomePage() {
                 {["All Pujas", "Pradosh Vrat", "Shaktipeeth", "Jyotirlinga"].map((tab, i) => (
                   <button
                     key={tab}
-                    className={`text-xs font-bold px-4 sm:px-5 py-2 rounded-full transition-all duration-300 cursor-pointer whitespace-nowrap ${
+                    className={`text-xs font-semibold px-4 sm:px-5 py-2 rounded-full transition-all duration-300 cursor-pointer whitespace-nowrap ${
                       i === 0
                         ? "bg-[#EA5C26] text-white"
                         : "text-[#6D1344] hover:text-[#EA5C26] hover:bg-white"
@@ -400,12 +400,12 @@ export default function HomePage() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                       />
                       
-                      <span className="absolute top-2.5 right-2.5 bg-[#6D1344] text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full border border-white/20">
+                      <span className="absolute top-2.5 right-2.5 bg-[#6D1344] text-white text-[10px] font-semibold uppercase px-3 py-1 rounded-full border border-white/20">
                         {card.tag}
                       </span>
 
                       <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                        <span className="bg-[#2C151B]/90 text-white text-xs font-semibold px-3 py-1 rounded-full inline-flex items-center gap-1.5 max-w-full">
+                        <span className="bg-[#2C151B]/90 text-white text-xs font-medium px-3 py-1 rounded-full inline-flex items-center gap-1.5 max-w-full">
                           <MapPin className="w-3.5 h-3.5 text-[#FAA531] shrink-0" />
                           <span className="truncate">{card.loc}</span>
                         </span>
@@ -413,16 +413,16 @@ export default function HomePage() {
                     </div>
 
                     <div className="px-0.5 space-y-2.5">
-                      <h3 className="font-heading font-bold text-sm sm:text-base text-[#6D1344] leading-snug line-clamp-2 min-h-[2.75rem] group-hover:text-[#EA5C26] transition-colors">
+                      <h3 className="font-heading font-semibold text-sm sm:text-base text-[#6D1344] leading-snug line-clamp-2 min-h-[2.75rem] group-hover:text-[#EA5C26] transition-colors">
                         {card.title}
                       </h3>
 
                       <div className="flex items-center justify-between text-xs text-[#7A676E] font-medium pt-0.5">
-                        <span className="flex items-center gap-1.5 font-bold text-[#6D1344] bg-slate-50 px-2.5 py-1 rounded-lg border border-[#E8D8C5]">
+                        <span className="flex items-center gap-1.5 font-semibold text-[#6D1344] bg-slate-50 px-2.5 py-1 rounded-lg border border-[#E8D8C5]">
                           <Calendar className="w-3.5 h-3.5 text-[#EA5C26]" />
                           {card.date}
                         </span>
-                        <span className="text-[#7A676E] font-semibold text-[11px]">
+                        <span className="text-[#7A676E] font-medium text-[11px]">
                           {card.booked}
                         </span>
                       </div>
@@ -431,12 +431,12 @@ export default function HomePage() {
 
                   <div className="px-0.5 pt-3 space-y-2.5 border-t border-[#E8D8C5]/60 mt-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] text-[#7A676E] font-bold uppercase tracking-wider">Starting Seva</span>
-                      <span className="font-heading text-lg font-bold text-[#6D1344]">{card.price}</span>
+                      <span className="text-[10px] text-[#7A676E] font-medium uppercase tracking-wider">Starting Seva</span>
+                      <span className="font-heading text-lg font-semibold text-[#6D1344]">{card.price}</span>
                     </div>
 
                     <Link href="/puja/ganesh-sahastra-archan" className="block w-full">
-                      <Button className="w-full bg-[#EA5C26] hover:bg-[#D44B17] text-white font-bold text-xs min-h-[44px] rounded-xl transition-colors cursor-pointer">
+                      <Button className="w-full bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs min-h-[44px] rounded-xl transition-colors cursor-pointer">
                         <span>Participate in Puja →</span>
                       </Button>
                     </Link>
@@ -456,11 +456,11 @@ export default function HomePage() {
               {/* Left Column */}
               <div className="lg:col-span-5 space-y-8">
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
+                  <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-medium uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                     <span>Transparent Process</span>
                   </div>
 
-                  <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#6D1344] tracking-tight leading-tight">
+                  <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#6D1344] tracking-tight leading-tight">
                     Vedic Rituals performed with{" "}
                     <span className="text-[#EA5C26]">100% Transparency</span>
                   </h2>
@@ -479,19 +479,22 @@ export default function HomePage() {
                       <button
                         key={step.id}
                         onClick={() => setActiveStepIndex(step.id)}
-                        className={`w-full text-left transition-all duration-300 flex items-center justify-between px-5 py-3.5 rounded-xl border cursor-pointer ${
+                        className={`w-full text-left transition-all duration-300 flex items-center justify-between px-6 py-3.5 rounded-full border cursor-pointer ${
                           isActive
-                            ? "bg-white text-[#EA5C26] border-[#EA5C26]/40 shadow-xs font-bold"
-                            : "bg-slate-50 hover:bg-white text-[#6D1344] border-[#E8D8C5] font-semibold"
+                            ? "bg-white text-[#EA5C26] border-[#EA5C26] shadow-2xs font-semibold"
+                            : "bg-slate-50/60 hover:bg-white text-[#6D1344] border-[#E8D8C5]/80 font-medium"
                         }`}
                       >
-                        <div className="flex items-center gap-3.5">
-                          <span className={`text-xs font-mono font-bold px-2.5 py-0.5 rounded-full ${
-                            isActive ? "bg-[#EA5C26]/15 text-[#EA5C26]" : "bg-slate-200/80 text-[#7A676E]"
+                        <div className="flex items-center gap-4">
+                          {/* TEMPLE-SHAPED DOME BADGE */}
+                          <span className={`text-xs font-mono font-semibold px-3 py-1 rounded-t-full rounded-b-[4px] border ${
+                            isActive
+                              ? "bg-[#EA5C26]/15 text-[#EA5C26] border-[#EA5C26]/30"
+                              : "bg-slate-200/80 text-[#6D1344] border-slate-300/60"
                           }`}>
                             {step.num}
                           </span>
-                          <span className="text-sm sm:text-base tracking-tight font-bold">
+                          <span className="text-sm sm:text-base tracking-tight font-semibold">
                             {step.label}
                           </span>
                         </div>
@@ -518,10 +521,10 @@ export default function HomePage() {
                     className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8D8C5] shadow-xs space-y-6"
                   >
                     <div className="space-y-2">
-                      <span className="text-xs font-mono font-bold text-[#EA5C26] bg-slate-100 px-3 py-1 rounded-full border border-[#E8D8C5]">
+                      <span className="text-xs font-mono font-semibold text-[#EA5C26] bg-slate-100 px-3 py-1 rounded-t-full rounded-b-[4px] border border-[#E8D8C5]">
                         STEP 0{activeStepIndex + 1} OF 04
                       </span>
-                      <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#6D1344]">
+                      <h3 className="font-heading text-xl sm:text-2xl font-semibold text-[#6D1344]">
                         {[
                           "Select Your Preferred Seva & Offering",
                           "Enter Devotee Name & Gotra for Sankalp",

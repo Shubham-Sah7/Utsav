@@ -343,27 +343,27 @@ export default function PujaDetailPage() {
               <div className="lg:col-span-6 space-y-5">
                 <div className="space-y-2.5">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-bold uppercase tracking-wider bg-transparent">
+                    <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider bg-transparent">
                       AUSPICIOUS PUJA SEVA
                     </span>
-                    <span className="text-xs font-semibold text-[#7C112F] flex items-center gap-1.5 bg-[#F6E1C6]/60 px-3 py-1 rounded-full border border-[#F6E1C6]">
+                    <span className="text-xs font-semibold text-[#7C112F] flex items-center gap-1.5 bg-slate-50 px-3 py-1 rounded-full border border-[#E8D8C5]">
                       <ShieldCheck className="w-3.5 h-3.5 text-[#EA5C26]" />
                       Special Ketu Graha Shanti Remedy
                     </span>
                   </div>
 
-                  <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#6D1344] leading-tight">
+                  <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight">
                     1008 Ganesh Sahastra Archan Path Aivam Ketu Shanti Puja
                   </h1>
 
                   <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-[#2C151B] font-medium pt-0.5">
-                    <div className="flex items-center gap-1.5 bg-[#F6E1C6]/60 px-3 py-1.5 rounded-xl border border-[#E8D8C5]">
+                    <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-[#E8D8C5]">
                       <MapPin className="w-4 h-4 text-[#EA5C26]" />
-                      <span className="font-semibold">Chintamani Ganesh, Kashi</span>
+                      <span className="font-medium">Chintamani Ganesh, Kashi</span>
                     </div>
-                    <div className="flex items-center gap-1.5 bg-[#F6E1C6]/60 px-3 py-1.5 rounded-xl border border-[#E8D8C5]">
+                    <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-[#E8D8C5]">
                       <Calendar className="w-4 h-4 text-[#EA5C26]" />
-                      <span className="font-semibold">Wed · Sep 09, 2026 · Budhvar Visesh</span>
+                      <span className="font-medium">Wed · Sep 09, 2026 · Budhvar Visesh</span>
                     </div>
                   </div>
 
@@ -373,10 +373,10 @@ export default function PujaDetailPage() {
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-[#FAA531] text-[#FAA531]" />
                       ))}
-                      <span className="text-xs font-bold text-[#6D1344] ml-1">4.8</span>
+                      <span className="text-xs font-semibold text-[#6D1344] ml-1">4.8</span>
                     </div>
                     <span className="text-[#E8D8C5]">•</span>
-                    <span className="text-xs font-semibold text-[#7A676E]">10 Lakh+ Devotees have participated</span>
+                    <span className="text-xs font-medium text-[#7A676E]">10 Lakh+ Devotees have participated</span>
                   </div>
                 </div>
 
@@ -398,7 +398,7 @@ export default function PujaDetailPage() {
                         <div className="w-7 h-7 rounded-full bg-[#EA5C26] text-white flex items-center justify-center shrink-0 shadow-2xs">
                           <IconComp className="w-3.5 h-3.5 stroke-[2.5]" />
                         </div>
-                        <span className="text-xs font-bold text-[#6D1344]">{item.label}</span>
+                        <span className="text-xs font-semibold text-[#6D1344]">{item.label}</span>
                       </div>
                     );
                   })}
@@ -408,11 +408,11 @@ export default function PujaDetailPage() {
                 <div className="pt-3 flex flex-col sm:flex-row items-center gap-4">
                   <Button
                     onClick={scrollToPackage}
-                    className="w-full sm:w-auto bg-[#EA5C26] hover:bg-[#D44B17] text-white font-bold text-sm min-h-[48px] px-8 rounded-xl shadow-xs transition-colors cursor-pointer"
+                    className="w-full sm:w-auto bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-sm min-h-[48px] px-8 rounded-xl shadow-xs transition-colors cursor-pointer"
                   >
                     <span>Participate in Puja</span>
                   </Button>
-                  <span className="text-xs font-semibold text-[#7A676E]">Dakshina from ₹951 <span className="line-through text-[#7A676E]/60">₹1,051</span></span>
+                  <span className="text-xs font-medium text-[#7A676E]">Dakshina from ₹951 <span className="line-through text-[#7A676E]/60">₹1,051</span></span>
                 </div>
               </div>
             </div>
@@ -420,13 +420,13 @@ export default function PujaDetailPage() {
         </motion.section>
 
         {/* 3. PARTICIPATION / PACKAGE SELECTOR */}
-        <motion.section id="package-selector" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-[#F6E1C6]/30 border-y border-[#E8D8C5]">
+        <motion.section id="package-selector" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white border-y border-[#E8D8C5]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
-              <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-bold uppercase tracking-wider bg-transparent">
+              <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider bg-transparent">
                 SEVA OPTIONS
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#6D1344]">
+              <h2 className="font-heading text-2xl sm:text-3xl font-semibold text-[#6D1344]">
                 Choose Your Seva Participation
               </h2>
               <p className="text-xs sm:text-sm text-[#7A676E] font-normal">
