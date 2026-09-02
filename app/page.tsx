@@ -486,14 +486,48 @@ export default function HomePage() {
                         }`}
                       >
                         <div className="flex items-center gap-4">
-                          {/* TEMPLE-SHAPED DOME BADGE */}
-                          <span className={`text-xs font-mono font-semibold px-3 py-1 rounded-t-full rounded-b-[4px] border ${
-                            isActive
-                              ? "bg-[#EA5C26]/15 text-[#EA5C26] border-[#EA5C26]/30"
-                              : "bg-slate-200/80 text-[#6D1344] border-slate-300/60"
-                          }`}>
-                            {step.num}
-                          </span>
+                          {/* AUTHENTIC INDIAN TEMPLE SHIKHARA / MANDIR SPIRE BADGE */}
+                          <div className="relative inline-flex items-center justify-center shrink-0 w-9 h-11">
+                            <svg
+                              viewBox="0 0 40 48"
+                              className="w-full h-full"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              {/* Temple Kalash Top Finial */}
+                              <path
+                                d="M20 2L22 6H18L20 2Z"
+                                className={isActive ? "fill-[#EA5C26]" : "fill-[#6D1344]"}
+                              />
+                              <circle
+                                cx="20"
+                                cy="7"
+                                r="1.5"
+                                className={isActive ? "fill-[#EA5C26]" : "fill-[#6D1344]"}
+                              />
+
+                              {/* Temple Shikhara Spire Outline & Background */}
+                              <path
+                                d="M20 9.5 C22.5 14 25.5 18.5 27.5 24 C29.5 29.5 31.5 36 33.5 46 H6.5 C8.5 36 10.5 29.5 12.5 24 C14.5 18.5 17.5 14 20 9.5 Z"
+                                className={
+                                  isActive
+                                    ? "fill-[#EA5C26]/15 stroke-[#EA5C26]"
+                                    : "fill-slate-100 stroke-slate-300"
+                                }
+                                strokeWidth="1.5"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+
+                            <span
+                              className={`absolute bottom-2.5 inset-x-0 text-center text-[11px] font-mono font-bold tracking-tight ${
+                                isActive ? "text-[#EA5C26]" : "text-[#6D1344]"
+                              }`}
+                            >
+                              {step.num}
+                            </span>
+                          </div>
+
                           <span className="text-sm sm:text-base tracking-tight font-semibold">
                             {step.label}
                           </span>
@@ -521,9 +555,9 @@ export default function HomePage() {
                     className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8D8C5] shadow-xs space-y-6"
                   >
                     <div className="space-y-2">
-                      <span className="text-xs font-mono font-semibold text-[#EA5C26] bg-slate-100 px-3 py-1 rounded-t-full rounded-b-[4px] border border-[#E8D8C5]">
-                        STEP 0{activeStepIndex + 1} OF 04
-                      </span>
+                      <div className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-[#EA5C26] bg-slate-100 px-3 py-1 rounded-full border border-[#E8D8C5]">
+                        <span>STEP 0{activeStepIndex + 1} OF 04</span>
+                      </div>
                       <h3 className="font-heading text-xl sm:text-2xl font-semibold text-[#6D1344]">
                         {[
                           "Select Your Preferred Seva & Offering",
