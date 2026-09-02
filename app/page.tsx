@@ -432,7 +432,7 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="px-0.5 pt-3 space-y-2.5 border-t border-[#E8D8C5]/60 mt-3">
+                  <div className="px-0.5 pt-3 space-y-2.5 mt-3">
                     <div className="flex items-center justify-between">
                       <span className="text-[10px] text-[#7A676E] font-medium uppercase tracking-wider">Starting Seva</span>
                       <span className="font-heading text-lg font-semibold text-[#6D1344]">{card.price}</span>
@@ -1366,7 +1366,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Meta Footer */}
-                    <div className="pt-2 border-t border-[#E8D8C5]/60 flex items-center justify-between text-[11px] text-[#7A676E] font-medium">
+                    <div className="pt-2 flex items-center justify-between text-[11px] text-[#7A676E] font-medium">
                       <span>{card.date}</span>
                       <span className="text-[#EA5C26] group-hover:translate-x-1 transition-transform">Read →</span>
                     </div>
@@ -1541,7 +1541,7 @@ export default function HomePage() {
             </div>
 
             {/* Accordion List with Horizontal Separators matching reference */}
-            <div id="faq-list-container" className="divide-y divide-slate-200/80 border-t border-b border-slate-200/80">
+            <div id="faq-list-container" className="space-y-3">
               {[
                 {
                   q: "What happens after I book a Puja?",

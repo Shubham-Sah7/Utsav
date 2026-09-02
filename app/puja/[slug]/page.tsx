@@ -905,7 +905,7 @@ export default function PujaDetailPage() {
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-3 pt-3 border-t border-[#E8D8C5]/60">
+                  <div className="flex items-center gap-3 pt-3">
                     <img
                       src={rev.avatar}
                       alt={rev.name}
@@ -927,7 +927,7 @@ export default function PujaDetailPage() {
         </motion.section>
 
         {/* 11. FREQUENTLY ASKED QUESTIONS */}
-        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-[#FFF9EF] border-t border-[#E8D8C5]">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-[#FFF9EF]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-3">
               <span className="inline-block px-3.5 py-1.5 rounded-full border border-[#E8D8C5] text-[#6D1344] text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-transparent">
@@ -942,7 +942,7 @@ export default function PujaDetailPage() {
             </div>
 
             {/* Accordion List */}
-            <div className="divide-y divide-[#E8D8C5] border-t border-b border-[#E8D8C5]">
+            <div className="space-y-3">
               {faqs.map((faq, idx) => {
                 const isOpen = openFaqIndex === idx;
                 return (
