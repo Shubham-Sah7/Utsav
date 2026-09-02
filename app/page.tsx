@@ -125,7 +125,7 @@ export default function HomePage() {
       {/* 1. HEADER */}
       <Header />
 
-      <main className="flex-1">
+      <main className="flex-1 max-w-full overflow-x-hidden">
         {/* HERO SECTION: CENTERED MOVING HERITAGE GALLERY WITH TEMPLE PILLARS */}
         <motion.section id="hero-section" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14">
           {/* Left-Most Authentic Temple Pillar (Un-cropped Full Image) */}

@@ -94,7 +94,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="flex items-center gap-1 text-xs font-semibold text-[#6D1344] bg-slate-100 rounded-full px-3 py-1.5 hover:bg-slate-200/60 shrink-0 border border-slate-200/60"
+                  className="flex items-center gap-1 text-xs font-semibold text-[#6D1344] bg-slate-100 rounded-full px-3.5 h-11 min-h-[44px] hover:bg-slate-200/60 shrink-0 border border-slate-200/60 cursor-pointer"
                 >
                   <Globe className="w-3.5 h-3.5 text-[#6D1344]" />
                   <span>{language === "EN" ? "Hindi" : "English"}</span>
@@ -104,13 +104,13 @@ export function Header() {
               <DropdownMenuContent align="end" className="w-36 bg-white/95 backdrop-blur-xl rounded-xl border border-slate-200 shadow-md">
                 <DropdownMenuItem
                   onClick={() => setLanguage("HI")}
-                  className="text-xs cursor-pointer font-medium hover:bg-slate-100 text-[#6D1344]"
+                  className="text-xs cursor-pointer font-medium hover:bg-slate-100 text-[#6D1344] min-h-[44px]"
                 >
                   हिंदी (Hindi)
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => setLanguage("EN")}
-                  className="text-xs cursor-pointer font-medium hover:bg-slate-100 text-[#6D1344]"
+                  className="text-xs cursor-pointer font-medium hover:bg-slate-100 text-[#6D1344] min-h-[44px]"
                 >
                   English
                 </DropdownMenuItem>
@@ -122,7 +122,7 @@ export function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setIsLoginOpen(true)}
-              className="hidden md:flex items-center gap-1.5 text-xs font-semibold text-[#6D1344] hover:text-[#EA5C26] px-3 py-1.5 rounded-full hover:bg-slate-100 shrink-0"
+              className="hidden md:flex items-center gap-1.5 text-xs font-semibold text-[#6D1344] hover:text-[#EA5C26] px-3.5 h-11 min-h-[44px] rounded-full hover:bg-slate-100 shrink-0 cursor-pointer"
             >
               <User className="w-3.5 h-3.5 text-[#6D1344]" />
               <span>Login</span>
@@ -132,7 +132,7 @@ export function Header() {
             <Button
               asChild
               size="sm"
-              className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs sm:text-sm h-10 px-4 rounded-xl shadow-xs transition-all duration-300 shrink-0"
+              className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs sm:text-sm h-11 min-h-[44px] px-4 rounded-xl shadow-xs transition-all duration-300 shrink-0 cursor-pointer"
             >
               <Link href="#discover-pujas" className="flex items-center gap-1.5">
                 <CalendarCheck className="w-3.5 h-3.5 text-white stroke-[2.5]" />
@@ -143,7 +143,7 @@ export function Header() {
             {/* Download App CTA Button */}
             <Button
               size="sm"
-              className="bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 font-bold text-xs sm:text-sm h-10 px-4 rounded-xl transition-all duration-300 hidden xl:flex shrink-0"
+              className="bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 font-bold text-xs sm:text-sm h-11 min-h-[44px] px-4 rounded-xl transition-all duration-300 hidden xl:flex shrink-0 cursor-pointer"
             >
               <div className="flex items-center gap-1.5">
                 <Download className="w-3.5 h-3.5 text-slate-700 stroke-[2.5]" />
@@ -151,10 +151,10 @@ export function Header() {
               </div>
             </Button>
 
-            {/* Mobile Drawer */}
+            {/* Mobile Drawer Trigger */}
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="lg:hidden text-slate-700">
+                <Button variant="ghost" size="icon" className="lg:hidden text-slate-700 h-11 w-11 min-h-[44px] min-w-[44px] rounded-full flex items-center justify-center cursor-pointer">
                   <Menu className="w-5 h-5" />
                 </Button>
               </SheetTrigger>
@@ -170,7 +170,7 @@ export function Header() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="py-2.5 px-3.5 rounded-xl text-sm font-semibold text-slate-800 hover:text-[#C85B12] hover:bg-[#F8F4EA]"
+                      className="py-3 px-4 rounded-xl text-base font-semibold text-slate-800 hover:text-[#EA5C26] hover:bg-slate-50 min-h-[44px] flex items-center"
                     >
                       {link.name}
                     </Link>
@@ -181,17 +181,17 @@ export function Header() {
                   <Button
                     variant="outline"
                     onClick={() => setIsLoginOpen(true)}
-                    className="w-full justify-center gap-2 border-none shadow-xs font-bold rounded-xl text-slate-800 bg-slate-100"
+                    className="w-full justify-center gap-2 border-none shadow-xs font-bold rounded-xl text-slate-800 bg-slate-100 h-12 min-h-[48px] cursor-pointer"
                   >
                     <User className="w-4 h-4 text-slate-600" /> Devotee Login
                   </Button>
 
                   {/* Mobile Drawer Official Download Badges */}
                   <div className="pt-2 flex flex-col items-center gap-2.5">
-                    <a href="#app-store" className="hover:opacity-90 transition-opacity cursor-pointer w-full flex justify-center">
+                    <a href="#app-store" className="hover:opacity-90 transition-opacity cursor-pointer w-full flex justify-center min-h-[44px] items-center">
                       <img src="/Images/Badges/app_store_badge.png" alt="Download on the App Store" className="h-10 w-auto object-contain" />
                     </a>
-                    <a href="#google-play" className="hover:opacity-90 transition-opacity cursor-pointer w-full flex justify-center">
+                    <a href="#google-play" className="hover:opacity-90 transition-opacity cursor-pointer w-full flex justify-center min-h-[44px] items-center">
                       <img src="/Images/Badges/google_play_badge.png" alt="Get it on Google Play" className="h-10 w-auto object-contain" />
                     </a>
                   </div>

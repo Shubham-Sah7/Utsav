@@ -329,7 +329,7 @@ export default function PujaDetailPage() {
       {/* 1. STICKY HEADER */}
       <Header />
 
-      <main className="flex-grow pt-14 sm:pt-16">
+      <main className="flex-grow pt-14 sm:pt-16 max-w-full overflow-x-hidden pb-16 lg:pb-0">
         {/* 2. PUJA HERO SECTION */}
         <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="pt-2 sm:pt-3 pb-6 sm:pb-8 bg-[#FFF9EF]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -998,20 +998,21 @@ export default function PujaDetailPage() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-0 inset-x-0 bg-[#FFF9EF]/95 backdrop-blur-md border-t border-[#E8D8C5] py-3.5 px-4 sm:px-8 z-50 shadow-lg flex items-center justify-between"
+            className="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-xl border-t border-[#E8D8C5] py-3 px-4 sm:px-8 z-50 shadow-lg flex items-center justify-between gap-3"
           >
-            <div className="space-y-0.5">
-              <h4 className="font-heading text-xs sm:text-sm font-bold text-[#6D1344] line-clamp-1">
-                1008 Ganesh Sahastra Archana
+            <div className="space-y-0.5 min-w-0 flex-1">
+              <h4 className="font-heading text-xs sm:text-sm font-semibold text-[#6D1344] truncate">
+                {breadcrumbName}
               </h4>
-              <p className="text-[11px] text-[#EA5C26] font-bold">Chintamani Ganesh, Kashi • ₹951 onwards</p>
+              <p className="text-[11px] text-[#EA5C26] font-medium truncate">{pujaLocation} • ₹951 onwards</p>
             </div>
 
             <Button
               onClick={scrollToPackage}
-              className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-bold text-xs sm:text-sm min-h-[44px] px-6 rounded-xl shadow-xs transition-colors shrink-0 cursor-pointer"
+              className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs sm:text-sm h-11 min-h-[44px] px-5 rounded-lg shadow-xs transition-colors shrink-0 cursor-pointer flex items-center gap-1"
             >
               <span>Participate</span>
+              <ChevronRight className="w-4 h-4" />
             </Button>
           </motion.div>
         )}
