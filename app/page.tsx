@@ -635,33 +635,33 @@ export default function HomePage() {
                 <img src="/Images/panchang.jpg" alt="Sacred Panchang Guide" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
-              <div className="dharmik-text-box space-y-4 text-center md:text-left">
+              <div className="dharmik-text-box space-y-4 text-left">
                 <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Panchang</span>
                 <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Today's Sacred Panchang</h3>
                 <p className="text-xs sm:text-sm text-[#7A676E] leading-relaxed font-normal">
                   Check today's Tithi, Nakshatra, Auspicious Muhurat and Rahukaal for planning daily sacred rituals.
                 </p>
 
-                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md mx-auto md:mx-0">
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Daily Tithi, Nakshatra & Rahukaal Timings</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Auspicious Choghadiya & Abhijit Muhurat</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Location-Based Precise Calculations</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
@@ -687,33 +687,33 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
-              <div className="dharmik-text-box space-y-4 text-center md:text-left md:order-1">
+              <div className="dharmik-text-box space-y-4 text-left md:order-1">
                 <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Store</span>
                 <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Puja & Seva Store</h3>
                 <p className="text-xs sm:text-sm text-[#7A676E] leading-relaxed font-normal">
                   Explore authentic puja items, energized yantras, rudraksha and doorstep sacred prasad from top temples.
                 </p>
 
-                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md mx-auto md:mx-0">
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>100% Authentic Temples Prasad Delivery</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Energized Rudraksha & Sacred Yantras</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Direct Doorstep Express Shipping</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
@@ -747,33 +747,33 @@ export default function HomePage() {
                 <img src="/Images/scripture.jpg" alt="Dharmik Gyan & Scriptures" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
-              <div className="dharmik-text-box space-y-4 text-center md:text-left">
+              <div className="dharmik-text-box space-y-4 text-left">
                 <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Scriptures</span>
                 <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Dharmik Gyan & Scriptures</h3>
                 <p className="text-xs sm:text-sm text-[#7A676E] leading-relaxed font-normal">
                   Unlock the wisdom of ancient scriptures, puranas, mantras and stories that illuminate your spiritual journey.
                 </p>
 
-                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md mx-auto md:mx-0">
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Ancient Puranas & Vedic Texts Library</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Daily Mantra & Chalisa Audio Recitations</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Spiritual Stories for Daily Guidance</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
@@ -799,33 +799,33 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
-              <div className="dharmik-text-box space-y-4 text-center md:text-left md:order-1">
+              <div className="dharmik-text-box space-y-4 text-left md:order-1">
                 <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Astrology</span>
                 <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Daily Rashifal</h3>
                 <p className="text-xs sm:text-sm text-[#7A676E] leading-relaxed font-normal">
                   Understand your astrological forecasts, daily horoscopes and planetary remedies tailored for your Rashi.
                 </p>
 
-                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md mx-auto md:mx-0">
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Precise Daily Planetary Transit Forecasts</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Personalized Rashi & Graha Remedies</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Nakshatra-Based Personal Guidance</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
@@ -859,33 +859,33 @@ export default function HomePage() {
                 <img src="/Images/Hero/gold-temple-gopuram.jpg" alt="Temples of India" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
-              <div className="dharmik-text-box space-y-4 text-center md:text-left">
+              <div className="dharmik-text-box space-y-4 text-left">
                 <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Shrines</span>
                 <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Temples of India</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                   Discover history, significance, and rituals of thousands of ancient temples across India.
                 </p>
 
-                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700 font-medium max-w-md mx-auto md:mx-0">
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700 font-medium max-w-md">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Detailed Sthan Purana & Shrine History</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Live Aarti & Sacred Darshan Timings</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Pilgrimage & Yatra Planning Guidelines</span>
                   </li>
-                  <li className="flex items-center gap-2.5 justify-center md:justify-start">
+                  <li className="flex items-center gap-2.5 justify-start">
                     <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
