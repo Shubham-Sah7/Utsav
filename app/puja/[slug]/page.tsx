@@ -56,16 +56,16 @@ export default function PujaDetailPage() {
   // State for Gallery
   const galleryImages = isKaliPuja
     ? [
-        { src: "/Images/Pujas/kali_sanctum_hero.jpg", alt: "Maa Dakshina Kali Sanctum Kalighat" },
-        { src: "/Images/Pujas/kali_chandi_path_havan.jpg", alt: "Sacred Chandi Path Havan Yajna" },
-        { src: "/Images/Pujas/kali_aarti_darshan.jpg", alt: "Sacred Evening Kali Aarti Darshan" },
-        { src: "/Images/Pujas/kalighat_temple_exterior.jpg", alt: "Historic Kalighat Temple Exterior" }
+        { src: "/images/pujas/kali_sanctum_hero.jpg", alt: "Maa Dakshina Kali Sanctum Kalighat" },
+        { src: "/images/pujas/kali_chandi_path_havan.jpg", alt: "Sacred Chandi Path Havan Yajna" },
+        { src: "/images/pujas/kali_aarti_darshan.jpg", alt: "Sacred Evening Kali Aarti Darshan" },
+        { src: "/images/pujas/kalighat_temple_exterior.jpg", alt: "Historic Kalighat Temple Exterior" }
       ]
     : [
-        { src: "/Images/panchang.jpg", alt: "Chintamani Ganesh Mandir Sanctum Kashi" },
-        { src: "/Images/Hero/ganga-aarti-flame.jpg", alt: "Ganga Aarti Flame Kashi" },
-        { src: "/Images/scripture.jpg", alt: "Vedic Sahastra Archan Chanting" },
-        { src: "/Images/Hero/kashi-golden-shikhara.jpg", alt: "Kashi Temple Shikhara" }
+        { src: "/images/panchang.jpg", alt: "Chintamani Ganesh Mandir Sanctum Kashi" },
+        { src: "/images/hero/ganga-aarti-flame.jpg", alt: "Ganga Aarti Flame Kashi" },
+        { src: "/images/scripture.jpg", alt: "Vedic Sahastra Archan Chanting" },
+        { src: "/images/hero/kashi-golden-shikhara.jpg", alt: "Kashi Temple Shikhara" }
       ];
 
   const [selectedImgIndex, setSelectedImgIndex] = useState(0);
@@ -81,7 +81,7 @@ export default function PujaDetailPage() {
       originalPrice: 1051,
       badge: null,
       desc: "Single devotee Sankalp & Prasad delivery.",
-      img: "/Images/Avatars/indian_devotee_1_1788330405371.jpg",
+      img: "/images/avatars/indian_devotee_1_1788330405371.jpg",
       features: [
         "Sankalp with your Name & Gotra",
         "Full puja video shared with you",
@@ -97,7 +97,7 @@ export default function PujaDetailPage() {
       originalPrice: 1301,
       badge: "Most Chosen",
       desc: "Couple / 2 Family members Sankalp & Prasad.",
-      img: "/Images/Packages/partner_couple.jpg",
+      img: "/images/packages/partner_couple.jpg",
       features: [
         "Joint Sankalp for both Names & Gotras",
         "Full puja video shared with you",
@@ -114,7 +114,7 @@ export default function PujaDetailPage() {
       originalPrice: 1801,
       badge: "Best Value",
       desc: "Immediate family members Sankalp & Prasad.",
-      img: "/Images/Packages/family_group.jpg",
+      img: "/images/packages/family_group.jpg",
       features: [
         "Family Sankalp for up to 4 members",
         "Full puja video shared with you",
@@ -132,7 +132,7 @@ export default function PujaDetailPage() {
       originalPrice: 2201,
       badge: null,
       desc: "Extended family Sankalp, special ARCHANA & Prasad.",
-      img: "/Images/Packages/joint_family_havan.jpg",
+      img: "/images/packages/joint_family_havan.jpg",
       features: [
         "Full Family Sankalp for up to 6 members",
         "Full puja video shared with you",
@@ -181,31 +181,31 @@ export default function PujaDetailPage() {
       title: "Puja Performed at Temple",
       tag: "Sanctum Ritual",
       desc: "An experienced and verified Panditji performs the puja following proper Vedic rituals at the temple.",
-      img: "/Images/panchang.jpg"
+      img: "/images/panchang.jpg"
     },
     {
       title: "Guided Mantras for Home",
       tag: "Vedic Guidance",
       desc: "Receive a mantra chanting guide along with do's & don'ts to follow during the puja.",
-      img: "/Images/scripture.jpg"
+      img: "/images/scripture.jpg"
     },
     {
       title: "Personalised Puja Video",
       tag: "WhatsApp Proof",
       desc: "Full video of your Puja with Naam-Gotra sankalp chanting. Shared on WhatsApp within 1-3 days.",
-      img: "/Images/Hero/ganga-aarti-flame.jpg"
+      img: "/images/hero/ganga-aarti-flame.jpg"
     },
     {
       title: "Authentic Prasad Box",
       tag: "Doorstep Delivery",
       desc: "Prasad prepared at the temple will be packed and delivered to your home within 7-10 days.",
-      img: "/Images/prasad_thali.jpg"
+      img: "/images/prasad_thali.jpg"
     },
     {
       title: "Live WhatsApp Updates",
       tag: "Real-time Alert",
       desc: "Get updates on WhatsApp for all steps of your Puja.",
-      img: "/Images/Hero/kashi-golden-shikhara.jpg"
+      img: "/images/hero/kashi-golden-shikhara.jpg"
     }
   ];
 
@@ -213,27 +213,27 @@ export default function PujaDetailPage() {
     {
       title: "Financial Prosperity",
       desc: "Attract wealth and blessings for overall financial well-being",
-      img: "/Images/Benefits/financial_prosperity.jpg"
+      img: "/images/benefits/financial_prosperity.jpg"
     },
     {
       title: "Fame & Success",
       desc: "Opens doors to success and popularity in your career pursuits",
-      img: "/Images/Benefits/fame_success.jpg"
+      img: "/images/benefits/fame_success.jpg"
     },
     {
       title: "Removal of Ketu Dosh",
       desc: "Balance planetary influences to bring peace & clarity",
-      img: "/Images/Benefits/ketu_dosh_removal.jpg"
+      img: "/images/benefits/ketu_dosh_removal.jpg"
     },
     {
       title: "Career Growth",
       desc: "Remove professional hurdles and open new doors",
-      img: "/Images/Benefits/career_growth.jpg"
+      img: "/images/benefits/career_growth.jpg"
     },
     {
       title: "Business Growth",
       desc: "Attracts financial prosperity for the overall growth of business",
-      img: "/Images/Benefits/business_growth.jpg"
+      img: "/images/benefits/business_growth.jpg"
     }
   ];
 
@@ -242,31 +242,31 @@ export default function PujaDetailPage() {
       num: "01",
       title: "Select Puja",
       desc: "Select a puja and bhet daan options",
-      img: "/Images/Steps/step1_select_puja.jpg"
+      img: "/images/steps/step1_select_puja.jpg"
     },
     {
       num: "02",
       title: "Pay Dakshina",
       desc: "Securely pay your dakshina using UPI/Card",
-      img: "/Images/Steps/step2_pay_dakshina.jpg"
+      img: "/images/steps/step2_pay_dakshina.jpg"
     },
     {
       num: "03",
       title: "Fill Sankalp Form",
       desc: "Enter offering name(s), gotra & address",
-      img: "/Images/Steps/step3_fill_sankalp.jpg"
+      img: "/images/steps/step3_fill_sankalp.jpg"
     },
     {
       num: "04",
       title: "Watch Puja Video",
       desc: "Full video with name-gotra on WhatsApp",
-      img: "/Images/Steps/step4_watch_video.jpg"
+      img: "/images/steps/step4_watch_video.jpg"
     },
     {
       num: "05",
       title: "Prasad Delivered",
       desc: "Authentic prasad delivered to your home",
-      img: "/Images/prasad_thali.jpg"
+      img: "/images/prasad_thali.jpg"
     }
   ];
 
@@ -298,28 +298,28 @@ export default function PujaDetailPage() {
       name: "Preeti Rana",
       location: "Pune, Maharashtra",
       time: "7 months ago",
-      avatar: "/Images/Avatars/indian_devotee_2_1788330428136.jpg",
+      avatar: "/images/avatars/indian_devotee_2_1788330428136.jpg",
       quote: "The Utsav app is awesome and at very reasonable price we can offer... The packaging of the Prasad was also awesome. The best part is that the CEO himself is reaching out to customers. I will definitely be a permanent customer for UTSAV."
     },
     {
       name: "Bideshwari Uniyal",
       location: "Ghaziabad, UP",
       time: "7 months ago",
-      avatar: "/Images/Avatars/indian_devotee_4_1788330503434.jpg",
+      avatar: "/images/avatars/indian_devotee_4_1788330503434.jpg",
       quote: "It's Excellent service. They sent a video of the puja being performed, and I could clearly hear my name being chanted. As someone living far from these temples, this app is a blessing!"
     },
     {
       name: "Rajalakshmi Saravanan",
       location: "Bengaluru, KA",
       time: "7 months ago",
-      avatar: "/Images/Avatars/indian_devotee_3_1788330480133.jpg",
+      avatar: "/images/avatars/indian_devotee_3_1788330480133.jpg",
       quote: "It was a nice experience for me to have done the puja with Utsav app. It was done within the auspicious time period. Prasad packing & delivery time were great. Thank you Utsav. 🙏"
     },
     {
       name: "Sacchin Subhash Ratnaparkhi",
       location: "Mumbai, MH",
       time: "8 months ago",
-      avatar: "/Images/Avatars/indian_devotee_1_1788330405371.jpg",
+      avatar: "/images/avatars/indian_devotee_1_1788330405371.jpg",
       quote: "Nice puja mai achha fresh feel kar raha hoo, mere raste khul gaye hai, Ab sab sahi ho raha hai. Great regular updates, customer support, and prasad contents."
     }
   ];
@@ -755,7 +755,7 @@ export default function PujaDetailPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-lg p-6 sm:p-8 border border-[#E8D8C5] shadow-xs flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
               <img
-                src="/Images/Hero/devotee-aarti-blessing.jpg"
+                src="/images/hero/devotee-aarti-blessing.jpg"
                 alt="Challa Abhiram S. Vedic Acharya"
                 className="w-28 h-28 sm:w-32 sm:h-32 rounded-lg object-cover shrink-0 border border-[#E8D8C5]"
               />

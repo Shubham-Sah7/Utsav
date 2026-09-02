@@ -196,10 +196,10 @@ export function Header() {
                   {/* Mobile Drawer Official Download Badges */}
                   <div className="pt-2 flex flex-col items-center gap-2.5">
                     <a href="#app-store" className="hover:opacity-90 transition-opacity cursor-pointer w-full flex justify-center min-h-[44px] items-center">
-                      <img src="/Images/Badges/app_store_badge.png" alt="Download on the App Store" className="h-10 w-auto object-contain" />
+                      <img src="/images/badges/app_store_badge.png" alt="Download on the App Store" className="h-10 w-auto object-contain" />
                     </a>
                     <a href="#google-play" className="hover:opacity-90 transition-opacity cursor-pointer w-full flex justify-center min-h-[44px] items-center">
-                      <img src="/Images/Badges/google_play_badge.png" alt="Get it on Google Play" className="h-10 w-auto object-contain" />
+                      <img src="/images/badges/google_play_badge.png" alt="Get it on Google Play" className="h-10 w-auto object-contain" />
                     </a>
                   </div>
                 </div>

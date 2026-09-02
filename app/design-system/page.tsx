@@ -504,7 +504,7 @@ export default function DesignSystemPage() {
                   <div className="bg-white rounded-lg p-4 flex flex-col justify-between border border-[#E8D8C5] shadow-2xs space-y-3.5">
                     <div className="space-y-3">
                       <div className="relative h-48 w-full rounded-md overflow-hidden bg-slate-100">
-                        <img src="/Images/panchang.jpg" alt="Puja" className="w-full h-full object-cover" />
+                        <img src="/images/panchang.jpg" alt="Puja" className="w-full h-full object-cover" />
                         <span className="absolute top-2.5 right-2.5 bg-[#6D1344] text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">
                           Budhvar Visesh
                         </span>
@@ -586,9 +586,9 @@ export default function DesignSystemPage() {
                 <h3 className="font-heading text-lg font-semibold text-[#6D1344]">1. Benefit Card Component (`Card / Benefit`)</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                   {[
-                    { title: "Financial Prosperity", desc: "Attract wealth and blessings for financial well-being", img: "/Images/Benefits/financial_prosperity.jpg" },
-                    { title: "Fame & Success", desc: "Opens doors to success and popularity in career", img: "/Images/Benefits/fame_success.jpg" },
-                    { title: "Removal of Ketu Dosh", desc: "Balance planetary influences to bring peace & clarity", img: "/Images/Benefits/ketu_dosh_removal.jpg" }
+                    { title: "Financial Prosperity", desc: "Attract wealth and blessings for financial well-being", img: "/images/benefits/financial_prosperity.jpg" },
+                    { title: "Fame & Success", desc: "Opens doors to success and popularity in career", img: "/images/benefits/fame_success.jpg" },
+                    { title: "Removal of Ketu Dosh", desc: "Balance planetary influences to bring peace & clarity", img: "/images/benefits/ketu_dosh_removal.jpg" }
                   ].map((b, i) => (
                     <div key={i} className="bg-white rounded-lg border border-[#E8D8C5] overflow-hidden space-y-3 p-3">
                       <div className="relative aspect-square sm:aspect-auto sm:h-36 w-full rounded-md overflow-hidden bg-slate-100">
@@ -606,7 +606,7 @@ export default function DesignSystemPage() {
                 <h3 className="font-heading text-lg font-semibold text-[#6D1344]">2. Verified Pandit Profile Component (`Card / Pandit Profile`)</h3>
                 <div className="bg-white rounded-lg p-6 border border-[#E8D8C5] shadow-xs flex flex-col md:flex-row items-center md:items-start gap-6 max-w-2xl">
                   <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#EA5C26] shrink-0 shadow-xs relative">
-                    <img src="/Images/pandit.jpg" alt="Panditji" className="w-full h-full object-cover" />
+                    <img src="/images/pandit.jpg" alt="Panditji" className="w-full h-full object-cover" />
                   </div>
                   <div className="space-y-2 text-center md:text-left">
                     <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
@@ -677,7 +677,7 @@ export default function DesignSystemPage() {
                     <p className="text-xs text-[#7A676E]">Sri Chintamani Ganesh Mandir, Kashi</p>
                   </div>
                   <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-slate-100">
-                    <img src="/Images/panchang.jpg" alt="Puja" className="w-full h-full object-cover" />
+                    <img src="/images/panchang.jpg" alt="Puja" className="w-full h-full object-cover" />
                   </div>
 
                   {/* STICKY BOTTOM BAR DEMO */}
