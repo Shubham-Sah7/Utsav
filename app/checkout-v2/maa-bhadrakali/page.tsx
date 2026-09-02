@@ -38,7 +38,8 @@ const BHET_OPTIONS: BhetItem[] = [
 ];
 
 export default function CheckoutV2Page() {
-  const [step, setStep] = useState<1 | 2>(1);
+  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<"qr" | "card" | "netbanking" | null>(null);
 
   // Form State
   const [devotees, setDevotees] = useState<Devotee[]>([
@@ -56,8 +57,8 @@ export default function CheckoutV2Page() {
   // Bhet State
   const [selectedBhet, setSelectedBhet] = useState<string[]>([]);
   
-  // Payment Modal Simulation
-  const [showPaymentModal, setShowPaymentModal] = useState(false);
+  // Payment Success Simulation
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   // Price Calculations
   const dakshinaPrice = 951;
@@ -103,12 +104,12 @@ export default function CheckoutV2Page() {
       <header className="bg-white border-b border-slate-200 px-4 sm:px-8 py-3.5">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {step === 2 ? (
+            {step > 1 ? (
               <button
-                onClick={() => setStep(1)}
+                onClick={() => setStep((step - 1) as 1 | 2)}
                 className="text-xs font-medium text-[#6D1344] hover:underline cursor-pointer flex items-center gap-1"
               >
-                ← Back to Sankalp
+                ← Back
               </button>
             ) : (
               <Link href="/" className="flex items-center gap-2">
@@ -132,17 +133,17 @@ export default function CheckoutV2Page() {
               className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${
                 step === 1
                   ? "bg-[#EA5C26] text-white"
-                  : "bg-[#6D1344] text-white"
+                  : "bg-emerald-700 text-white"
               }`}
             >
               {step > 1 ? "✓" : "1"}
             </span>
-            <span className={step === 1 ? "font-bold text-[#6D1344]" : "text-slate-600 font-medium"}>
+            <span className={step === 1 ? "font-bold text-[#6D1344]" : "text-emerald-800 font-medium"}>
               Sankalp
             </span>
           </div>
 
-          <div className="flex-1 h-[1px] bg-slate-200 mx-3" />
+          <div className={`flex-1 h-[1px] mx-3 ${step > 1 ? "bg-emerald-700" : "bg-slate-200"}`} />
 
           {/* Step 2 */}
           <div className="flex items-center gap-2">
@@ -150,24 +151,34 @@ export default function CheckoutV2Page() {
               className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${
                 step === 2
                   ? "bg-[#EA5C26] text-white"
+                  : step > 2
+                  ? "bg-emerald-700 text-white"
                   : "bg-slate-200 text-slate-600"
               }`}
             >
-              2
+              {step > 2 ? "✓" : "2"}
             </span>
-            <span className={step === 2 ? "font-bold text-[#6D1344]" : "text-slate-400 font-medium"}>
+            <span className={step === 2 ? "font-bold text-[#6D1344]" : step > 2 ? "text-emerald-800 font-medium" : "text-slate-400 font-medium"}>
               Review & Bhet
             </span>
           </div>
 
-          <div className="flex-1 h-[1px] bg-slate-200 mx-3" />
+          <div className={`flex-1 h-[1px] mx-3 ${step > 2 ? "bg-emerald-700" : "bg-slate-200"}`} />
 
           {/* Step 3 */}
-          <div className="flex items-center gap-2 opacity-40">
-            <span className="w-5 h-5 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-[11px] font-bold">
+          <div className="flex items-center gap-2">
+            <span
+              className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${
+                step === 3
+                  ? "bg-[#EA5C26] text-white"
+                  : "bg-slate-200 text-slate-600"
+              }`}
+            >
               3
             </span>
-            <span className="text-slate-400 font-medium">Payment</span>
+            <span className={step === 3 ? "font-bold text-[#6D1344]" : "text-slate-400 font-medium"}>
+              Payment
+            </span>
           </div>
         </div>
       </div>
@@ -538,10 +549,10 @@ export default function CheckoutV2Page() {
                 </div>
 
                 <button
-                  onClick={() => setShowPaymentModal(true)}
+                  onClick={() => setStep(3)}
                   className="w-full bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs py-3 rounded cursor-pointer transition-colors block text-center"
                 >
-                  Continue to Payment
+                  Continue to Payment (₹{totalPrice})
                 </button>
 
                 <div className="text-center pt-1">
@@ -554,7 +565,7 @@ export default function CheckoutV2Page() {
                     </button>
                   ) : (
                     <button
-                      onClick={() => setShowPaymentModal(true)}
+                      onClick={() => setStep(3)}
                       className="text-xs text-slate-500 hover:underline cursor-pointer"
                     >
                       Skip Bhet
@@ -563,6 +574,193 @@ export default function CheckoutV2Page() {
                 </div>
               </div>
             </div>
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* SCREEN 3: PAYMENT OPTIONS (MATCHING USER SCREENSHOT) */}
+        {/* ========================================================================= */}
+        {step === 3 && (
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div>
+              <h1 className="font-heading text-xl sm:text-2xl font-bold text-[#6D1344]">
+                Select Payment Method
+              </h1>
+              <p className="text-xs text-slate-600 pt-1">
+                Total Amount Payable: <strong className="text-[#EA5C26]">₹{totalPrice}</strong>
+              </p>
+            </div>
+
+            {/* Recommended UPI Section */}
+            <div className="space-y-2">
+              <div className="text-xs font-bold text-[#6D1344] uppercase tracking-wider relative inline-block">
+                <span>Recommended UPI</span>
+                <div className="h-[2px] bg-[#EA5C26] w-full mt-0.5" />
+              </div>
+
+              <div
+                onClick={() => setSelectedPaymentMethod("qr")}
+                className="bg-white border border-slate-300 hover:border-[#EA5C26] rounded-xl p-4 flex items-center justify-between cursor-pointer transition-all shadow-2xs hover:shadow-xs group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-10 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center p-1.5">
+                    <span className="text-[11px] font-bold text-slate-700 tracking-tighter">UPI</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-sm text-slate-900 group-hover:text-[#6D1344]">
+                      Pay using QR Code
+                    </span>
+                    <span className="text-[11px] text-slate-500 block">
+                      Google Pay, PhonePe, Paytm, BHIM UPI
+                    </span>
+                  </div>
+                </div>
+                <span className="text-slate-400 group-hover:text-[#EA5C26] font-bold text-lg">›</span>
+              </div>
+            </div>
+
+            {/* Credit & Debit Cards Section */}
+            <div className="space-y-2 pt-2">
+              <div className="text-xs font-bold text-[#6D1344] uppercase tracking-wider relative inline-block">
+                <span>Credit & Debit Cards</span>
+                <div className="h-[2px] bg-[#EA5C26] w-full mt-0.5" />
+              </div>
+
+              <div
+                onClick={() => setSelectedPaymentMethod("card")}
+                className="bg-white border border-slate-300 hover:border-[#EA5C26] rounded-xl p-4 flex items-center justify-between cursor-pointer transition-all shadow-2xs hover:shadow-xs group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-10 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center p-1.5">
+                    <span className="text-base">💳</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-sm text-slate-900 group-hover:text-[#6D1344]">
+                      Pay using Card
+                    </span>
+                    <span className="text-[11px] text-slate-500 block">
+                      Visa, Mastercard, RuPay, Maestro
+                    </span>
+                  </div>
+                </div>
+                <span className="text-slate-400 group-hover:text-[#EA5C26] font-bold text-lg">›</span>
+              </div>
+            </div>
+
+            {/* Net Banking Section */}
+            <div className="space-y-2 pt-2">
+              <div className="text-xs font-bold text-[#6D1344] uppercase tracking-wider relative inline-block">
+                <span>Net Banking</span>
+                <div className="h-[2px] bg-[#EA5C26] w-full mt-0.5" />
+              </div>
+
+              <div
+                onClick={() => setSelectedPaymentMethod("netbanking")}
+                className="bg-white border border-slate-300 hover:border-[#EA5C26] rounded-xl p-4 flex items-center justify-between cursor-pointer transition-all shadow-2xs hover:shadow-xs group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-10 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center p-1.5">
+                    <span className="text-base">🏛️</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-sm text-slate-900 group-hover:text-[#6D1344]">
+                      Pay using Net Banking
+                    </span>
+                    <span className="text-[11px] text-slate-500 block">
+                      SBI, HDFC, ICICI, Axis, Kotak & All Major Banks
+                    </span>
+                  </div>
+                </div>
+                <span className="text-slate-400 group-hover:text-[#EA5C26] font-bold text-lg">›</span>
+              </div>
+            </div>
+
+            {/* Payment Summary Box */}
+            <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-2 text-xs">
+              <div className="flex justify-between text-slate-600">
+                <span>Puja Dakshina (Maa Bhadrakali Seva)</span>
+                <span className="font-semibold text-slate-900">₹{dakshinaPrice}</span>
+              </div>
+              {bhetTotal > 0 && (
+                <div className="flex justify-between text-[#EA5C26]">
+                  <span>Optional Bhet Add-ons</span>
+                  <span className="font-semibold">+₹{bhetTotal}</span>
+                </div>
+              )}
+              <div className="flex justify-between font-bold text-sm text-[#6D1344] pt-2 border-t border-slate-200">
+                <span>Total Amount Payable</span>
+                <span className="text-[#EA5C26]">₹{totalPrice}</span>
+              </div>
+            </div>
+
+            {/* Active Payment Method Modal / QR Display */}
+            {selectedPaymentMethod && (
+              <div className="bg-[#FFF9EF] border border-[#EA5C26] rounded-xl p-6 text-center space-y-4">
+                <h3 className="font-heading font-bold text-base text-[#6D1344]">
+                  {selectedPaymentMethod === "qr" && "Scan QR Code to Pay"}
+                  {selectedPaymentMethod === "card" && "Enter Card Details"}
+                  {selectedPaymentMethod === "netbanking" && "Select Your Bank"}
+                </h3>
+
+                {selectedPaymentMethod === "qr" && (
+                  <div className="space-y-3">
+                    <div className="w-44 h-44 bg-white border border-slate-300 rounded-xl mx-auto p-2.5 flex items-center justify-center shadow-inner">
+                      <img
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=utsav@upi&pn=Utsav%20Devotional&am=951"
+                        alt="UPI QR Code"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <p className="text-xs text-slate-600">
+                      Scan with Google Pay, PhonePe, Paytm or any UPI App to complete <strong>₹{totalPrice}</strong>
+                    </p>
+                  </div>
+                )}
+
+                {selectedPaymentMethod === "card" && (
+                  <div className="space-y-3 max-w-sm mx-auto text-left">
+                    <input
+                      type="text"
+                      placeholder="Card Number (4532 •••• •••• 8892)"
+                      className="w-full bg-white border border-slate-300 rounded px-3 py-2 text-xs"
+                    />
+                    <div className="grid grid-cols-2 gap-2">
+                      <input
+                        type="text"
+                        placeholder="MM / YY"
+                        className="bg-white border border-slate-300 rounded px-3 py-2 text-xs"
+                      />
+                      <input
+                        type="password"
+                        placeholder="CVV"
+                        className="bg-white border border-slate-300 rounded px-3 py-2 text-xs"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {selectedPaymentMethod === "netbanking" && (
+                  <div className="grid grid-cols-3 gap-2 max-w-sm mx-auto text-xs">
+                    {["SBI", "HDFC", "ICICI", "Axis", "Kotak", "PNB"].map((bank) => (
+                      <button
+                        key={bank}
+                        onClick={() => setShowSuccessModal(true)}
+                        className="p-2.5 bg-white border border-slate-300 rounded hover:border-[#EA5C26] font-semibold text-slate-800"
+                      >
+                        {bank}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                <button
+                  onClick={() => setShowSuccessModal(true)}
+                  className="w-full max-w-xs bg-[#EA5C26] hover:bg-[#D44B17] text-white font-bold text-xs py-3 rounded-lg cursor-pointer transition-colors shadow-xs"
+                >
+                  Complete Payment of ₹{totalPrice}
+                </button>
+              </div>
+            )}
           </div>
         )}
       </main>
@@ -574,61 +772,74 @@ export default function CheckoutV2Page() {
           <span className="font-bold text-sm text-[#EA5C26]">₹{totalPrice}</span>
         </div>
 
-        {step === 1 ? (
+        {step === 1 && (
           <button
             onClick={() => setStep(2)}
             className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs px-4 py-2.5 rounded cursor-pointer"
           >
             Continue to Review →
           </button>
-        ) : (
+        )}
+
+        {step === 2 && (
           <button
-            onClick={() => setShowPaymentModal(true)}
+            onClick={() => setStep(3)}
             className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs px-4 py-2.5 rounded cursor-pointer"
           >
             Continue to Payment
           </button>
         )}
+
+        {step === 3 && (
+          <button
+            onClick={() => setShowSuccessModal(true)}
+            className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs px-4 py-2.5 rounded cursor-pointer"
+          >
+            Pay ₹{totalPrice}
+          </button>
+        )}
       </div>
 
-      {/* PAYMENT SIMULATION MODAL */}
-      {showPaymentModal && (
+      {/* SUCCESS CONFIRMATION MODAL */}
+      {showSuccessModal && (
         <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg border border-slate-200 max-w-sm w-full p-6 text-center space-y-4">
-            <h3 className="font-heading text-lg font-bold text-[#6D1344]">
-              Payment Connection
-            </h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Navigating to payment gateway for <strong className="text-slate-900">₹{totalPrice}</strong>.
-            </p>
+          <div className="bg-white rounded-xl border border-slate-200 max-w-sm w-full p-6 text-center space-y-4 shadow-xl">
+            <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-xl font-bold">
+              ✓
+            </div>
+
+            <div className="space-y-1">
+              <h3 className="font-heading text-lg font-bold text-[#6D1344]">
+                Puja Seva Booked Successfully!
+              </h3>
+              <p className="text-xs text-slate-600">
+                Your Sankalp for <strong className="text-slate-900">{devotees[0]?.name || "Shubham Sah"}</strong> has been confirmed.
+              </p>
+            </div>
 
             <div className="bg-slate-50 border border-slate-200 rounded p-3 text-left text-xs space-y-1">
               <div>
-                <span className="text-slate-500">Devotee: </span>
-                <span className="font-semibold">{devotees[0]?.name || "Shubham Sah"}</span>
+                <span className="text-slate-500">Transaction ID: </span>
+                <span className="font-mono font-semibold text-slate-800">UTSAV-2026-9812</span>
               </div>
               <div>
-                <span className="text-slate-500">Gotra: </span>
-                <span className="font-semibold">{devotees[0]?.gotra || "Kashyap"}</span>
+                <span className="text-slate-500">Amount Paid: </span>
+                <span className="font-semibold text-emerald-700">₹{totalPrice}</span>
               </div>
-              {selectedBhet.length > 0 && (
-                <div>
-                  <span className="text-slate-500">Bhet: </span>
-                  <span className="font-semibold text-[#EA5C26]">
-                    {selectedBhet.map((id) => BHET_OPTIONS.find((b) => b.id === id)?.title).join(", ")}
-                  </span>
-                </div>
-              )}
+              <div>
+                <span className="text-slate-500">WhatsApp Proof: </span>
+                <span className="font-semibold text-slate-800">+91 {phone}</span>
+              </div>
             </div>
 
-            <div className="flex gap-2 pt-2">
-              <Link href="/puja/ganesh-sahastra-archan" className="flex-1">
-                <button className="w-full bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs py-2 rounded cursor-pointer">
-                  Go to Checkout
+            <div className="flex gap-2 pt-1">
+              <Link href="/" className="flex-1">
+                <button className="w-full bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs py-2.5 rounded cursor-pointer">
+                  Return to Home
                 </button>
               </Link>
               <button
-                onClick={() => setShowPaymentModal(false)}
+                onClick={() => setShowSuccessModal(false)}
                 className="px-3 py-2 text-xs text-slate-600 hover:bg-slate-100 rounded border border-slate-200 cursor-pointer"
               >
                 Close
