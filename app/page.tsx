@@ -450,10 +450,10 @@ export default function HomePage() {
         <motion.section id="how-it-works" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
               
               {/* Left Column */}
-              <div className="lg:col-span-5 space-y-8">
+              <div className="lg:col-span-5 space-y-6">
                 <div className="space-y-3">
                   <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-medium uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                     <span>Transparent Process</span>
@@ -550,9 +550,9 @@ export default function HomePage() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8D8C5] shadow-xs space-y-6"
+                    className="bg-white rounded-2xl p-6 sm:p-7 border border-[#E8D8C5] shadow-xs space-y-5"
                   >
-                    <div className="space-y-2">
+                    <div className="space-y-1.5">
                       <span className="inline-block text-xs font-mono font-semibold text-[#EA5C26] bg-slate-100 px-3.5 py-1 rounded-full border border-[#E8D8C5]">
                         STEP 0{activeStepIndex + 1} OF 04
                       </span>
@@ -574,7 +574,8 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <div className="w-full h-64 sm:h-72 rounded-xl overflow-hidden relative border border-[#E8D8C5] bg-slate-100">
+                    {/* EXPANDED UN-CROPPED STEP IMAGE CONTAINER */}
+                    <div className="w-full h-80 sm:h-96 lg:h-[380px] rounded-xl overflow-hidden relative border border-[#E8D8C5] bg-slate-100">
                       <img
                         src={[
                           "/Images/Hero/ganga-aarti-flame.jpg",
@@ -583,7 +584,7 @@ export default function HomePage() {
                           "/Images/prasad_thali.jpg"
                         ][activeStepIndex]}
                         alt="Step Proof"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#2C151B]/80 via-transparent to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-semibold">
