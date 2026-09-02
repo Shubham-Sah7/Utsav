@@ -355,14 +355,24 @@ export default function PujaDetailPage() {
             </div>
 
             {/* Sankalp Details Form */}
-            <div className="bg-white rounded-xl p-6 sm:p-8 border border-slate-200/80 shadow-2xs space-y-6">
-              <h3 className="font-heading text-lg font-extrabold text-slate-900">
-                Enter Sankalp Details ({packages[selectedPackage].devotees})
-              </h3>
+            <div className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200/80 shadow-2xs space-y-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
+                <div>
+                  <h3 className="font-heading text-lg font-extrabold text-slate-900">
+                    Enter Sankalp Details
+                  </h3>
+                  <p className="text-xs text-slate-500 font-normal pt-0.5">
+                    Selected Package: <span className="font-bold text-[#C85B12]">{packages[selectedPackage].title} ({packages[selectedPackage].devotees})</span>
+                  </p>
+                </div>
+                <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 w-max">
+                  Step 2 of 2
+                </span>
+              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-700 block">
+                  <label className="text-xs font-extrabold text-slate-800 block">
                     Devotee Name(s) <span className="text-[#C85B12]">*</span>
                   </label>
                   <input
@@ -370,12 +380,12 @@ export default function PujaDetailPage() {
                     value={devoteeNames}
                     onChange={(e) => setDevoteeNames(e.target.value)}
                     placeholder="e.g. Shubham Sah, Priya Sah"
-                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-[#C85B12]"
+                    className="w-full px-4 py-2.5 rounded-md border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-none focus:border-[#C85B12] transition-colors"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-700 block">
+                  <label className="text-xs font-extrabold text-slate-800 block">
                     Family Gotra <span className="text-slate-400 font-normal">(Optional)</span>
                   </label>
                   <input
@@ -383,18 +393,18 @@ export default function PujaDetailPage() {
                     value={devoteeGotra}
                     onChange={(e) => setDevoteeGotra(e.target.value)}
                     placeholder="e.g. Kashyap / Vatsa (Leave blank if unknown)"
-                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-[#C85B12]"
+                    className="w-full px-4 py-2.5 rounded-md border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-none focus:border-[#C85B12] transition-colors"
                   />
                 </div>
               </div>
 
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-left space-y-0.5">
-                  <span className="text-xs text-slate-500 font-medium block">Total Seva Amount</span>
+                  <span className="text-xs text-slate-500 font-semibold block">Total Seva Amount</span>
                   <span className="text-2xl font-extrabold text-slate-900">₹{packages[selectedPackage].price}</span>
                 </div>
 
-                <Button className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-sm h-12 px-10 rounded-lg shadow-xs transition-all duration-300 cursor-pointer">
+                <Button className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-xs sm:text-sm h-11 px-8 rounded-md shadow-xs transition-colors cursor-pointer">
                   <span>Book this Puja →</span>
                 </Button>
               </div>
