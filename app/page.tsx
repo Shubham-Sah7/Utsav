@@ -555,9 +555,9 @@ export default function HomePage() {
                     className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8D8C5] shadow-xs space-y-6"
                   >
                     <div className="space-y-2">
-                      <div className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-[#EA5C26] bg-slate-100 px-3 py-1 rounded-full border border-[#E8D8C5]">
-                        <span>STEP 0{activeStepIndex + 1} OF 04</span>
-                      </div>
+                      <span className="inline-block text-xs font-mono font-semibold text-[#EA5C26] bg-slate-100 px-3.5 py-1 rounded-full border border-[#E8D8C5]">
+                        STEP 0{activeStepIndex + 1} OF 04
+                      </span>
                       <h3 className="font-heading text-xl sm:text-2xl font-semibold text-[#6D1344]">
                         {[
                           "Select Your Preferred Seva & Offering",
