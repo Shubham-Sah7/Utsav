@@ -363,7 +363,7 @@ export default function HomePage() {
                   date: "Sep 11, Friday",
                   booked: "6.1k Participated",
                   price: "₹951",
-                  img: "/Images/Pujas/devi-shaktipeeth-aarti.jpg",
+                  img: "/Images/Pujas/kali_sanctum_hero.jpg",
                   slug: "/puja/maa-kali-puja"
                 },
                 {

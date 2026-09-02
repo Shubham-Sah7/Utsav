@@ -56,10 +56,10 @@ export default function PujaDetailPage() {
   // State for Gallery
   const galleryImages = isKaliPuja
     ? [
-        { src: "/Images/Pujas/devi-shaktipeeth-aarti.jpg", alt: "Maa Kali Sanctum Kalighat" },
-        { src: "/Images/Hero/ganga-aarti-flame.jpg", alt: "Sacred Chandi Path Aarti" },
-        { src: "/Images/scripture.jpg", alt: "Vedic Mantra Jaap & Tantra Shanti" },
-        { src: "/Images/gopuram-artwork.jpg", alt: "Kalighat Temple Sanctum" }
+        { src: "/Images/Pujas/kali_sanctum_hero.jpg", alt: "Maa Dakshina Kali Sanctum Kalighat" },
+        { src: "/Images/Pujas/kali_chandi_path_havan.jpg", alt: "Sacred Chandi Path Havan Yajna" },
+        { src: "/Images/Pujas/kali_aarti_darshan.jpg", alt: "Sacred Evening Kali Aarti Darshan" },
+        { src: "/Images/Pujas/kalighat_temple_exterior.jpg", alt: "Historic Kalighat Temple Exterior" }
       ]
     : [
         { src: "/Images/panchang.jpg", alt: "Chintamani Ganesh Mandir Sanctum Kashi" },
