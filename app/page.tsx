@@ -174,24 +174,23 @@ export default function HomePage() {
 
             {/* Main Headline */}
             <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#6D1344] tracking-tight leading-[1.15]">
-              Connecting Devotees to Sacred Shrines across{" "}
-              <span className="text-[#EA5C26]">India 🛕</span>
+              Be part of your temple, <span className="text-[#EA5C26]">wherever you are.</span>
             </h1>
 
             {/* Subtitle Text */}
             <p className="text-sm sm:text-base text-[#7A676E] font-normal leading-relaxed max-w-xl mx-auto">
-              Participate in authentic temple Pujas even when you cannot physically be there. Receive personalized video proof and blessed prasad delivered safely to your doorstep.
+              Participate in authentic temple Pujas even when you cannot be there. Your name and gotra are included in the Sankalp, with Puja video and Prasad delivered to your doorstep.
             </p>
 
             {/* Trust Badges */}
             <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-medium text-[#6D1344]">
               <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                 <Star className="w-3.5 h-3.5 fill-[#FAA531] text-[#FAA531]" />
-                <span className="font-semibold text-[#6D1344]">4.8 Rating</span>
+                <span className="font-semibold text-[#6D1344]">4.8★ Rated</span>
               </span>
               <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#EA5C26]" />
-                <span className="font-semibold text-[#6D1344]">100k+ Devotees Blessed</span>
+                <span className="font-semibold text-[#6D1344]">100k+ Devotees</span>
               </span>
             </div>
 
@@ -323,7 +322,7 @@ export default function HomePage() {
                   Upcoming <span className="text-[#EA5C26]">Sacred Temple Pujas</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-[#7A676E] font-normal max-w-xl pt-1">
-                  Select an upcoming Puja at India's prominent shrines to receive live Sankalp video proof and doorstep Prasad.
+                  Choose a Puja from India's sacred temples and participate from wherever you are.
                 </p>
               </div>
 
@@ -461,18 +460,17 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#6D1344] tracking-tight leading-tight">
-                    Vedic Rituals performed with{" "}
-                    <span className="text-[#EA5C26]">100% Transparency</span>
+                    Know what happens <span className="text-[#EA5C26]">after you book.</span>
                   </h2>
                 </div>
 
                 {/* Vertical Step Tab List */}
                 <div className="space-y-3">
                   {[
-                    { id: 0, num: "01", label: "Select Preferred Seva" },
-                    { id: 1, num: "02", label: "Recite Name & Gotra" },
-                    { id: 2, num: "03", label: "Live Video Proof" },
-                    { id: 3, num: "04", label: "Doorstep Prasad Delivery" }
+                    { id: 0, num: "01", label: "Choose your Puja" },
+                    { id: 1, num: "02", label: "Add your name & gotra" },
+                    { id: 2, num: "03", label: "Receive your Darshan video" },
+                    { id: 3, num: "04", label: "Get Prasad at home" }
                   ].map((step) => {
                     const isActive = activeStepIndex === step.id;
                     return (
@@ -560,18 +558,18 @@ export default function HomePage() {
                       </span>
                       <h3 className="font-heading text-xl sm:text-2xl font-semibold text-[#6D1344]">
                         {[
-                          "Select Your Preferred Seva & Offering",
-                          "Enter Devotee Name & Gotra for Sankalp",
-                          "Receive HD Live Video Proof on WhatsApp",
-                          "Receive Blessed Pure Temple Prasad at Doorstep"
+                          "Choose your Puja",
+                          "Add your name & gotra",
+                          "Receive your Darshan video",
+                          "Get Prasad at home"
                         ][activeStepIndex]}
                       </h3>
                       <p className="text-xs sm:text-sm text-[#7A676E] font-normal leading-relaxed">
                         {[
-                          "Choose from individual, couple, or family puja packages at India's sacred shrines.",
-                          "Your family names and Gotra are explicitly recited by Vedic Pandits during the holy Sankalp.",
-                          "Watch live video footage of your ritual being performed at the sanctum with your name chanted clearly.",
-                          "Pure, sanctified temple prasad along with sacred Thread, Kumkum, and Vibhuti is packed and shipped to your home."
+                          "Select your desired Puja package and Seva option for your family.",
+                          "Your name and gotra are shared with the temple and included in the Sankalp.",
+                          "Receive a same day Darshan video, followed by your full Puja video on WhatsApp in 3 to 5 days.",
+                          "For applicable main Pujas, Prasad is delivered to your doorstep in 7 to 10 days."
                         ][activeStepIndex]}
                       </p>
                     </div>
@@ -912,10 +910,10 @@ export default function HomePage() {
                   <span>Devotee Experiences</span>
                 </div>
                 <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight">
-                  What devotees <span className="text-[#EA5C26]">are saying.</span>
+                  They couldn't be at the temple. <span className="text-[#EA5C26]">So they joined from home.</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-[#7A676E] font-normal pt-1">
-                  Over 100,000+ satisfied devotees across India & worldwide.
+                  Real experiences from devotees across India and beyond.
                 </p>
               </div>
 
@@ -1413,11 +1411,10 @@ export default function HomePage() {
                 <span>Spiritual Devotion Anywhere</span>
               </div>
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight max-w-2xl mx-auto">
-                Experience Devotion on <br />
-                <span className="text-[#EA5C26] whitespace-nowrap">Utsav App</span>
+                Your Puja, <span className="text-[#EA5C26] whitespace-nowrap">wherever you are.</span>
               </h2>
               <p className="text-xs sm:text-sm text-[#7A676E] font-normal max-w-xl mx-auto pt-1">
-                Book Pujas, watch HD live video proof, read Panchang, and receive blessed Prasad directly from your phone.
+                Follow your Puja, receive updates and stay connected with Utsav from your phone.
               </p>
             </div>
 
@@ -1542,8 +1539,8 @@ export default function HomePage() {
             <div id="faq-list-container" className="divide-y divide-slate-200/80 border-t border-b border-slate-200/80">
               {[
                 {
-                  q: "How do I know the Puja is performed in my family's name?",
-                  a: "Our temple Pandits explicitly recite your Name and Gotra during the sacred Sankalp ritual before starting the Archana or Yajna. You will receive an authentic HD video proof of your Sankalp recited inside the temple sanctum directly on WhatsApp."
+                  q: "What happens after I book a Puja?",
+                  a: "Your Sankalp details are shared with the temple. The Pandit performs the Puja in your name, followed by your Darshan and Puja video updates and Prasad delivery where applicable."
                 },
                 {
                   q: "When will I receive the video proof on WhatsApp?",
