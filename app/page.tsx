@@ -186,7 +186,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-medium text-[#6D1344]">
               <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                 <Star className="w-3.5 h-3.5 fill-[#FAA531] text-[#FAA531]" />
-                <span className="font-semibold text-[#6D1344]">4.8★ Rated</span>
+                <span className="font-semibold text-[#6D1344]">4.8 Rated</span>
               </span>
               <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#EA5C26]" />
