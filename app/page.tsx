@@ -347,40 +347,44 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
               {[
                 {
+                  title: "1008 Ganesh Sahastra Archana & Ketu Shanti Puja",
+                  tag: "Special Budhvar",
+                  loc: "Chintamani Ganesh, Kashi",
+                  date: "Sep 09, Wednesday",
+                  booked: "10 Lakh+ Devotees",
+                  price: "₹951",
+                  img: "/Images/panchang.jpg",
+                  slug: "/puja/ganesh-sahastra-archan"
+                },
+                {
+                  title: "Maa Dakshina Kali Mahayajna & Shatru Badha Shanti",
+                  tag: "Shaktipeeth Seva",
+                  loc: "Kalighat Shaktipeeth, Kolkata",
+                  date: "Sep 11, Friday",
+                  booked: "6.1k Participated",
+                  price: "₹951",
+                  img: "/Images/Pujas/devi-shaktipeeth-aarti.jpg",
+                  slug: "/puja/maa-kali-puja"
+                },
+                {
                   title: "1008 Archana Seva & Special Bilva Patra Abhishekam",
                   tag: "Special Pradosh",
                   loc: "Kashi Vishwanath, Varanasi",
-                  date: "Sep 05, Friday",
+                  date: "Sep 15, Tuesday",
                   booked: "4.8k Participated",
                   price: "₹851",
-                  img: "/Images/Hero/ganga-aarti-flame.jpg"
-                },
-                {
-                  title: "Special Tripur Sundari Yajna & Kumkum Archana",
-                  tag: "Shaktipeeth Seva",
-                  loc: "Kamakhya Temple, Assam",
-                  date: "Sep 08, Monday",
-                  booked: "6.1k Participated",
-                  price: "₹1,250",
-                  img: "/Images/Pujas/devi-shaktipeeth-aarti.jpg"
-                },
-                {
-                  title: "Ashta Ganapati Puja for Removal of All Obstacles",
-                  tag: "Ganapati Seva",
-                  loc: "Ashtavinayak, Maharashtra",
-                  date: "Sep 11, Thursday",
-                  booked: "2.9k Participated",
-                  price: "₹1,100",
-                  img: "/Images/Pujas/ganesha-idol-puja.jpg"
+                  img: "/Images/Hero/ganga-aarti-flame.jpg",
+                  slug: "/puja/kashi-vishwanath-abhishekam"
                 },
                 {
                   title: "Mahamrityunjaya Jaap & Bhasma Aarti Seva",
                   tag: "Bhasma Aarti",
                   loc: "Mahakaleshwar, Ujjain",
-                  date: "Sep 15, Monday",
+                  date: "Sep 18, Friday",
                   booked: "8.4k Participated",
                   price: "₹751",
-                  img: "/Images/Hero/vedic-yajna-fire.jpg"
+                  img: "/Images/Hero/vedic-yajna-fire.jpg",
+                  slug: "/puja/mahakaleshwar-bhasma-aarti"
                 }
               ].map((card, idx) => (
                 <motion.div
@@ -434,7 +438,7 @@ export default function HomePage() {
                       <span className="font-heading text-lg font-semibold text-[#6D1344]">{card.price}</span>
                     </div>
 
-                    <Link href="/puja/ganesh-sahastra-archan" className="block w-full">
+                    <Link href={card.slug} className="block w-full">
                       <Button className="w-full bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs min-h-[44px] rounded-xl transition-colors cursor-pointer">
                         <span>Participate in Puja →</span>
                       </Button>
