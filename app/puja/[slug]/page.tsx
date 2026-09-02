@@ -18,11 +18,7 @@ import {
   Clock,
   Video,
   Package,
-  BookOpen,
-  Sparkles,
-  Flame,
-  HelpCircle,
-  PhoneCall
+  BookOpen
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -175,6 +171,67 @@ export default function PujaDetailPage() {
     }
   ];
 
+  const benefitsWithImages = [
+    {
+      title: "Financial Prosperity",
+      desc: "Attract wealth and blessings for overall financial well-being",
+      img: "/Images/prasad_thali.jpg"
+    },
+    {
+      title: "Fame & Success",
+      desc: "Opens doors to success and popularity in your career pursuits",
+      img: "/Images/Hero/kashi-golden-shikhara.jpg"
+    },
+    {
+      title: "Removal of Ketu Dosh",
+      desc: "Balance planetary influences to bring peace & clarity",
+      img: "/Images/scripture.jpg"
+    },
+    {
+      title: "Career Growth",
+      desc: "Remove professional hurdles and open new doors",
+      img: "/Images/Hero/ganga-aarti-flame.jpg"
+    },
+    {
+      title: "Business Growth",
+      desc: "Attracts financial prosperity for the overall growth of business",
+      img: "/Images/panchang.jpg"
+    }
+  ];
+
+  const stepsWithImages = [
+    {
+      num: "01",
+      title: "Select Puja",
+      desc: "Select a puja and bhet daan options",
+      img: "/Images/Hero/ganga-aarti-flame.jpg"
+    },
+    {
+      num: "02",
+      title: "Pay Dakshina",
+      desc: "Securely pay your dakshina using UPI/Card",
+      img: "/Images/scripture.jpg"
+    },
+    {
+      num: "03",
+      title: "Fill Sankalp Form",
+      desc: "Enter offering name(s), gotra & address",
+      img: "/Images/Avatars/indian_devotee_1_1788330405371.jpg"
+    },
+    {
+      num: "04",
+      title: "Watch Puja Video",
+      desc: "Full video with name-gotra on WhatsApp",
+      img: "/Images/Hero/devotee-aarti-blessing.jpg"
+    },
+    {
+      num: "05",
+      title: "Prasad Delivered",
+      desc: "Authentic prasad delivered to your home",
+      img: "/Images/prasad_thali.jpg"
+    }
+  ];
+
   const faqs = [
     {
       q: "What is Chintamani Ganpati famous for?",
@@ -234,12 +291,12 @@ export default function PujaDetailPage() {
       {/* 1. STICKY HEADER */}
       <Header />
 
-      <main className="flex-grow pt-24 sm:pt-28">
+      <main className="flex-grow pt-16 sm:pt-20">
         {/* 2. PUJA HERO SECTION */}
-        <section className="py-8 sm:py-12 bg-white">
+        <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="py-6 sm:py-10 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium">
+            {/* Breadcrumb - Reduced Top Extra Whitespace */}
+            <div className="flex items-center gap-2 text-xs text-slate-500 mb-4 font-medium">
               <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
               <ChevronRight className="w-3 h-3 text-slate-400" />
               <Link href="/#discover-pujas" className="hover:text-slate-900 transition-colors">Puja Seva</Link>
@@ -247,11 +304,11 @@ export default function PujaDetailPage() {
               <span className="text-slate-900 font-bold">1008 Ganesh Sahastra Archan</span>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               {/* LEFT COLUMN: Gallery */}
-              <div className="lg:col-span-6 space-y-4">
-                {/* Main Active Image Frame */}
-                <div className="w-full h-80 sm:h-96 lg:h-[460px] rounded-xl overflow-hidden relative border border-slate-200/80 bg-slate-950 group">
+              <div className="lg:col-span-6 space-y-3">
+                {/* Main Active Image Frame with Reduced Corner Radius */}
+                <div className="w-full h-80 sm:h-96 lg:h-[440px] rounded-lg overflow-hidden relative border border-slate-200/80 bg-slate-950 group">
                   <motion.img
                     key={selectedImgIndex}
                     src={galleryImages[selectedImgIndex].src}
@@ -261,7 +318,7 @@ export default function PujaDetailPage() {
                     transition={{ duration: 0.5 }}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute top-4 left-4 bg-slate-900/90 text-white text-[11px] font-bold px-3 py-1 rounded-sm border border-white/20">
+                  <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-3 py-1 rounded-sm border border-white/20">
                     Sacred Temple Sanctum
                   </div>
                 </div>
@@ -272,7 +329,7 @@ export default function PujaDetailPage() {
                     <button
                       key={idx}
                       onClick={() => setSelectedImgIndex(idx)}
-                      className={`h-20 rounded-lg overflow-hidden border-2 transition-all cursor-pointer relative ${
+                      className={`h-20 rounded-md overflow-hidden border-2 transition-all cursor-pointer relative ${
                         selectedImgIndex === idx ? "border-[#C85B12] opacity-100" : "border-slate-200/80 opacity-70 hover:opacity-100"
                       }`}
                     >
@@ -283,9 +340,9 @@ export default function PujaDetailPage() {
               </div>
 
               {/* RIGHT COLUMN: Metadata & Quick Participate */}
-              <div className="lg:col-span-6 space-y-6">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2">
+              <div className="lg:col-span-6 space-y-5">
+                <div className="space-y-2.5">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="inline-block px-3 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
                       SPECIAL PUJA
                     </span>
@@ -299,19 +356,19 @@ export default function PujaDetailPage() {
                     1008 Ganesh Sahastra Archan Path Aivam Ketu Shanti Puja
                   </h1>
 
-                  <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-700 font-semibold pt-1">
-                    <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-sm">
+                  <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-700 font-semibold pt-0.5">
+                    <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-md">
                       <MapPin className="w-4 h-4 text-[#C85B12]" />
                       <span>Chintamani Ganesh, Kashi</span>
                     </div>
-                    <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-sm">
+                    <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-md">
                       <Calendar className="w-4 h-4 text-[#C85B12]" />
                       <span>Wed · Sep 09, 2026 · Budhvar Visesh</span>
                     </div>
                   </div>
 
                   {/* Rating & Devotee Stats */}
-                  <div className="flex items-center gap-3 pt-1">
+                  <div className="flex items-center gap-3 pt-0.5">
                     <div className="flex items-center gap-1 text-amber-500">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
@@ -327,8 +384,8 @@ export default function PujaDetailPage() {
                   A sacred 1008-name Ganesh Archana and Ketu Shanti Puja performed at Chintamani Ganesh Mandir, Kashi. Removes life obstacles, financial stress, and bestows peace & career growth.
                 </p>
 
-                {/* Quick Benefit Badges */}
-                <div className="grid grid-cols-2 gap-3 pt-2">
+                {/* Quick Benefit Badges (Solid Orange Circle + White Icon + Reduced Corner Radius) */}
+                <div className="grid grid-cols-2 gap-3 pt-1">
                   {[
                     { label: "HD Video Proof", icon: Video },
                     { label: "Doorstep Prasad", icon: Package },
@@ -337,8 +394,8 @@ export default function PujaDetailPage() {
                   ].map((item, idx) => {
                     const IconComp = item.icon;
                     return (
-                      <div key={idx} className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl border border-slate-200/80 bg-white shadow-2xs">
-                        <div className="w-7 h-7 rounded-full bg-[#C85B12]/10 text-[#C85B12] flex items-center justify-center shrink-0">
+                      <div key={idx} className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-lg border border-slate-200/80 bg-white shadow-2xs">
+                        <div className="w-7 h-7 rounded-full bg-[#C85B12] text-white flex items-center justify-center shrink-0 shadow-2xs">
                           <IconComp className="w-3.5 h-3.5 stroke-[2.5]" />
                         </div>
                         <span className="text-xs font-extrabold text-slate-900">{item.label}</span>
@@ -348,10 +405,10 @@ export default function PujaDetailPage() {
                 </div>
 
                 {/* Primary Hero CTA */}
-                <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                <div className="pt-3 flex flex-col sm:flex-row items-center gap-4">
                   <Button
                     onClick={scrollToPackage}
-                    className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-sm h-12 px-8 rounded-lg shadow-xs transition-all duration-300 cursor-pointer"
+                    className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-sm h-11 px-8 rounded-md shadow-xs transition-colors cursor-pointer"
                   >
                     <span>Participate in Puja →</span>
                   </Button>
@@ -360,10 +417,10 @@ export default function PujaDetailPage() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* 3. PARTICIPATION / PACKAGE SELECTOR */}
-        <section id="package-selector" className="py-12 sm:py-16 bg-slate-50/60 border-y border-slate-200/80">
+        <motion.section id="package-selector" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-slate-50/60 border-y border-slate-200/80">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
@@ -517,10 +574,10 @@ export default function PujaDetailPage() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        {/* 4. WHAT YOU RECEIVE (RICH PHOTOGRAPHY IMAGE-FEATURE CARDS) */}
-        <section className="py-12 sm:py-16 bg-white">
+        {/* 4. WHAT YOU RECEIVE (RICH PHOTOGRAPHY IMAGE-FEATURE CARDS WITH REDUCED CORNER RADIUS) */}
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
@@ -532,9 +589,9 @@ export default function PujaDetailPage() {
             </div>
 
             {/* Rich Photography Feature Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
               {inclusions.map((item, idx) => (
-                <div key={idx} className="bg-white rounded-xl overflow-hidden border border-slate-200/80 shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
+                <div key={idx} className="bg-white rounded-lg overflow-hidden border border-slate-200/80 shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3.5">
                     {/* Rich Image Header */}
                     <div className="relative h-44 w-full overflow-hidden bg-slate-100">
@@ -558,10 +615,10 @@ export default function PujaDetailPage() {
               ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* 5. UTSAV PROMISE */}
-        <section className="py-10 bg-slate-50/60 border-y border-slate-200/80">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-10 bg-slate-50/60 border-y border-slate-200/80">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-emerald-600 text-emerald-700 text-[11px] font-extrabold uppercase bg-transparent">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
@@ -588,10 +645,10 @@ export default function PujaDetailPage() {
               </span>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* 6. ABOUT THE PUJA, MANDIR & BHAGWAN */}
-        <section className="py-12 sm:py-16 bg-white">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
@@ -645,16 +702,16 @@ export default function PujaDetailPage() {
               </button>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* 7. PUJA PERFORMED BY */}
-        <section className="py-12 sm:py-16 bg-slate-50/60 border-y border-slate-200/80">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-slate-50/60 border-y border-slate-200/80">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-xl p-6 sm:p-8 border border-slate-200/80 shadow-2xs flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
+            <div className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200/80 shadow-2xs flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
               <img
                 src="/Images/Hero/devotee-aarti-blessing.jpg"
                 alt="Challa Abhiram S. Vedic Acharya"
-                className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl object-cover shrink-0 border border-slate-200"
+                className="w-28 h-28 sm:w-32 sm:h-32 rounded-lg object-cover shrink-0 border border-slate-200"
               />
               <div className="space-y-3 text-center md:text-left flex-1">
                 <div className="space-y-1">
@@ -682,11 +739,11 @@ export default function PujaDetailPage() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        {/* 8. WHY PERFORM THIS PUJA? */}
-        <section className="py-12 sm:py-16 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        {/* 8. WHY PERFORM THIS PUJA? (WITH PHOTOGRAPHY & REDUCED CORNER RADIUS) */}
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
                 BENEFITS
@@ -696,29 +753,35 @@ export default function PujaDetailPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              {[
-                { title: "Financial Prosperity", desc: "Attract wealth and blessings for overall financial well-being 💸" },
-                { title: "Fame & Success", desc: "Opens doors to success and popularity. Empower yourself to shine in your career" },
-                { title: "Removal of Ketu Dosh", desc: "Balance planetary influences to bring peace, clarity, and spiritual growth" },
-                { title: "Career Growth", desc: "Remove professional hurdles and open new doors for opportunity" },
-                { title: "Business Growth", desc: "Attracts financial prosperity for the overall growth of business" }
-              ].map((item, idx) => (
-                <div key={idx} className="p-5 rounded-xl border border-slate-200/80 bg-white text-center space-y-2 hover:border-[#C85B12] transition-colors">
-                  <span className="w-8 h-8 rounded-full bg-[#C85B12]/10 text-[#C85B12] font-bold text-xs flex items-center justify-center mx-auto">
-                    0{idx + 1}
-                  </span>
-                  <h4 className="font-heading text-xs font-extrabold text-slate-900">{item.title}</h4>
-                  <p className="text-[11px] text-slate-500 font-normal leading-relaxed">{item.desc}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+              {benefitsWithImages.map((item, idx) => (
+                <div key={idx} className="rounded-lg overflow-hidden border border-slate-200/80 bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
+                  <div className="space-y-3">
+                    <div className="relative h-32 w-full overflow-hidden bg-slate-100">
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                      />
+                      <span className="absolute top-2.5 left-2.5 bg-slate-900/90 text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-sm">
+                        0{idx + 1}
+                      </span>
+                    </div>
+
+                    <div className="p-4 pt-1 space-y-1">
+                      <h4 className="font-heading text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">{item.title}</h4>
+                      <p className="text-[11px] text-slate-500 font-normal leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        {/* 9. HOW TO PARTICIPATE (TIMELINE) */}
-        <section className="py-12 sm:py-16 bg-slate-50/60 border-y border-slate-200/80">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        {/* 9. HOW TO PARTICIPATE (WITH PHOTOGRAPHY & REDUCED CORNER RADIUS) */}
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-slate-50/60 border-y border-slate-200/80">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
                 STEPS
@@ -731,28 +794,34 @@ export default function PujaDetailPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 relative">
-              {[
-                { num: "1", title: "Select Puja", desc: "Select a puja and bhet daan options such as vastra daan, gau seva, brahman bhojan etc." },
-                { num: "2", title: "Pay Dakshina", desc: "Securely pay your dakshina using UPI, Card or Net Banking." },
-                { num: "3", title: "Fill Sankalp Form", desc: "Enter offering name(s), gotra, prasad delivery address & puja wish." },
-                { num: "4", title: "Watch Puja Video", desc: "Short darshan video shared on tithi. Full video with name-gotra on WhatsApp within 3-5 days." },
-                { num: "5", title: "Prasad Delivered", desc: "Authentic prasad from the temple will be delivered within 7 - 10 days" }
-              ].map((step, idx) => (
-                <div key={idx} className="p-4 rounded-xl border border-slate-200/80 bg-white text-center space-y-2">
-                  <span className="text-xs font-mono font-bold text-[#C85B12] px-2 py-0.5 rounded-sm bg-[#C85B12]/10 inline-block">
-                    {step.num}
-                  </span>
-                  <h4 className="font-heading text-xs font-extrabold text-slate-900">{step.title}</h4>
-                  <p className="text-[11px] text-slate-500 font-normal leading-relaxed">{step.desc}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+              {stepsWithImages.map((step, idx) => (
+                <div key={idx} className="rounded-lg overflow-hidden border border-slate-200/80 bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
+                  <div className="space-y-3">
+                    <div className="relative h-32 w-full overflow-hidden bg-slate-100">
+                      <img
+                        src={step.img}
+                        alt={step.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                      />
+                      <span className="absolute top-2.5 left-2.5 bg-[#C85B12] text-white text-[10px] font-extrabold px-2 py-0.5 rounded-sm">
+                        {step.num}
+                      </span>
+                    </div>
+
+                    <div className="p-4 pt-1 space-y-1">
+                      <h4 className="font-heading text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">{step.title}</h4>
+                      <p className="text-[11px] text-slate-500 font-normal leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        {/* 10. DEVOTEE REVIEWS (AUTHENTIC USER REVIEWS) */}
-        <section className="py-12 sm:py-16 bg-white">
+        {/* 10. DEVOTEE REVIEWS */}
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
@@ -765,7 +834,7 @@ export default function PujaDetailPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {userReviews.map((rev, idx) => (
-                <div key={idx} className="p-6 rounded-2xl border border-slate-200/80 bg-white shadow-2xs flex flex-col justify-between space-y-4">
+                <div key={idx} className="p-6 rounded-lg border border-slate-200/80 bg-white shadow-2xs flex flex-col justify-between space-y-4">
                   <div>
                     <span className="text-2xl font-serif text-[#C85B12]/40 font-extrabold leading-none block mb-2 select-none">
                       “
@@ -775,7 +844,7 @@ export default function PujaDetailPage() {
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-3 pt-3 mt-3 border-t border-slate-100">
+                  <div className="flex items-center gap-3 pt-3 mt-3">
                     <img
                       src={rev.avatar}
                       alt={rev.name}
@@ -794,10 +863,10 @@ export default function PujaDetailPage() {
               ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* 11. FREQUENTLY ASKED QUESTIONS (EXACT MATCHING HOMEPAGE STYLE) */}
-        <section className="py-12 sm:py-16 bg-white border-t border-slate-200/80">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white border-t border-slate-200/80">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-3">
               <span className="inline-block px-3.5 py-1.5 rounded-full border border-slate-200/80 text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider bg-transparent">
@@ -857,7 +926,7 @@ export default function PujaDetailPage() {
               })}
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
 
       {/* 12. STICKY BOTTOM BOOKING BAR */}
