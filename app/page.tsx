@@ -1428,7 +1428,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* 3 iPhone Mockup Screen Cards Grid */}
+            {/* 3 App Showcase Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-stretch justify-items-center">
               {/* Phone Card 1: Live Video Proof */}
               <motion.div
@@ -1438,31 +1438,13 @@ export default function HomePage() {
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center group w-full"
               >
-                {/* 100% Single iPhone Device Frame */}
-                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[40px] p-2.5 shadow-2xl border-[3px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
-                  {/* Dynamic Island Notch */}
-                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 gap-1.5 shadow-xs pointer-events-none">
-                    <div className="w-2 h-2 rounded-full bg-slate-900 border border-slate-800" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
-                  </div>
-
-                  {/* Pure Screen Content */}
-                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-[#FFF9EF]">
-                    <img
-                      src="/images/app/screen_puja.jpg"
-                      alt="Utsav App Puja Seva Screen"
-                      className="w-full h-full object-cover object-top"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        if (target.src.includes('/images/')) {
-                          target.src = '/images/app/screen_puja.jpg';
-                        }
-                      }}
-                    />
-                  </div>
-
-                  {/* Bottom Home Indicator Bar */}
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30 pointer-events-none" />
+                {/* Clean App Screenshot Card */}
+                <div className="relative w-[260px] sm:w-[280px] rounded-2xl overflow-hidden shadow-lg border border-[#E8D8C5] bg-white group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300">
+                  <img
+                    src="/images/app/screen_puja.jpg"
+                    alt="Utsav App Puja Seva Screen"
+                    className="w-full h-auto object-contain block"
+                  />
                 </div>
 
                 {/* Card Description underneath */}
@@ -1484,31 +1466,13 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center group w-full"
               >
-                {/* 100% Single iPhone Device Frame */}
-                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[40px] p-2.5 shadow-2xl border-[3px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
-                  {/* Dynamic Island Notch */}
-                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 gap-1.5 shadow-xs pointer-events-none">
-                    <div className="w-2 h-2 rounded-full bg-slate-900 border border-slate-800" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
-                  </div>
-
-                  {/* Pure Screen Content */}
-                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-[#FFF9EF]">
-                    <img
-                      src="/images/app/screen_home.jpg"
-                      alt="Utsav App Home Screen"
-                      className="w-full h-full object-cover object-top"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        if (target.src.includes('/images/')) {
-                          target.src = '/images/app/screen_home.jpg';
-                        }
-                      }}
-                    />
-                  </div>
-
-                  {/* Bottom Home Indicator Bar */}
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30 pointer-events-none" />
+                {/* Clean App Screenshot Card */}
+                <div className="relative w-[260px] sm:w-[280px] rounded-2xl overflow-hidden shadow-lg border border-[#E8D8C5] bg-white group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300">
+                  <img
+                    src="/images/app/screen_home.jpg"
+                    alt="Utsav App Home Screen"
+                    className="w-full h-auto object-contain block"
+                  />
                 </div>
 
                 {/* Card Description underneath */}
@@ -1530,40 +1494,22 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center group w-full"
               >
-                {/* 100% Single iPhone Device Frame */}
-                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[40px] p-2.5 shadow-2xl border-[3px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
-                  {/* Dynamic Island Notch */}
-                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 gap-1.5 shadow-xs pointer-events-none">
-                    <div className="w-2 h-2 rounded-full bg-slate-900 border border-slate-800" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
-                  </div>
-
-                  {/* Pure Screen Content */}
-                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-[#FFF9EF]">
-                    <img
-                      src="/images/app/screen_store.jpg"
-                      alt="Utsav App Siddha Store Screen"
-                      className="w-full h-full object-cover object-top"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        if (target.src.includes('/images/')) {
-                          target.src = '/images/app/screen_store.jpg';
-                        }
-                      }}
-                    />
-                  </div>
-
-                  {/* Bottom Home Indicator Bar */}
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30 pointer-events-none" />
+                {/* Clean App Screenshot Card */}
+                <div className="relative w-[260px] sm:w-[280px] rounded-2xl overflow-hidden shadow-lg border border-[#E8D8C5] bg-white group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300">
+                  <img
+                    src="/images/app/screen_store.jpg"
+                    alt="Utsav App Siddha Store Screen"
+                    className="w-full h-auto object-contain block"
+                  />
                 </div>
 
                 {/* Card Description underneath */}
                 <div className="pt-6 text-center max-w-xs space-y-1.5">
                   <h3 className="font-heading text-lg font-semibold text-[#6D1344]">
-                    Siddha Store & Healing Bracelets
+                    Mahaprasad & Siddha Items
                   </h3>
                   <p className="text-xs text-[#7A676E] font-normal leading-relaxed">
-                    Shop energized Money Magnet bracelets, 5 Mukhi Rudraksha, and authentic shrine Prasad.
+                    Receive authentic temple Prasad, consecrated Rudraksha & sacred idols delivered to your home.
                   </p>
                 </div>
               </motion.div>
@@ -1740,40 +1686,22 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Right Column: 100% Single iPhone Device Frame (5 cols) */}
+              {/* Right Column: Clean App Showcase Card (5 cols) */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
                 <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                  className="w-full flex justify-center"
+                  className="w-full flex justify-center lg:justify-end"
                 >
-                  {/* 100% Single iPhone Device Frame */}
-                  <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[40px] p-2.5 shadow-2xl border-[3px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden hover:-translate-y-1 transition-all duration-500">
-                    {/* Dynamic Island Notch */}
-                    <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 gap-1.5 shadow-xs pointer-events-none">
-                      <div className="w-2 h-2 rounded-full bg-slate-900 border border-slate-800" />
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
-                    </div>
-
-                    {/* Pure Screen Content */}
-                    <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-[#FFF9EF]">
-                      <img
-                        src="/images/app/screen_home.jpg"
-                        alt="Utsav Mobile App Showcase Screen"
-                        className="w-full h-full object-cover object-top"
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          if (target.src.includes('/images/')) {
-                            target.src = '/images/app/screen_home.jpg';
-                          }
-                        }}
-                      />
-                    </div>
-
-                    {/* Bottom Home Indicator Bar */}
-                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30 pointer-events-none" />
+                  {/* Clean App Screenshot Card */}
+                  <div className="relative w-[260px] sm:w-[285px] rounded-2xl overflow-hidden shadow-lg border border-[#E8D8C5] bg-white hover:-translate-y-1.5 transition-all duration-300">
+                    <img
+                      src="/images/app/screen_home.jpg"
+                      alt="Utsav Mobile App Showcase Screen"
+                      className="w-full h-auto object-contain block"
+                    />
                   </div>
                 </motion.div>
               </div>
