@@ -18,7 +18,11 @@ import {
   Clock,
   Video,
   Package,
-  BookOpen
+  BookOpen,
+  Sparkles,
+  Flame,
+  HelpCircle,
+  PhoneCall
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -33,39 +37,76 @@ export default function PujaDetailPage() {
   const [selectedImgIndex, setSelectedImgIndex] = useState(0);
 
   // State for Package Selection
-  const [selectedPackage, setSelectedPackage] = useState<number>(0);
+  const [selectedPackage, setSelectedPackage] = useState<number>(1); // Default to Partner Puja (Most Chosen)
   const packages = [
     {
       id: 0,
       title: "Individual Puja",
       devotees: "1 Devotee",
       price: 951,
+      originalPrice: 1051,
+      badge: null,
       desc: "Single devotee Sankalp & Prasad delivery.",
-      img: "/Images/Avatars/indian_devotee_3_1788330480133.jpg"
+      img: "/Images/Avatars/indian_devotee_3_1788330480133.jpg",
+      features: [
+        "Sankalp with your Name & Gotra",
+        "Full puja video shared with you",
+        "Live updates via WhatsApp",
+        "Blessed Prasad delivered to your home"
+      ]
     },
     {
       id: 1,
       title: "Partner Puja",
-      devotees: "Up to 2 Devotees",
+      devotees: "Upto 2 Devotees",
       price: 1201,
+      originalPrice: 1301,
+      badge: "Most Chosen",
       desc: "Couple / 2 Family members Sankalp & Prasad.",
-      img: "/Images/Hero/devotee-aarti-blessing.jpg"
+      img: "/Images/Hero/devotee-aarti-blessing.jpg",
+      features: [
+        "Joint Sankalp for both Names & Gotras",
+        "Full puja video shared with you",
+        "Live updates via WhatsApp",
+        "Special blessings for you & your partner",
+        "Blessed Prasad delivered to your home"
+      ]
     },
     {
       id: 2,
       title: "Family Puja",
-      devotees: "Up to 4 Devotees",
+      devotees: "Upto 4 Devotees",
       price: 1601,
+      originalPrice: 1801,
+      badge: "Best Value",
       desc: "Immediate family members Sankalp & Prasad.",
-      img: "/Images/Avatars/indian_devotee_4_1788330503434.jpg"
+      img: "/Images/Avatars/indian_devotee_4_1788330503434.jpg",
+      features: [
+        "Family Sankalp for up to 4 members",
+        "Full puja video shared with you",
+        "Live updates via WhatsApp",
+        "Divine protection for your entire family",
+        "+ Special Ganesh Chalisa Path Seva",
+        "Blessed Prasad delivered to your home"
+      ]
     },
     {
       id: 3,
       title: "Joint Family Puja",
-      devotees: "Up to 6 Devotees",
+      devotees: "Upto 6 Devotees",
       price: 2001,
+      originalPrice: 2201,
+      badge: null,
       desc: "Extended family Sankalp, special ARCHANA & Prasad.",
-      img: "/Images/Hero/vedic-yajna-fire.jpg"
+      img: "/Images/Hero/vedic-yajna-fire.jpg",
+      features: [
+        "Full Family Sankalp for up to 6 members",
+        "Full puja video shared with you",
+        "Live updates via WhatsApp",
+        "Blessings for your entire Kul",
+        "+ Special Ganesh Chalisa Path Seva",
+        "Blessed Prasad delivered to your home"
+      ]
     }
   ];
 
@@ -105,55 +146,86 @@ export default function PujaDetailPage() {
     {
       title: "Puja Performed at Temple",
       tag: "Sanctum Ritual",
-      desc: "Chintamani Ganesh Mandir Sanctum, Kashi",
+      desc: "An experienced and verified Panditji performs the puja following proper Vedic rituals at the temple.",
       img: "/Images/panchang.jpg"
     },
     {
       title: "Guided Mantras for Home",
       tag: "Vedic Guidance",
-      desc: "Vedic audio & prayer guidelines",
+      desc: "Receive a mantra chanting guide along with do's & don'ts to follow during the puja.",
       img: "/Images/scripture.jpg"
     },
     {
       title: "Personalised Puja Video",
       tag: "WhatsApp Proof",
-      desc: "HD video proof with name chanting",
+      desc: "Full video of your Puja with Naam-Gotra sankalp chanting. Shared on WhatsApp within 1-3 days.",
       img: "/Images/Hero/ganga-aarti-flame.jpg"
     },
     {
       title: "Authentic Prasad Box",
       tag: "Doorstep Delivery",
-      desc: "Bhasma, Roli, Kumkum & Yantra",
+      desc: "Prasad prepared at the temple will be packed and delivered to your home within 7-10 days.",
       img: "/Images/prasad_thali.jpg"
     },
     {
       title: "Live WhatsApp Updates",
       tag: "Real-time Alert",
-      desc: "Real-time ritual notifications",
+      desc: "Get updates on WhatsApp for all steps of your Puja.",
       img: "/Images/Hero/kashi-golden-shikhara.jpg"
     }
   ];
 
   const faqs = [
     {
-      q: "Do I need to be physically present at the temple for this Puja?",
-      a: "No, physical presence is not required. Your name and Gotra will be formally recited during the Sankalp by head priest Challa Abhiram S. inside Chintamani Ganesh Mandir, Kashi. You will receive a personalized video proof on WhatsApp."
+      q: "What is Chintamani Ganpati famous for?",
+      a: "Chintamani Ganpati in Kashi is famous for fulfilling all sincere desires and removing deep-rooted worries ('Chinta'). Mentioned in the Skanda Purana, praying here brings mental peace and relief from life obstacles."
     },
     {
-      q: "How and when will I receive the video proof?",
-      a: "The HD Sankalp video clip showing the Pandit chanting your name & Gotra will be sent to your WhatsApp within 24 to 48 hours after the Puja completion."
+      q: "Which god is called Chintamani?",
+      a: "Lord Ganesha in his Swayambhu form is called Chintamani Vinayak — the divine deity who absorbs all anxieties and bestows wisdom, prosperity, and clarity."
     },
     {
-      q: "What is included inside the Prasad box?",
-      a: "The sanctified Prasad box contains energized Ganesh Yantra, sacred Bhasma, Roli, Kumkum, dry fruits prasad, and holy Akshat blessed at the sanctum."
+      q: "What is the significance of Chintamani Ganpati?",
+      a: "This ancient Kashi shrine is one of the most powerful Ganesha sanctums. A 1008 Sahasra Archana performed here invokes Lord Ganesha's 1,008 divine names, pacifying planetary doshas and bestowing success."
     },
     {
-      q: "Can I add names of my family members and Gotra?",
-      a: "Yes! Depending on the package selected (Individual, Partner, Family, or Joint Family), you can submit all family member names and Gotra in the Sankalp form."
+      q: "What is Ketu Graha Shanti pooja?",
+      a: "Ketu Graha Shanti Puja is a specialized Vedic ritual performed to pacify the malefic effects of Ketu (sudden losses, confusion, health issues). Offering 108 White Madar flowers into the Havan fire turns Ketu's energy into spiritual strength and career growth."
     },
     {
-      q: "What happens if the Puja is delayed or canceled?",
-      a: "Under the Utsav 100% Refund Promise, if the Puja is not performed on the announced date or video proof is not delivered, you get a full 100% refund with no questions asked."
+      q: "What is the power of Chintamani?",
+      a: "Chintamani Ganesha holds the unique power to control Ketu Graha. Worshipping this sacred form purifies karmic blocks, grants financial stability, and bestows victory in personal & professional endeavors."
+    }
+  ];
+
+  const userReviews = [
+    {
+      name: "Preeti Rana",
+      location: "Pune, Maharashtra",
+      time: "7 months ago",
+      avatar: "/Images/Avatars/indian_devotee_2_1788330428136.jpg",
+      quote: "The Utsav app is awesome and at very reasonable price we can offer... The packaging of the Prasad was also awesome. The best part is that the CEO himself is reaching out to customers. I will definitely be a permanent customer for UTSAV."
+    },
+    {
+      name: "Bideshwari Uniyal",
+      location: "Ghaziabad, UP",
+      time: "7 months ago",
+      avatar: "/Images/Avatars/indian_devotee_4_1788330503434.jpg",
+      quote: "It's Excellent service. They sent a video of the puja being performed, and I could clearly hear my name being chanted. As someone living far from these temples, this app is a blessing!"
+    },
+    {
+      name: "Rajalakshmi Saravanan",
+      location: "Bengaluru, KA",
+      time: "7 months ago",
+      avatar: "/Images/Avatars/indian_devotee_3_1788330480133.jpg",
+      quote: "It was a nice experience for me to have done the puja with Utsav app. It was done within the auspicious time period. Prasad packing & delivery time were great. Thank you Utsav. 🙏"
+    },
+    {
+      name: "Sacchin Subhash Ratnaparkhi",
+      location: "Mumbai, MH",
+      time: "8 months ago",
+      avatar: "/Images/Avatars/indian_devotee_1_1788330405371.jpg",
+      quote: "Nice puja mai achha fresh feel kar raha hoo, mere raste khul gaye hai, Ab sab sahi ho raha hai. Great regular updates, customer support, and prasad contents."
     }
   ];
 
@@ -213,9 +285,15 @@ export default function PujaDetailPage() {
               {/* RIGHT COLUMN: Metadata & Quick Participate */}
               <div className="lg:col-span-6 space-y-6">
                 <div className="space-y-3">
-                  <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
-                    SPECIAL PUJA
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block px-3 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
+                      SPECIAL PUJA
+                    </span>
+                    <span className="text-xs font-extrabold text-red-600 flex items-center gap-1">
+                      <span className="w-2 h-2 rounded-full bg-red-600 animate-ping inline-block" />
+                      Puja to Protects from Ketu's Sudden Negative Effects
+                    </span>
+                  </div>
 
                   <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
                     1008 Ganesh Sahastra Archan Path Aivam Ketu Shanti Puja
@@ -241,7 +319,7 @@ export default function PujaDetailPage() {
                       <span className="text-xs font-bold text-slate-900 ml-1">4.6</span>
                     </div>
                     <span className="text-slate-300">•</span>
-                    <span className="text-xs font-bold text-slate-700">10 Lakh+ Devotees Participated</span>
+                    <span className="text-xs font-bold text-slate-700">10 Lakh+ Devotees have offered Puja (1k+ Reviews)</span>
                   </div>
                 </div>
 
@@ -277,7 +355,7 @@ export default function PujaDetailPage() {
                   >
                     <span>Participate in Puja →</span>
                   </Button>
-                  <span className="text-xs font-bold text-slate-500">Starting from ₹951</span>
+                  <span className="text-xs font-bold text-slate-500">Starting from ₹951 <span className="line-through text-slate-400">₹1,051</span></span>
                 </div>
               </div>
             </div>
@@ -286,7 +364,7 @@ export default function PujaDetailPage() {
 
         {/* 3. PARTICIPATION / PACKAGE SELECTOR */}
         <section id="package-selector" className="py-12 sm:py-16 bg-slate-50/60 border-y border-slate-200/80">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
                 SEVA PACKAGES
@@ -307,14 +385,14 @@ export default function PujaDetailPage() {
                   <div
                     key={pkg.id}
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className={`rounded-lg overflow-hidden border transition-all duration-300 cursor-pointer flex flex-col justify-between group bg-white shadow-2xs ${
+                    className={`rounded-lg overflow-hidden border transition-all duration-300 cursor-pointer flex flex-col justify-between group bg-white shadow-2xs relative ${
                       isSelected
                         ? "border-[#C85B12] ring-2 ring-[#C85B12]/20 shadow-xs"
                         : "border-slate-200/80 hover:border-slate-300"
                     }`}
                   >
                     <div className="space-y-3">
-                      {/* Image Header with Reduced Corner Radius & Top Badges */}
+                      {/* Image Header with Top Badges */}
                       <div className="relative h-36 w-full overflow-hidden bg-slate-100">
                         <img
                           src={pkg.img}
@@ -327,6 +405,11 @@ export default function PujaDetailPage() {
                         <span className="absolute top-2.5 right-2.5 bg-white/95 text-[#C85B12] text-[10px] font-extrabold px-2.5 py-0.5 rounded-sm shadow-xs">
                           {pkg.devotees}
                         </span>
+                        {pkg.badge && (
+                          <span className="absolute bottom-2.5 left-2.5 bg-[#C85B12] text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-sm shadow-xs">
+                            {pkg.badge}
+                          </span>
+                        )}
                         {isSelected && (
                           <div className="absolute inset-0 bg-[#C85B12]/15 flex items-center justify-center backdrop-blur-[1px]">
                             <span className="w-8 h-8 rounded-full bg-[#C85B12] text-white flex items-center justify-center text-sm font-extrabold shadow-md">
@@ -337,17 +420,38 @@ export default function PujaDetailPage() {
                       </div>
 
                       {/* Card Content Body */}
-                      <div className="p-4 pt-1 space-y-1.5">
-                        <h3 className="font-heading text-base font-extrabold text-slate-900 leading-tight">{pkg.title}</h3>
-                        <p className="text-xs text-slate-500 font-normal leading-relaxed">{pkg.desc}</p>
+                      <div className="p-4 pt-1 space-y-2.5">
+                        <div className="space-y-1">
+                          <h3 className="font-heading text-base font-extrabold text-slate-900 leading-tight">{pkg.title}</h3>
+                          <p className="text-xs text-slate-500 font-normal leading-relaxed">{pkg.desc}</p>
+                        </div>
+
+                        {/* Feature Bullet Points */}
+                        <ul className="space-y-1.5 pt-1 text-[11px] text-slate-700 font-medium border-t border-slate-100">
+                          {pkg.features.map((feat, idx) => (
+                            <li key={idx} className="flex items-start gap-1.5">
+                              <Check className="w-3.5 h-3.5 text-[#C85B12] shrink-0 mt-0.5 stroke-[2.5]" />
+                              <span>{feat}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
 
-                    <div className="p-4 pt-0">
+                    <div className="p-4 pt-0 space-y-3">
                       <div className="pt-3 border-t border-slate-100 flex items-baseline justify-between">
                         <span className="text-xs font-semibold text-slate-500">Dakshina</span>
-                        <span className="text-xl font-extrabold text-slate-900">₹{pkg.price}</span>
+                        <div className="flex items-baseline gap-1.5">
+                          <span className="text-xs text-slate-400 line-through font-medium">₹{pkg.originalPrice}</span>
+                          <span className="text-xl font-extrabold text-slate-900">₹{pkg.price}</span>
+                        </div>
                       </div>
+
+                      <Button className={`w-full text-xs font-extrabold h-9 rounded-md cursor-pointer transition-colors ${
+                        isSelected ? "bg-[#C85B12] text-white" : "bg-slate-100 text-slate-800 hover:bg-slate-200"
+                      }`}>
+                        <span>{isSelected ? "Selected ✓" : "Book Now"}</span>
+                      </Button>
                     </div>
                   </div>
                 );
@@ -401,7 +505,10 @@ export default function PujaDetailPage() {
               <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-left space-y-0.5">
                   <span className="text-xs text-slate-500 font-semibold block">Total Seva Amount</span>
-                  <span className="text-2xl font-extrabold text-slate-900">₹{packages[selectedPackage].price}</span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-sm text-slate-400 line-through font-medium">₹{packages[selectedPackage].originalPrice}</span>
+                    <span className="text-2xl font-extrabold text-slate-900">₹{packages[selectedPackage].price}</span>
+                  </div>
                 </div>
 
                 <Button className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-xs sm:text-sm h-11 px-8 rounded-md shadow-xs transition-colors cursor-pointer">
@@ -417,10 +524,10 @@ export default function PujaDetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
-                PUJA INCLUSIONS
+                EVERY PUJA PACKAGE INCLUDES
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
-                Everything your Puja includes
+                Here's what you get with every booking
               </h2>
             </div>
 
@@ -466,15 +573,15 @@ export default function PujaDetailPage() {
             </h2>
 
             <p className="text-xs sm:text-sm text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed">
-              If the Puja is not performed or the promised video is not delivered, Utsav assures a 100% refund. No questions asked.
+              If puja is not performed, or video is not delivered — we assure you a 100% refund. No questions asked.
             </p>
 
             <div className="pt-2 flex flex-wrap justify-center gap-6 text-xs font-extrabold text-slate-800">
               <span className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" /> 100% Refund Assurance
+                <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" /> 100% Refund
               </span>
               <span className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" /> Guaranteed Video Proof
+                <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" /> Guaranteed Video
               </span>
               <span className="flex items-center gap-1.5">
                 <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" /> No Questions Asked
@@ -483,7 +590,7 @@ export default function PujaDetailPage() {
           </div>
         </section>
 
-        {/* 6. ABOUT THE PUJA */}
+        {/* 6. ABOUT THE PUJA, MANDIR & BHAGWAN */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="space-y-2">
@@ -491,26 +598,41 @@ export default function PujaDetailPage() {
                 SCRIPTURAL CONTEXT
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
-                About this Puja
+                About - Puja, Mandir & Bhagwan
               </h2>
             </div>
 
             <div className="prose prose-slate max-w-none text-xs sm:text-sm text-slate-700 leading-relaxed space-y-4 font-normal">
               <p>
-                <strong>Lord Ganesha</strong> is revered as <em>Vighnaharta</em> (Remover of Obstacles) and the harbinger of auspicious beginnings. Performing 1008 Ganesh Sahastra Archan Path involves sacred recitation of 1008 divine names of Lord Ganesha accompanied by offering of Modak and sacred Durva grass.
+                This powerful Visesh 1008 Ganesh Sahasra Archana Path & Sankalp Puja is performed at the sacred Sri Chintamani Ganesh Mandir in Kashi, the divine abode of Chintamani Vinayak — the remover of worries, fulfiller of desires, and the bestower of clarity, stability, and auspiciousness.
               </p>
 
               <p>
-                <strong>Chintamani Ganesh Mandir in Kashi (Varanasi)</strong> is one of the most ancient and powerful Ganesha shrines mentioned in the Kashi Khanda of Skanda Purana. Devotees believe praying here relieves mental anxiety, financial debts, and planetary doshas.
+                This anushthan involves the chanting of 1,008 sacred names of Bhagwan Ganesh, each carrying a unique vibration that removes obstacles, attracts wisdom, and purifies deep-rooted karmic blocks. Devotees seeking solutions for long-standing problems, clarity in decisions, peace of mind, career growth, relationship harmony, or protection from negativity are highly advised to perform this puja.
               </p>
 
               {isReadMoreOpen && (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4 pt-2 border-t border-slate-100">
-                  <p>
-                    <strong>Ketu Shanti Ritual:</strong> Ketu represents spiritual liberation, sudden life shifts, and intuition. When Ketu creates obstacles or health imbalances, performing Ketu Shanti alongside Ganesh Sahastra Archan pacifies malefic planetary transits.
-                  </p>
-                  <p>
-                    <strong>Why Devotees Participate:</strong> Devotees across India and abroad participate to seek financial stability, success in competitive endeavors, marriage harmony, and protection for their family.
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6 pt-4 border-t border-slate-100">
+                  <div className="space-y-2">
+                    <h3 className="font-heading text-base font-extrabold text-slate-900">About the Deity: Swayambhu Swetark Ganesha</h3>
+                    <p>The deity worshipped in this puja is a very rare form called Swetark Ganesha.</p>
+                    <ul className="list-disc pl-5 space-y-1 text-slate-600">
+                      <li><strong>Self-Manifested:</strong> This idol is not made by human hands; it appears naturally in the root of the Aak (Madar) plant after years of growth.</li>
+                      <li><strong>The Master of Ketu:</strong> Lord Ganesha is the only deity who can control Ketu. Worshipping this "Swetark" form converts Ketu's destructive energy into spiritual strength and success.</li>
+                    </ul>
+                  </div>
+
+                  <div className="space-y-2">
+                    <h3 className="font-heading text-base font-extrabold text-slate-900">About the Temple: Chintamani Ganesh Mandir, Kashi</h3>
+                    <p>This special Ketu Shanti Puja involves the 1008 Ganesh Sahasra Archana Path and is performed at the Chintamani Ganesh Mandir in Kashi.</p>
+                    <ul className="list-disc pl-5 space-y-1 text-slate-600">
+                      <li><strong>The Ritual:</strong> On Wednesday, priests will offer 108 White Madar flowers into the sacred Havan fire.</li>
+                      <li><strong>The Result:</strong> This specific offering is believed to calm Ketu immediately, turning your struggles into Career Growth, Fame, and Wealth.</li>
+                    </ul>
+                  </div>
+
+                  <p className="font-bold text-slate-900">
+                    Don't let anxiety and invisible obstacles hold you back. Perform this powerful remedy to pacify Ketu and open your path to victory. Book this puja via the Utsav App now.
                   </p>
                 </motion.div>
               )}
@@ -519,7 +641,7 @@ export default function PujaDetailPage() {
                 onClick={() => setIsReadMoreOpen(!isReadMoreOpen)}
                 className="text-xs font-extrabold text-[#C85B12] hover:underline flex items-center gap-1 pt-2 cursor-pointer"
               >
-                <span>{isReadMoreOpen ? "Show Less ↑" : "Read More About Rituals & History ↓"}</span>
+                <span>{isReadMoreOpen ? "Show Less ↑" : "Show More Details About Deity & Temple ↓"}</span>
               </button>
             </div>
           </div>
@@ -539,14 +661,14 @@ export default function PujaDetailPage() {
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
                     <h3 className="font-heading text-xl font-extrabold text-slate-900">Challa Abhiram S.</h3>
                     <span className="bg-transparent text-emerald-700 text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-emerald-600/40 flex items-center gap-1">
-                      <UserCheck className="w-3 h-3" /> Verified Pandit
+                      <UserCheck className="w-3 h-3" /> VERIFIED on Utsav since 2023
                     </span>
                   </div>
                   <p className="text-xs font-bold text-[#C85B12]">Vedic Acharya · Varanasi</p>
                 </div>
 
                 <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                  Senior Vedic Scholar and authorized head priest at Chintamani Ganesh Mandir, Kashi with over 10 years of sacred ritual practice.
+                  Authorised Pandit at Chintamani Ganesh Mandir, Kashi. Senior Vedic Scholar with over 10 years of sacred ritual practice.
                 </p>
 
                 <div className="pt-1 flex flex-wrap justify-center md:justify-start gap-4 text-xs font-bold text-slate-700">
@@ -554,7 +676,7 @@ export default function PujaDetailPage() {
                     <Award className="w-4 h-4 text-[#C85B12]" /> 9921+ Pujas Performed
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-[#C85B12]" /> 10+ Years Practice
+                    <Clock className="w-4 h-4 text-[#C85B12]" /> 10+ Years of Practice
                   </span>
                 </div>
               </div>
@@ -576,11 +698,11 @@ export default function PujaDetailPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {[
-                { title: "Financial Prosperity", desc: "Attract wealth & remove debts" },
-                { title: "Fame & Success", desc: "Enhance prestige & social standing" },
-                { title: "Removal of Ketu Dosh", desc: "Pacify malefic planetary effects" },
-                { title: "Career Growth", desc: "Overcome work & business hurdles" },
-                { title: "Business Growth", desc: "Invite trade stability & profits" }
+                { title: "Financial Prosperity", desc: "Attract wealth and blessings for overall financial well-being 💸" },
+                { title: "Fame & Success", desc: "Opens doors to success and popularity. Empower yourself to shine in your career" },
+                { title: "Removal of Ketu Dosh", desc: "Balance planetary influences to bring peace, clarity, and spiritual growth" },
+                { title: "Career Growth", desc: "Remove professional hurdles and open new doors for opportunity" },
+                { title: "Business Growth", desc: "Attracts financial prosperity for the overall growth of business" }
               ].map((item, idx) => (
                 <div key={idx} className="p-5 rounded-xl border border-slate-200/80 bg-white text-center space-y-2 hover:border-[#C85B12] transition-colors">
                   <span className="w-8 h-8 rounded-full bg-[#C85B12]/10 text-[#C85B12] font-bold text-xs flex items-center justify-center mx-auto">
@@ -602,66 +724,47 @@ export default function PujaDetailPage() {
                 STEPS
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
-                How to Participate
+                How to Participate in Puja?
               </h2>
+              <p className="text-xs sm:text-sm text-slate-600 font-normal">
+                Few easy steps to seek blessings with Utsav
+              </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 relative">
               {[
-                { num: "01", title: "Select Puja", desc: "Choose package & date" },
-                { num: "02", title: "Pay Dakshina", desc: "Secure online checkout" },
-                { num: "03", title: "Fill Sankalp", desc: "Submit Name & Gotra" },
-                { num: "04", title: "Watch Video", desc: "HD WhatsApp proof" },
-                { num: "05", title: "Prasad Home", desc: "Express delivery" }
+                { num: "1", title: "Select Puja", desc: "Select a puja and bhet daan options such as vastra daan, gau seva, brahman bhojan etc." },
+                { num: "2", title: "Pay Dakshina", desc: "Securely pay your dakshina using UPI, Card or Net Banking." },
+                { num: "3", title: "Fill Sankalp Form", desc: "Enter offering name(s), gotra, prasad delivery address & puja wish." },
+                { num: "4", title: "Watch Puja Video", desc: "Short darshan video shared on tithi. Full video with name-gotra on WhatsApp within 3-5 days." },
+                { num: "5", title: "Prasad Delivered", desc: "Authentic prasad from the temple will be delivered within 7 - 10 days" }
               ].map((step, idx) => (
                 <div key={idx} className="p-4 rounded-xl border border-slate-200/80 bg-white text-center space-y-2">
                   <span className="text-xs font-mono font-bold text-[#C85B12] px-2 py-0.5 rounded-sm bg-[#C85B12]/10 inline-block">
                     {step.num}
                   </span>
                   <h4 className="font-heading text-xs font-extrabold text-slate-900">{step.title}</h4>
-                  <p className="text-[11px] text-slate-500 font-normal">{step.desc}</p>
+                  <p className="text-[11px] text-slate-500 font-normal leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* 10. DEVOTEE REVIEWS (MATCHING HOMEPAGE SECTION 7 CARD STYLE) */}
+        {/* 10. DEVOTEE REVIEWS (AUTHENTIC USER REVIEWS) */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
-                TESTIMONIALS
+                REVIEWS FROM USERS
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
-                Devotees who participated
+                4.5⭐ 10 Lakh+ Users | 100+ Puja Performed
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  name: "Suresh Kumar",
-                  location: "Bengaluru, KA",
-                  avatar: "/Images/Avatars/indian_devotee_3_1788330480133.jpg",
-                  quote: "Pandit ji recited my name & Gotra very clearly in the Video. Blessed experience!",
-                  rating: 5
-                },
-                {
-                  name: "Meenakshi Sundaram",
-                  location: "Chennai, TN",
-                  avatar: "/Images/Avatars/indian_devotee_2_1788330428136.jpg",
-                  quote: "Received authentic Prasad box at home safely in 3 days. Extremely genuine service.",
-                  rating: 5
-                },
-                {
-                  name: "Rajesh Sharma",
-                  location: "New Delhi, DL",
-                  avatar: "/Images/Avatars/indian_devotee_1_1788330405371.jpg",
-                  quote: "Felt as if my family was present inside Chintamani Ganesh sanctum. Highly recommended!",
-                  rating: 5
-                }
-              ].map((rev, idx) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {userReviews.map((rev, idx) => (
                 <div key={idx} className="p-6 rounded-2xl border border-slate-200/80 bg-white shadow-2xs flex flex-col justify-between space-y-4">
                   <div>
                     <span className="text-2xl font-serif text-[#C85B12]/40 font-extrabold leading-none block mb-2 select-none">
@@ -672,18 +775,18 @@ export default function PujaDetailPage() {
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-3 pt-3 mt-3">
+                  <div className="flex items-center gap-3 pt-3 mt-3 border-t border-slate-100">
                     <img
                       src={rev.avatar}
                       alt={rev.name}
-                      className="w-9 h-9 rounded-full object-cover shrink-0 border border-slate-200"
+                      className="w-10 h-10 rounded-full object-cover shrink-0 border border-slate-200"
                     />
                     <div className="space-y-0.5">
                       <h4 className="font-heading text-xs font-extrabold text-slate-900 leading-tight">
                         {rev.name}
                       </h4>
-                      <span className="text-[11px] text-[#C85B12] font-medium block">
-                        @{rev.location.toLowerCase().replace(/[^a-z]/g, '')}
+                      <span className="text-[11px] text-slate-500 font-medium block">
+                        {rev.location} • {rev.time}
                       </span>
                     </div>
                   </div>
