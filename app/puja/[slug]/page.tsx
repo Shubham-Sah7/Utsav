@@ -652,32 +652,32 @@ export default function PujaDetailPage() {
         {/* 5. UTSAV PROMISE BANNER MATCHING REFERENCE */}
         <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-8 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative bg-[#EAF5EC] border border-[#C8E6C9] rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden shadow-2xs">
+            <div className="relative bg-white border border-[#E8D8C5] rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden shadow-2xs">
               {/* Left: Shield Icon + Title */}
               <div className="flex items-center gap-3.5 shrink-0 z-10">
-                <div className="w-11 h-11 rounded-full bg-[#C8E6C9]/80 text-[#1B5E20] flex items-center justify-center border border-[#A5D6A7] shadow-2xs">
+                <div className="w-11 h-11 rounded-full bg-[#10B981]/10 text-[#10B981] flex items-center justify-center border border-[#10B981]/30 shadow-2xs">
                   <ShieldCheck className="w-5.5 h-5.5 stroke-[2.2]" />
                 </div>
-                <h3 className="font-heading text-lg sm:text-xl font-bold text-[#1B5E20] tracking-tight">
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-[#6D1344] tracking-tight">
                   Utsav Promise
                 </h3>
               </div>
 
               {/* Center: Guarantee Copy + Pill Badges */}
               <div className="space-y-3 text-center md:text-left z-10 flex-1 max-w-2xl">
-                <p className="text-xs sm:text-sm text-[#2E7D32] font-medium leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#2C151B] font-medium leading-relaxed">
                   If puja is not performed, or video is not delivered — we assure you a 100% refund. No questions asked.
                 </p>
 
                 {/* Pill Badges */}
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
-                  <span className="inline-flex items-center gap-1.5 bg-white px-3.5 py-1 rounded-full border border-[#C8E6C9] text-xs font-semibold text-[#1B5E20] shadow-2xs">
+                  <span className="inline-flex items-center gap-1.5 bg-slate-50 px-3.5 py-1 rounded-full border border-[#E8D8C5] text-xs font-semibold text-[#2C151B] shadow-2xs">
                     <span className="text-[#10B981] font-bold text-xs">✓</span> 100% Refund
                   </span>
-                  <span className="inline-flex items-center gap-1.5 bg-white px-3.5 py-1 rounded-full border border-[#C8E6C9] text-xs font-semibold text-[#1B5E20] shadow-2xs">
+                  <span className="inline-flex items-center gap-1.5 bg-slate-50 px-3.5 py-1 rounded-full border border-[#E8D8C5] text-xs font-semibold text-[#2C151B] shadow-2xs">
                     <span className="text-[#10B981] font-bold text-xs">✓</span> Guaranteed Video
                   </span>
-                  <span className="inline-flex items-center gap-1.5 bg-white px-3.5 py-1 rounded-full border border-[#C8E6C9] text-xs font-semibold text-[#1B5E20] shadow-2xs">
+                  <span className="inline-flex items-center gap-1.5 bg-slate-50 px-3.5 py-1 rounded-full border border-[#E8D8C5] text-xs font-semibold text-[#2C151B] shadow-2xs">
                     <span className="text-[#10B981] font-bold text-xs">✓</span> No Questions Asked
                   </span>
                 </div>
