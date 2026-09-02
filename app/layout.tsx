@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`antialiased ${poppins.variable} ${quicksand.variable}`}>
-      <body className="min-h-screen bg-[#FFF9EF] text-[#2C151B] font-sans">
+      <body className="min-h-screen bg-white text-[#2C151B] font-sans">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

@@ -63,7 +63,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#FFF9EF] text-[#2C151B] flex flex-col font-sans selection:bg-amber-200 selection:text-amber-900">
+    <div className="min-h-screen bg-white text-[#2C151B] flex flex-col font-sans selection:bg-amber-200 selection:text-amber-900">
       {/* 0. 2-SECOND OM LOADING SPLASH REVEAL ANIMATION */}
       <AnimatePresence>
         {isLoading && (
@@ -72,7 +72,7 @@ export default function HomePage() {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, scale: 1.05 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-[100] bg-[#FFF9EF] flex flex-col items-center justify-center pointer-events-auto"
+            className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center pointer-events-auto"
           >
             {/* Ambient Radiant Rotating Dashed Ring & Pulsing Om Badge */}
             <div className="relative flex items-center justify-center">
@@ -127,7 +127,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* HERO SECTION: CENTERED MOVING HERITAGE GALLERY WITH TEMPLE PILLARS */}
-        <motion.section id="hero-section" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="relative overflow-hidden bg-[#FFF9EF] py-10 sm:py-12 lg:py-14">
+        <motion.section id="hero-section" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14">
           {/* Left-Most Authentic Temple Pillar */}
           <div className="absolute top-0 left-0 bottom-0 pointer-events-none z-10 select-none hidden lg:block w-44 xl:w-56 opacity-90">
             <img
