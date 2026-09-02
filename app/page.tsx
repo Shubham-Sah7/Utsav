@@ -128,21 +128,21 @@ export default function HomePage() {
       <main className="flex-1">
         {/* HERO SECTION: CENTERED MOVING HERITAGE GALLERY WITH TEMPLE PILLARS */}
         <motion.section id="hero-section" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14">
-          {/* Left-Most Authentic Temple Pillar */}
-          <div className="absolute top-0 left-0 bottom-0 pointer-events-none z-10 select-none hidden lg:block w-44 xl:w-56 opacity-90">
+          {/* Left-Most Authentic Temple Pillar (Un-cropped Full Image) */}
+          <div className="absolute top-0 -left-4 lg:-left-6 bottom-0 pointer-events-none z-10 select-none hidden lg:block h-full opacity-95">
             <img
               src="/Images/temple-pillar.png"
               alt="Temple Pillar Left"
-              className="h-full w-full object-cover object-right scale-x-[-1]"
+              className="h-full w-auto object-contain object-left scale-x-[-1]"
             />
           </div>
 
-          {/* Right-Most Authentic Temple Pillar */}
-          <div className="absolute top-0 right-0 bottom-0 pointer-events-none z-10 select-none hidden lg:block w-44 xl:w-56 opacity-90">
+          {/* Right-Most Authentic Temple Pillar (Un-cropped Full Image) */}
+          <div className="absolute top-0 -right-4 lg:-right-6 bottom-0 pointer-events-none z-10 select-none hidden lg:block h-full opacity-95">
             <img
               src="/Images/temple-pillar.png"
               alt="Temple Pillar Right"
-              className="h-full w-full object-cover object-right"
+              className="h-full w-auto object-contain object-right"
             />
           </div>
 
