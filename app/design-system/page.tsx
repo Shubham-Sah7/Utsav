@@ -586,9 +586,9 @@ export default function DesignSystemPage() {
                 <h3 className="font-heading text-lg font-semibold text-[#6D1344]">1. Benefit Card Component (`Card / Benefit`)</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                   {[
-                    { title: "Financial Prosperity", desc: "Attract wealth and blessings for financial well-being", img: "/images/Benefits/financial_prosperity.jpg" },
-                    { title: "Fame & Success", desc: "Opens doors to success and popularity in career", img: "/images/Benefits/fame_success.jpg" },
-                    { title: "Removal of Ketu Dosh", desc: "Balance planetary influences to bring peace & clarity", img: "/images/Benefits/ketu_dosh_removal.jpg" }
+                    { title: "Financial Prosperity", desc: "Attract wealth and blessings for financial well-being", img: "/images/benefits/financial_prosperity.jpg" },
+                    { title: "Fame & Success", desc: "Opens doors to success and popularity in career", img: "/images/benefits/fame_success.jpg" },
+                    { title: "Removal of Ketu Dosh", desc: "Balance planetary influences to bring peace & clarity", img: "/images/benefits/ketu_dosh_removal.jpg" }
                   ].map((b, i) => (
                     <div key={i} className="bg-white rounded-lg border border-[#E8D8C5] overflow-hidden space-y-3 p-3">
                       <div className="relative aspect-square sm:aspect-auto sm:h-36 w-full rounded-md overflow-hidden bg-slate-100">

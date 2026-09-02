@@ -8,7 +8,7 @@ export function Footer() {
       {/* AUTHENTIC BLENDED TEMPLE GOPURAM SILHOUETTE AT BOTTOM */}
       <div className="absolute bottom-0 left-0 right-0 h-72 sm:h-96 pointer-events-none z-0 overflow-hidden select-none opacity-25">
         <img
-          src="/images/Hero/gold-temple-gopuram.jpg"
+          src="/images/hero/gold-temple-gopuram.jpg"
           alt="Temple Gopuram Silhouette"
           className="w-full h-full object-cover object-bottom mix-blend-luminosity filter brightness-110 contrast-125"
         />
@@ -57,11 +57,11 @@ export function Footer() {
             {/* Official Google Play & App Store Download Badges */}
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <a href="#app-store" className="hover:opacity-90 transition-opacity cursor-pointer inline-block">
-                <img src="/images/Badges/app_store_badge.png" alt="Download on the App Store" className="h-10 sm:h-11 w-auto object-contain drop-shadow-2xs" />
+                <img src="/images/badges/app_store_badge.png" alt="Download on the App Store" className="h-10 sm:h-11 w-auto object-contain drop-shadow-2xs" />
               </a>
 
               <a href="#google-play" className="hover:opacity-90 transition-opacity cursor-pointer inline-block">
-                <img src="/images/Badges/google_play_badge.png" alt="Get it on Google Play" className="h-10 sm:h-11 w-auto object-contain drop-shadow-2xs" />
+                <img src="/images/badges/google_play_badge.png" alt="Get it on Google Play" className="h-10 sm:h-11 w-auto object-contain drop-shadow-2xs" />
               </a>
             </div>
           </div>

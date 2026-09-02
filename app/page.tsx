@@ -151,17 +151,17 @@ export default function HomePage() {
             <div className="inline-flex items-center gap-3 bg-white border border-[#E8D8C5] px-4 py-1.5 rounded-full mb-1 shadow-2xs">
               <div className="flex items-center -space-x-2.5 shrink-0">
                 <img
-                  src="/images/Avatars/indian_devotee_1_1788330405371.jpg"
+                  src="/images/avatars/indian_devotee_1_1788330405371.jpg"
                   alt="Devotee 1"
                   className="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-cover border-2 border-white"
                 />
                 <img
-                  src="/images/Avatars/indian_devotee_2_1788330428136.jpg"
+                  src="/images/avatars/indian_devotee_2_1788330428136.jpg"
                   alt="Devotee 2"
                   className="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-cover border-2 border-white"
                 />
                 <img
-                  src="/images/Avatars/indian_devotee_3_1788330480133.jpg"
+                  src="/images/avatars/indian_devotee_3_1788330480133.jpg"
                   alt="Devotee 3"
                   className="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-cover border-2 border-white"
                 />
@@ -228,11 +228,11 @@ export default function HomePage() {
                 {/* Set 1: Authentic Inspiration Images */}
                 <div className="flex items-center gap-6 shrink-0">
                   {[
-                    "/images/Hero/varanasi-sunset-nandi.jpg",
+                    "/images/hero/varanasi-sunset-nandi.jpg",
                     "/images/kashi-vishwanath-spire.jpg",
-                    "/images/Hero/ganga-aarti-flame.jpg",
-                    "/images/Hero/devotee-aarti-blessing.jpg",
-                    "/images/Hero/vedic-yajna-fire.jpg",
+                    "/images/hero/ganga-aarti-flame.jpg",
+                    "/images/hero/devotee-aarti-blessing.jpg",
+                    "/images/hero/vedic-yajna-fire.jpg",
                   ].map((imgUrl, idx) => (
                     <div
                       key={idx}
@@ -251,11 +251,11 @@ export default function HomePage() {
                 {/* Set 2: Duplicated for seamless infinite continuous scroll loop */}
                 <div className="flex items-center gap-6 shrink-0">
                   {[
-                    "/images/Hero/varanasi-sunset-nandi.jpg",
+                    "/images/hero/varanasi-sunset-nandi.jpg",
                     "/images/kashi-vishwanath-spire.jpg",
-                    "/images/Hero/ganga-aarti-flame.jpg",
-                    "/images/Hero/devotee-aarti-blessing.jpg",
-                    "/images/Hero/vedic-yajna-fire.jpg",
+                    "/images/hero/ganga-aarti-flame.jpg",
+                    "/images/hero/devotee-aarti-blessing.jpg",
+                    "/images/hero/vedic-yajna-fire.jpg",
                   ].map((imgUrl, idx) => (
                     <div
                       key={`dup-${idx}`}
@@ -287,22 +287,22 @@ export default function HomePage() {
               <div className="animate-marquee flex items-center gap-12 sm:gap-16 shrink-0">
                 {/* Set 1 */}
                 <div className="flex items-center gap-12 sm:gap-16 shrink-0">
-                  <img src="/images/Logos/img1.png" alt="Economic Times" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/img2.png" alt="Entrackr" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/img3.png" alt="Entrepreneur India" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/abp.0blgc1fjdoxrf.svg" alt="ABP News" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/inc42.33a5jvta684y_.svg" alt="Inc42" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/img4.png" alt="VCCircle" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/img1.png" alt="Economic Times" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/img2.png" alt="Entrackr" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/img3.png" alt="Entrepreneur India" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/abp.0blgc1fjdoxrf.svg" alt="ABP News" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/inc42.33a5jvta684y_.svg" alt="Inc42" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/img4.png" alt="VCCircle" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
                 </div>
 
                 {/* Set 2 (Duplicated for seamless continuous loop) */}
                 <div className="flex items-center gap-12 sm:gap-16 shrink-0">
-                  <img src="/images/Logos/img1.png" alt="Economic Times" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/img2.png" alt="Entrackr" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/img3.png" alt="Entrepreneur India" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/abp.0blgc1fjdoxrf.svg" alt="ABP News" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/inc42.33a5jvta684y_.svg" alt="Inc42" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                  <img src="/images/Logos/img4.png" alt="VCCircle" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/img1.png" alt="Economic Times" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/img2.png" alt="Entrackr" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/img3.png" alt="Entrepreneur India" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/abp.0blgc1fjdoxrf.svg" alt="ABP News" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/inc42.33a5jvta684y_.svg" alt="Inc42" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  <img src="/images/logos/img4.png" alt="VCCircle" className="h-7 sm:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
                 </div>
               </div>
             </div>
@@ -365,7 +365,7 @@ export default function HomePage() {
                   tithi: "Amavasya Visesh · Kalighat",
                   booked: "6.1k Participated",
                   price: "₹951",
-                  img: "/images/Pujas/kali_sanctum_hero.jpg",
+                  img: "/images/pujas/kali_sanctum_hero.jpg",
                   slug: "/puja/maa-kali-puja"
                 },
                 {
@@ -376,7 +376,7 @@ export default function HomePage() {
                   tithi: "Pradosh Visesh · Kashi",
                   booked: "4.8k Participated",
                   price: "₹851",
-                  img: "/images/Hero/ganga-aarti-flame.jpg",
+                  img: "/images/hero/ganga-aarti-flame.jpg",
                   slug: "/puja/kashi-vishwanath-abhishekam"
                 },
                 {
@@ -387,7 +387,7 @@ export default function HomePage() {
                   tithi: "Bhasma Aarti · Ujjain Mandir",
                   booked: "8.4k Participated",
                   price: "₹751",
-                  img: "/images/Hero/vedic-yajna-fire.jpg",
+                  img: "/images/hero/vedic-yajna-fire.jpg",
                   slug: "/puja/mahakaleshwar-bhasma-aarti"
                 }
               ].map((card, idx) => (
@@ -587,9 +587,9 @@ export default function HomePage() {
                     <div className="w-full h-80 sm:h-96 lg:h-[380px] rounded-md overflow-hidden relative border border-[#E8D8C5] bg-slate-100">
                       <img
                         src={[
-                          "/images/Hero/ganga-aarti-flame.jpg",
+                          "/images/hero/ganga-aarti-flame.jpg",
                           "/images/scripture.jpg",
-                          "/images/Hero/devotee-aarti-blessing.jpg",
+                          "/images/hero/devotee-aarti-blessing.jpg",
                           "/images/prasad_thali.jpg"
                         ][activeStepIndex]}
                         alt="Step Proof"
@@ -861,7 +861,7 @@ export default function HomePage() {
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
               <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
-                <img src="/images/Hero/gold-temple-gopuram.jpg" alt="Temples of India" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                <img src="/images/hero/gold-temple-gopuram.jpg" alt="Temples of India" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
               <div className="dharmik-text-box space-y-4 text-left">
@@ -949,7 +949,7 @@ export default function HomePage() {
                     name: "Suresh Kumar",
                     city: "Bengaluru, KA",
                     puja: "Kashi Vishwanath Archana",
-                    avatar: "/images/Avatars/indian_devotee_3_1788330480133.jpg",
+                    avatar: "/images/avatars/indian_devotee_3_1788330480133.jpg",
                     quote: "Superb experience! Pandit ji took my name and gotra distinctly during Sankalp. Got the HD video proof on WhatsApp within 2 days.",
                     rating: 5,
                   },
@@ -957,7 +957,7 @@ export default function HomePage() {
                     name: "Meenakshi Sundaram",
                     city: "Chennai, TN",
                     puja: "Kamakhya Shaktipeeth Seva",
-                    avatar: "/images/Avatars/indian_devotee_2_1788330428136.jpg",
+                    avatar: "/images/avatars/indian_devotee_2_1788330428136.jpg",
                     quote: "Got the video proof on WhatsApp quickly and sacred Mahaprasad reached my home safely in Chennai. Highly authentic service!",
                     rating: 5,
                   },
@@ -965,7 +965,7 @@ export default function HomePage() {
                     name: "Rajesh Sharma",
                     city: "New Delhi, DL",
                     puja: "Mahakaleshwar Bhasma Aarti",
-                    avatar: "/images/Avatars/indian_devotee_1_1788330405371.jpg",
+                    avatar: "/images/avatars/indian_devotee_1_1788330405371.jpg",
                     quote: "Very genuine temple seva platform. Sitting in Delhi, I felt as if my whole family was present inside Ujjain sanctum.",
                     rating: 5,
                   },
@@ -973,7 +973,7 @@ export default function HomePage() {
                     name: "Anita Deshmukh",
                     city: "Mumbai, MH",
                     puja: "Ashtavinayak Ganapati Seva",
-                    avatar: "/images/Avatars/indian_devotee_4_1788330503434.jpg",
+                    avatar: "/images/avatars/indian_devotee_4_1788330503434.jpg",
                     quote: "Felt like sitting inside the temple itself! The prasad box was beautifully packaged with genuine Bhasma and Kumkum.",
                     rating: 5,
                   },
@@ -982,7 +982,7 @@ export default function HomePage() {
                     name: "Suresh Kumar",
                     city: "Bengaluru, KA",
                     puja: "Kashi Vishwanath Archana",
-                    avatar: "/images/Avatars/indian_devotee_3_1788330480133.jpg",
+                    avatar: "/images/avatars/indian_devotee_3_1788330480133.jpg",
                     quote: "Superb experience! Pandit ji took my name and gotra distinctly during Sankalp. Got the HD video proof on WhatsApp within 2 days.",
                     rating: 5,
                   },
@@ -990,7 +990,7 @@ export default function HomePage() {
                     name: "Meenakshi Sundaram",
                     city: "Chennai, TN",
                     puja: "Kamakhya Shaktipeeth Seva",
-                    avatar: "/images/Avatars/indian_devotee_2_1788330428136.jpg",
+                    avatar: "/images/avatars/indian_devotee_2_1788330428136.jpg",
                     quote: "Got the video proof on WhatsApp quickly and sacred Mahaprasad reached my home safely in Chennai. Highly authentic service!",
                     rating: 5,
                   },
@@ -998,7 +998,7 @@ export default function HomePage() {
                     name: "Rajesh Sharma",
                     city: "New Delhi, DL",
                     puja: "Mahakaleshwar Bhasma Aarti",
-                    avatar: "/images/Avatars/indian_devotee_1_1788330405371.jpg",
+                    avatar: "/images/avatars/indian_devotee_1_1788330405371.jpg",
                     quote: "Very genuine temple seva platform. Sitting in Delhi, I felt as if my whole family was present inside Ujjain sanctum.",
                     rating: 5,
                   },
@@ -1006,7 +1006,7 @@ export default function HomePage() {
                     name: "Anita Deshmukh",
                     city: "Mumbai, MH",
                     puja: "Ashtavinayak Ganapati Seva",
-                    avatar: "/images/Avatars/indian_devotee_4_1788330503434.jpg",
+                    avatar: "/images/avatars/indian_devotee_4_1788330503434.jpg",
                     quote: "Felt like sitting inside the temple itself! The prasad box was beautifully packaged with genuine Bhasma and Kumkum.",
                     rating: 5,
                   },
@@ -1052,7 +1052,7 @@ export default function HomePage() {
                     name: "Vikram Singh",
                     city: "Kolkata, WB",
                     puja: "Ashta Lakshmi Dhan Yajna",
-                    avatar: "/images/Avatars/indian_devotee_1_1788330405371.jpg",
+                    avatar: "/images/avatars/indian_devotee_1_1788330405371.jpg",
                     quote: "Authentic prasad, timely video updates, and prompt customer support. Highly recommended!",
                     rating: 5,
                   },
@@ -1060,7 +1060,7 @@ export default function HomePage() {
                     name: "Pooja Kapoor",
                     city: "Pune, MH",
                     puja: "Solah Somvar Vrat Puja",
-                    avatar: "/images/Avatars/indian_devotee_4_1788330503434.jpg",
+                    avatar: "/images/avatars/indian_devotee_4_1788330503434.jpg",
                     quote: "Extremely peaceful experience. Booking online puja through Utsav was smooth and transparent.",
                     rating: 5,
                   },
@@ -1068,7 +1068,7 @@ export default function HomePage() {
                     name: "Ramesh Menon",
                     city: "Kochi, KL",
                     puja: "Mangal Dosh Bhat Puja",
-                    avatar: "/images/Avatars/indian_devotee_3_1788330480133.jpg",
+                    avatar: "/images/avatars/indian_devotee_3_1788330480133.jpg",
                     quote: "Live Sankalp video proof gave immense satisfaction and spiritual bliss to my parents.",
                     rating: 5,
                   },
@@ -1076,7 +1076,7 @@ export default function HomePage() {
                     name: "Sanjay Verma",
                     city: "Jaipur, RJ",
                     puja: "Siddh Khatu Shyam Puja",
-                    avatar: "/images/Avatars/indian_devotee_2_1788330428136.jpg",
+                    avatar: "/images/avatars/indian_devotee_2_1788330428136.jpg",
                     quote: "Very reliable platform for NRIs and devotees living far away. Received pure Prasad safely.",
                     rating: 5,
                   },
@@ -1085,7 +1085,7 @@ export default function HomePage() {
                     name: "Vikram Singh",
                     city: "Kolkata, WB",
                     puja: "Ashta Lakshmi Dhan Yajna",
-                    avatar: "/images/Avatars/indian_devotee_1_1788330405371.jpg",
+                    avatar: "/images/avatars/indian_devotee_1_1788330405371.jpg",
                     quote: "Authentic prasad, timely video updates, and prompt customer support. Highly recommended!",
                     rating: 5,
                   },
@@ -1093,7 +1093,7 @@ export default function HomePage() {
                     name: "Pooja Kapoor",
                     city: "Pune, MH",
                     puja: "Solah Somvar Vrat Puja",
-                    avatar: "/images/Avatars/indian_devotee_4_1788330503434.jpg",
+                    avatar: "/images/avatars/indian_devotee_4_1788330503434.jpg",
                     quote: "Extremely peaceful experience. Booking online puja through Utsav was smooth and transparent.",
                     rating: 5,
                   },
@@ -1101,7 +1101,7 @@ export default function HomePage() {
                     name: "Ramesh Menon",
                     city: "Kochi, KL",
                     puja: "Mangal Dosh Bhat Puja",
-                    avatar: "/images/Avatars/indian_devotee_3_1788330480133.jpg",
+                    avatar: "/images/avatars/indian_devotee_3_1788330480133.jpg",
                     quote: "Live Sankalp video proof gave immense satisfaction and spiritual bliss to my parents.",
                     rating: 5,
                   },
@@ -1109,7 +1109,7 @@ export default function HomePage() {
                     name: "Sanjay Verma",
                     city: "Jaipur, RJ",
                     puja: "Siddh Khatu Shyam Puja",
-                    avatar: "/images/Avatars/indian_devotee_2_1788330428136.jpg",
+                    avatar: "/images/avatars/indian_devotee_2_1788330428136.jpg",
                     quote: "Very reliable platform for NRIs and devotees living far away. Received pure Prasad safely.",
                     rating: 5,
                   },
@@ -1169,12 +1169,12 @@ export default function HomePage() {
             {/* Scripture Category Photo Thumbnail Tiles Bar */}
             <div id="gyan-grid-tiles" className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-3 sm:gap-4">
               {[
-                { title: "Tithi", img: "/images/Thumbnails/tithi_thumbnail_1788285465435.jpg" },
-                { title: "Chalisa", img: "/images/Thumbnails/chalisa_thumbnail_1788285480897.jpg" },
-                { title: "Temples", img: "/images/Thumbnails/temples_thumbnail_1788285499254.jpg" },
-                { title: "Stotra", img: "/images/Thumbnails/stotra_thumbnail_1788285525647.jpg" },
-                { title: "Aarti", img: "/images/Thumbnails/aarti_thumbnail_1788285547720.jpg" },
-                { title: "Dharmik Gyan", img: "/images/Thumbnails/dharmik_gyan_thumbnail_1788285643296.jpg" },
+                { title: "Tithi", img: "/images/thumbnails/tithi_thumbnail_1788285465435.jpg" },
+                { title: "Chalisa", img: "/images/thumbnails/chalisa_thumbnail_1788285480897.jpg" },
+                { title: "Temples", img: "/images/thumbnails/temples_thumbnail_1788285499254.jpg" },
+                { title: "Stotra", img: "/images/thumbnails/stotra_thumbnail_1788285525647.jpg" },
+                { title: "Aarti", img: "/images/thumbnails/aarti_thumbnail_1788285547720.jpg" },
+                { title: "Dharmik Gyan", img: "/images/thumbnails/dharmik_gyan_thumbnail_1788285643296.jpg" },
                 { title: "Bhagavad Gita", img: "/images/scripture.jpg" },
                 { title: "Mantra", img: "/images/temple_diya.jpg" },
                 { title: "Astrology", img: "/images/panchang.jpg" },
@@ -1218,7 +1218,7 @@ export default function HomePage() {
                 className="lg:col-span-8 relative rounded-xl overflow-hidden min-h-[380px] sm:min-h-[440px] flex flex-col justify-end p-6 sm:p-8 group cursor-pointer hover:shadow-xs"
               >
                 <img
-                  src="/images/Blogs/rohini_nakshatra_astrology.jpg"
+                  src="/images/blogs/rohini_nakshatra_astrology.jpg"
                   alt="Rohini Nakshatra Destiny"
                   className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -1270,7 +1270,7 @@ export default function HomePage() {
                     {
                       title: "How Color & Fragrance Influence Sacred Ritual Energies",
                       date: "Aug 02 • 6 min read",
-                      img: "/images/Pujas/devi-shaktipeeth-aarti.jpg"
+                      img: "/images/pujas/devi-shaktipeeth-aarti.jpg"
                     }
                   ].map((post, idx) => (
                     <div
@@ -1319,21 +1319,21 @@ export default function HomePage() {
                     category: "Vastu Shastra",
                     desc: "Discover simple yet powerful Vastu adjustments for your home entrance, altar, and living spaces to invite positive energy.",
                     date: "Aug 10 • 10 min read",
-                    img: "/images/Blogs/1787647032386_47122.avif"
+                    img: "/images/blogs/1787647032386_47122.avif"
                   },
                   {
                     title: "How Shani Mahadasha Affects Your Horoscope & Remedial Pujas",
                     category: "Shani Remedies",
                     desc: "Learn about the transit of Saturn, its impact on different Rashis, and scripture-sanctioned Telabhishekam and Shanti rituals.",
                     date: "Aug 10 • 10 min read",
-                    img: "/images/Blogs/1787648514924_109784.avif"
+                    img: "/images/blogs/1787648514924_109784.avif"
                   },
                   {
                     title: "Solah Somvar Vrat Vidhi, Fasting Rules & Sacred Katha",
                     category: "Vrat Katha",
                     desc: "Step-by-step rituals, auspicious dates, and sacred mantras for observing 16 Mondays fast for Lord Shiva's divine blessings.",
                     date: "Aug 10 • 10 min read",
-                    img: "/images/Blogs/1787648948047_60418.avif"
+                    img: "/images/blogs/1787648948047_60418.avif"
                   }
                 ].map((card, idx) => (
                   <motion.div
@@ -1441,7 +1441,7 @@ export default function HomePage() {
                 {/* Clean App Screenshot Card */}
                 <div className="relative w-[260px] sm:w-[280px] rounded-2xl overflow-hidden shadow-lg border border-[#E8D8C5] bg-white group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300">
                   <img
-                    src="/images/App/screen_puja.jpg"
+                    src="/images/app/screen_puja.jpg"
                     alt="Utsav App Puja Seva Screen"
                     className="w-full h-auto object-contain block"
                   />
@@ -1469,7 +1469,7 @@ export default function HomePage() {
                 {/* Clean App Screenshot Card */}
                 <div className="relative w-[260px] sm:w-[280px] rounded-2xl overflow-hidden shadow-lg border border-[#E8D8C5] bg-white group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300">
                   <img
-                    src="/images/App/screen_home.jpg"
+                    src="/images/app/screen_home.jpg"
                     alt="Utsav App Home Screen"
                     className="w-full h-auto object-contain block"
                   />
@@ -1497,7 +1497,7 @@ export default function HomePage() {
                 {/* Clean App Screenshot Card */}
                 <div className="relative w-[260px] sm:w-[280px] rounded-2xl overflow-hidden shadow-lg border border-[#E8D8C5] bg-white group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300">
                   <img
-                    src="/images/App/screen_store.jpg"
+                    src="/images/app/screen_store.jpg"
                     alt="Utsav App Siddha Store Screen"
                     className="w-full h-auto object-contain block"
                   />
@@ -1518,11 +1518,11 @@ export default function HomePage() {
             {/* Official Google Play & App Store Download Badges */}
             <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="#app-store" className="hover:opacity-90 transition-opacity cursor-pointer inline-block">
-                <img src="/images/Badges/app_store_badge.png" alt="Download on the App Store" className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs" />
+                <img src="/images/badges/app_store_badge.png" alt="Download on the App Store" className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs" />
               </a>
 
               <a href="#google-play" className="hover:opacity-90 transition-opacity cursor-pointer inline-block">
-                <img src="/images/Badges/google_play_badge.png" alt="Get it on Google Play" className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs" />
+                <img src="/images/badges/google_play_badge.png" alt="Get it on Google Play" className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs" />
               </a>
             </div>
           </div>
@@ -1658,7 +1658,7 @@ export default function HomePage() {
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                   <a href="#app-store" className="hover:opacity-90 transition-opacity cursor-pointer inline-block">
                     <img
-                      src="/images/Badges/app_store_badge.png"
+                      src="/images/badges/app_store_badge.png"
                       alt="Download on the App Store"
                       className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs"
                       onError={(e) => {
@@ -1672,7 +1672,7 @@ export default function HomePage() {
 
                   <a href="#google-play" className="hover:opacity-90 transition-opacity cursor-pointer inline-block">
                     <img
-                      src="/images/Badges/google_play_badge.png"
+                      src="/images/badges/google_play_badge.png"
                       alt="Get it on Google Play"
                       className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs"
                       onError={(e) => {
@@ -1698,7 +1698,7 @@ export default function HomePage() {
                   {/* Clean App Screenshot Card */}
                   <div className="relative w-[260px] sm:w-[285px] rounded-2xl overflow-hidden shadow-lg border border-[#E8D8C5] bg-white hover:-translate-y-1.5 transition-all duration-300">
                     <img
-                      src="/images/App/screen_home.jpg"
+                      src="/images/app/screen_home.jpg"
                       alt="Utsav Mobile App Showcase Screen"
                       className="w-full h-auto object-contain block"
                     />
