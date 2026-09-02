@@ -1446,12 +1446,18 @@ export default function HomePage() {
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                   </div>
 
-                  {/* Pure Screen Content (Zoomed 1.26x for perfect header & bottom nav alignment) */}
-                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
+                  {/* Pure Screen Content */}
+                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-[#FFF9EF]">
                     <img
                       src="/Images/App/screen_puja.jpg"
                       alt="Utsav App Puja Seva Screen"
-                      className="w-full h-full object-cover scale-[1.26] object-[center_48%]"
+                      className="w-full h-full object-cover object-top"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src.includes('/Images/')) {
+                          target.src = '/images/app/screen_puja.jpg';
+                        }
+                      }}
                     />
                   </div>
 
@@ -1486,12 +1492,18 @@ export default function HomePage() {
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                   </div>
 
-                  {/* Pure Screen Content (Zoomed 1.26x for perfect header & bottom nav alignment) */}
-                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
+                  {/* Pure Screen Content */}
+                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-[#FFF9EF]">
                     <img
                       src="/Images/App/screen_home.jpg"
                       alt="Utsav App Home Screen"
-                      className="w-full h-full object-cover scale-[1.26] object-[center_48%]"
+                      className="w-full h-full object-cover object-top"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src.includes('/Images/')) {
+                          target.src = '/images/app/screen_home.jpg';
+                        }
+                      }}
                     />
                   </div>
 
@@ -1526,12 +1538,18 @@ export default function HomePage() {
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                   </div>
 
-                  {/* Pure Screen Content (Zoomed 1.26x for perfect header & bottom nav alignment) */}
-                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
+                  {/* Pure Screen Content */}
+                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-[#FFF9EF]">
                     <img
                       src="/Images/App/screen_store.jpg"
                       alt="Utsav App Siddha Store Screen"
-                      className="w-full h-full object-cover scale-[1.26] object-[center_48%]"
+                      className="w-full h-full object-cover object-top"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src.includes('/Images/')) {
+                          target.src = '/images/app/screen_store.jpg';
+                        }
+                      }}
                     />
                   </div>
 
@@ -1693,11 +1711,31 @@ export default function HomePage() {
                 {/* Official Download Badges matching uploaded graphics */}
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                   <a href="#app-store" className="hover:opacity-90 transition-opacity cursor-pointer inline-block">
-                    <img src="/Images/Badges/app_store_badge.png" alt="Download on the App Store" className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs" />
+                    <img
+                      src="/Images/Badges/app_store_badge.png"
+                      alt="Download on the App Store"
+                      className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src.includes('/Images/')) {
+                          target.src = '/images/badges/app_store_badge.png';
+                        }
+                      }}
+                    />
                   </a>
 
                   <a href="#google-play" className="hover:opacity-90 transition-opacity cursor-pointer inline-block">
-                    <img src="/Images/Badges/google_play_badge.png" alt="Get it on Google Play" className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs" />
+                    <img
+                      src="/Images/Badges/google_play_badge.png"
+                      alt="Get it on Google Play"
+                      className="h-12 sm:h-13 w-auto object-contain drop-shadow-xs"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src.includes('/Images/')) {
+                          target.src = '/images/badges/google_play_badge.png';
+                        }
+                      }}
+                    />
                   </a>
                 </div>
               </div>
@@ -1719,12 +1757,18 @@ export default function HomePage() {
                       <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                     </div>
 
-                    {/* Pure Screen Content (Zoomed 1.26x to crop inner duplicate bezels) */}
-                    <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
+                    {/* Pure Screen Content */}
+                    <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-[#FFF9EF]">
                       <img
-                        src="/Images/App/screen_puja.jpg"
+                        src="/Images/App/screen_home.jpg"
                         alt="Utsav Mobile App Showcase Screen"
-                        className="w-full h-full object-cover scale-[1.26] object-[center_48%]"
+                        className="w-full h-full object-cover object-top"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (target.src.includes('/Images/')) {
+                            target.src = '/images/app/screen_home.jpg';
+                          }
+                        }}
                       />
                     </div>
 
