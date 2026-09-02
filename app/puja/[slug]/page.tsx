@@ -13,17 +13,9 @@ import {
   ShieldCheck,
   ChevronDown,
   ChevronRight,
-  ArrowRight,
-  Clock,
   UserCheck,
   Award,
-  BookOpen,
-  Sparkles,
-  Video,
-  Package,
-  Bell,
-  HeartHandshake,
-  ChevronLeft
+  Clock
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -102,6 +94,39 @@ export default function PujaDetailPage() {
     }
   };
 
+  const inclusions = [
+    {
+      title: "Puja Performed at Temple",
+      tag: "Sanctum Ritual",
+      desc: "Chintamani Ganesh Mandir Sanctum, Kashi",
+      img: "/Images/panchang.jpg"
+    },
+    {
+      title: "Guided Mantras for Home",
+      tag: "Vedic Guidance",
+      desc: "Vedic audio & prayer guidelines",
+      img: "/Images/scripture.jpg"
+    },
+    {
+      title: "Personalised Puja Video",
+      tag: "WhatsApp Proof",
+      desc: "HD video proof with name chanting",
+      img: "/Images/Hero/ganga-aarti-flame.jpg"
+    },
+    {
+      title: "Authentic Prasad Box",
+      tag: "Doorstep Delivery",
+      desc: "Bhasma, Roli, Kumkum & Yantra",
+      img: "/Images/prasad_thali.jpg"
+    },
+    {
+      title: "Live WhatsApp Updates",
+      tag: "Real-time Alert",
+      desc: "Real-time ritual notifications",
+      img: "/Images/Hero/kashi-golden-shikhara.jpg"
+    }
+  ];
+
   const faqs = [
     {
       q: "Do I need to be physically present at the temple for this Puja?",
@@ -147,7 +172,7 @@ export default function PujaDetailPage() {
               {/* LEFT COLUMN: Gallery */}
               <div className="lg:col-span-6 space-y-4">
                 {/* Main Active Image Frame */}
-                <div className="w-full h-80 sm:h-96 lg:h-[460px] rounded-2xl overflow-hidden relative border border-slate-200/80 bg-slate-950 group">
+                <div className="w-full h-80 sm:h-96 lg:h-[460px] rounded-xl overflow-hidden relative border border-slate-200/80 bg-slate-950 group">
                   <motion.img
                     key={selectedImgIndex}
                     src={galleryImages[selectedImgIndex].src}
@@ -157,7 +182,7 @@ export default function PujaDetailPage() {
                     transition={{ duration: 0.5 }}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full border border-white/20">
+                  <div className="absolute top-4 left-4 bg-slate-900/90 text-white text-[11px] font-bold px-3 py-1 rounded-sm border border-white/20">
                     Sacred Temple Sanctum
                   </div>
                 </div>
@@ -168,7 +193,7 @@ export default function PujaDetailPage() {
                     <button
                       key={idx}
                       onClick={() => setSelectedImgIndex(idx)}
-                      className={`h-20 rounded-xl overflow-hidden border-2 transition-all cursor-pointer relative ${
+                      className={`h-20 rounded-lg overflow-hidden border-2 transition-all cursor-pointer relative ${
                         selectedImgIndex === idx ? "border-[#C85B12] opacity-100" : "border-slate-200/80 opacity-70 hover:opacity-100"
                       }`}
                     >
@@ -190,11 +215,11 @@ export default function PujaDetailPage() {
                   </h1>
 
                   <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-700 font-semibold pt-1">
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-sm">
                       <MapPin className="w-4 h-4 text-[#C85B12]" />
                       <span>Chintamani Ganesh, Kashi</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-sm">
                       <Calendar className="w-4 h-4 text-[#C85B12]" />
                       <span>Wed · Sep 09, 2026 · Budhvar Visesh</span>
                     </div>
@@ -219,19 +244,19 @@ export default function PujaDetailPage() {
 
                 {/* Quick Benefit Badges */}
                 <div className="grid grid-cols-2 gap-3 pt-2">
-                  <div className="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200/80 bg-slate-50/50">
+                  <div className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200/80 bg-slate-50/50">
                     <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" />
                     <span className="text-xs font-bold text-slate-800">HD Video Proof</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200/80 bg-slate-50/50">
+                  <div className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200/80 bg-slate-50/50">
                     <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" />
                     <span className="text-xs font-bold text-slate-800">Doorstep Prasad</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200/80 bg-slate-50/50">
+                  <div className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200/80 bg-slate-50/50">
                     <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" />
                     <span className="text-xs font-bold text-slate-800">Name & Gotra Recited</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200/80 bg-slate-50/50">
+                  <div className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200/80 bg-slate-50/50">
                     <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" />
                     <span className="text-xs font-bold text-slate-800">100% Refund Assurance</span>
                   </div>
@@ -241,7 +266,7 @@ export default function PujaDetailPage() {
                 <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
                   <Button
                     onClick={scrollToPackage}
-                    className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-sm h-12 px-8 rounded-xl shadow-xs transition-all duration-300"
+                    className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-sm h-12 px-8 rounded-lg shadow-xs transition-all duration-300 cursor-pointer"
                   >
                     <span>Participate in Puja →</span>
                   </Button>
@@ -281,17 +306,19 @@ export default function PujaDetailPage() {
                         : "bg-white border-slate-200/80 hover:border-slate-300"
                     }`}
                   >
-                    <div className="space-y-2">
+                    <div className="space-y-2.5">
                       <div className="flex items-center justify-between">
                         <span className="text-xs font-mono font-bold text-slate-400">0{pkg.id + 1}</span>
                         {isSelected && (
-                          <span className="w-5 h-5 rounded-full bg-[#C85B12] text-white flex items-center justify-center text-xs">
+                          <span className="w-5 h-5 rounded-full bg-[#C85B12] text-white flex items-center justify-center text-xs font-bold">
                             ✓
                           </span>
                         )}
                       </div>
                       <h3 className="font-heading text-base font-extrabold text-slate-900">{pkg.title}</h3>
-                      <span className="text-xs font-bold text-[#C85B12] block">{pkg.devotees}</span>
+                      <span className="text-xs font-bold text-[#C85B12] block bg-[#C85B12]/10 px-2.5 py-1 rounded-sm w-max">
+                        {pkg.devotees}
+                      </span>
                       <p className="text-xs text-slate-500 font-normal leading-relaxed">{pkg.desc}</p>
                     </div>
 
@@ -305,7 +332,7 @@ export default function PujaDetailPage() {
             </div>
 
             {/* Sankalp Details Form */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-2xs space-y-6">
+            <div className="bg-white rounded-xl p-6 sm:p-8 border border-slate-200/80 shadow-2xs space-y-6">
               <h3 className="font-heading text-lg font-extrabold text-slate-900">
                 Enter Sankalp Details ({packages[selectedPackage].devotees})
               </h3>
@@ -320,7 +347,7 @@ export default function PujaDetailPage() {
                     value={devoteeNames}
                     onChange={(e) => setDevoteeNames(e.target.value)}
                     placeholder="e.g. Shubham Sah, Priya Sah"
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C85B12]"
+                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-[#C85B12]"
                   />
                 </div>
 
@@ -333,7 +360,7 @@ export default function PujaDetailPage() {
                     value={devoteeGotra}
                     onChange={(e) => setDevoteeGotra(e.target.value)}
                     placeholder="e.g. Kashyap / Vatsa (Leave blank if unknown)"
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C85B12]"
+                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-[#C85B12]"
                   />
                 </div>
               </div>
@@ -344,7 +371,7 @@ export default function PujaDetailPage() {
                   <span className="text-2xl font-extrabold text-slate-900">₹{packages[selectedPackage].price}</span>
                 </div>
 
-                <Button className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-sm h-12 px-10 rounded-xl shadow-xs transition-all duration-300">
+                <Button className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-sm h-12 px-10 rounded-lg shadow-xs transition-all duration-300 cursor-pointer">
                   <span>Book this Puja →</span>
                 </Button>
               </div>
@@ -352,9 +379,9 @@ export default function PujaDetailPage() {
           </div>
         </section>
 
-        {/* 4. WHAT YOU RECEIVE */}
+        {/* 4. WHAT YOU RECEIVE (RICH PHOTOGRAPHY IMAGE-FEATURE CARDS) */}
         <section className="py-12 sm:py-16 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
                 PUJA INCLUSIONS
@@ -364,25 +391,31 @@ export default function PujaDetailPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {[
-                { title: "Puja Performed at Temple", desc: "Chintamani Ganesh Sanctum, Kashi", icon: MapPin },
-                { title: "Guided Mantras for Home", desc: "Vedic audio & prayer guidelines", icon: BookOpen },
-                { title: "Personalised Puja Video", desc: "HD video proof with name chanting", icon: Video },
-                { title: "Authentic Prasad Box", desc: "Bhasma, Roli, Kumkum & Yantra", icon: Package },
-                { title: "Live WhatsApp Updates", desc: "Real-time ritual notifications", icon: Bell }
-              ].map((item, idx) => {
-                const IconComp = item.icon;
-                return (
-                  <div key={idx} className="p-5 rounded-xl border border-slate-200/80 bg-white text-center space-y-3 flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full border border-[#C85B12]/30 flex items-center justify-center text-[#C85B12]">
-                      <IconComp className="w-5 h-5 stroke-[2]" />
+            {/* Rich Photography Feature Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+              {inclusions.map((item, idx) => (
+                <div key={idx} className="bg-white rounded-xl overflow-hidden border border-slate-200/80 shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
+                  <div className="space-y-3.5">
+                    {/* Rich Image Header */}
+                    <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                      />
+                      <span className="absolute top-2.5 right-2.5 bg-white/95 text-slate-900 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-sm shadow-xs">
+                        {item.tag}
+                      </span>
                     </div>
-                    <h4 className="font-heading text-xs font-extrabold text-slate-900 leading-tight">{item.title}</h4>
-                    <p className="text-[11px] text-slate-500 font-normal leading-relaxed">{item.desc}</p>
+
+                    {/* Card Content Body */}
+                    <div className="p-4 pt-1 space-y-1.5">
+                      <h4 className="font-heading text-sm font-extrabold text-slate-900 leading-snug">{item.title}</h4>
+                      <p className="text-xs text-slate-500 font-normal leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -390,7 +423,7 @@ export default function PujaDetailPage() {
         {/* 5. UTSAV PROMISE */}
         <section className="py-10 bg-slate-50/60 border-y border-slate-200/80">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-emerald-600 text-emerald-700 text-[11px] font-extrabold uppercase">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-emerald-600 text-emerald-700 text-[11px] font-extrabold uppercase bg-emerald-50/50">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>GUARANTEED AUTHENTICITY</span>
             </div>
@@ -462,11 +495,11 @@ export default function PujaDetailPage() {
         {/* 7. PUJA PERFORMED BY */}
         <section className="py-12 sm:py-16 bg-slate-50/60 border-y border-slate-200/80">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-2xs flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
+            <div className="bg-white rounded-xl p-6 sm:p-8 border border-slate-200/80 shadow-2xs flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
               <img
                 src="/Images/Hero/devotee-aarti-blessing.jpg"
                 alt="Challa Abhiram S. Vedic Acharya"
-                className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover shrink-0 border border-slate-200"
+                className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl object-cover shrink-0 border border-slate-200"
               />
               <div className="space-y-3 text-center md:text-left flex-1">
                 <div className="space-y-1">
@@ -549,7 +582,7 @@ export default function PujaDetailPage() {
                 { num: "05", title: "Prasad Home", desc: "Express delivery" }
               ].map((step, idx) => (
                 <div key={idx} className="p-4 rounded-xl border border-slate-200/80 bg-white text-center space-y-2">
-                  <span className="text-xs font-mono font-bold text-[#C85B12] px-2 py-0.5 rounded-md bg-[#C85B12]/10 inline-block">
+                  <span className="text-xs font-mono font-bold text-[#C85B12] px-2 py-0.5 rounded-sm bg-[#C85B12]/10 inline-block">
                     {step.num}
                   </span>
                   <h4 className="font-heading text-xs font-extrabold text-slate-900">{step.title}</h4>
@@ -560,7 +593,7 @@ export default function PujaDetailPage() {
           </div>
         </section>
 
-        {/* 10. DEVOTEE REVIEWS */}
+        {/* 10. DEVOTEE REVIEWS (MATCHING HOMEPAGE SECTION 7 CARD STYLE) */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
@@ -577,32 +610,49 @@ export default function PujaDetailPage() {
                 {
                   name: "Suresh Kumar",
                   location: "Bengaluru, KA",
+                  avatar: "/Images/Avatars/indian_devotee_3_1788330480133.jpg",
                   quote: "Pandit ji recited my name & Gotra very clearly in the Video. Blessed experience!",
                   rating: 5
                 },
                 {
                   name: "Meenakshi Sundaram",
                   location: "Chennai, TN",
+                  avatar: "/Images/Avatars/indian_devotee_2_1788330428136.jpg",
                   quote: "Received authentic Prasad box at home safely in 3 days. Extremely genuine service.",
                   rating: 5
                 },
                 {
                   name: "Rajesh Sharma",
                   location: "New Delhi, DL",
+                  avatar: "/Images/Avatars/indian_devotee_1_1788330405371.jpg",
                   quote: "Felt as if my family was present inside Chintamani Ganesh sanctum. Highly recommended!",
                   rating: 5
                 }
               ].map((rev, idx) => (
-                <div key={idx} className="p-6 rounded-2xl border border-slate-200/80 bg-white space-y-4">
-                  <div className="flex items-center gap-1 text-amber-500">
-                    {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                    ))}
+                <div key={idx} className="p-6 rounded-2xl border border-slate-200/80 bg-white shadow-2xs flex flex-col justify-between space-y-4">
+                  <div>
+                    <span className="text-2xl font-serif text-[#C85B12]/40 font-extrabold leading-none block mb-2 select-none">
+                      “
+                    </span>
+                    <p className="font-heading text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed">
+                      {rev.quote}
+                    </p>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-700 font-normal leading-relaxed">“{rev.quote}”</p>
-                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-xs font-extrabold text-slate-900">{rev.name}</span>
-                    <span className="text-[11px] text-slate-400 font-normal">{rev.location}</span>
+
+                  <div className="flex items-center gap-3 pt-3 mt-3">
+                    <img
+                      src={rev.avatar}
+                      alt={rev.name}
+                      className="w-9 h-9 rounded-full object-cover shrink-0 border border-slate-200"
+                    />
+                    <div className="space-y-0.5">
+                      <h4 className="font-heading text-xs font-extrabold text-slate-900 leading-tight">
+                        {rev.name}
+                      </h4>
+                      <span className="text-[11px] text-[#C85B12] font-medium block">
+                        @{rev.location.toLowerCase().replace(/[^a-z]/g, '')}
+                      </span>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -610,7 +660,7 @@ export default function PujaDetailPage() {
           </div>
         </section>
 
-        {/* 11. FAQ ACCORDION */}
+        {/* 11. FAQ ACCORDION (MATCHING HOMEPAGE FAQ CARD STYLE) */}
         <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
@@ -626,10 +676,10 @@ export default function PujaDetailPage() {
               {faqs.map((faq, idx) => {
                 const isOpen = openFaqIndex === idx;
                 return (
-                  <div key={idx} className="bg-white rounded-xl border border-slate-200/80 overflow-hidden">
+                  <div key={idx} className="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-2xs">
                     <button
                       onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                      className="w-full text-left p-4 sm:p-5 flex items-center justify-between font-heading text-xs sm:text-sm font-extrabold text-slate-900 cursor-pointer"
+                      className="w-full text-left p-4 sm:p-5 flex items-center justify-between font-heading text-xs sm:text-sm font-extrabold text-slate-900 cursor-pointer hover:text-[#C85B12] transition-colors"
                     >
                       <span>{faq.q}</span>
                       <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${isOpen ? "rotate-180" : ""}`} />
@@ -666,7 +716,7 @@ export default function PujaDetailPage() {
 
             <Button
               onClick={scrollToPackage}
-              className="bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-xs sm:text-sm h-10 px-6 rounded-xl shadow-xs transition-all duration-300 shrink-0"
+              className="bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-xs sm:text-sm h-10 px-6 rounded-lg shadow-xs transition-all duration-300 shrink-0 cursor-pointer"
             >
               <span>Book Puja →</span>
             </Button>
