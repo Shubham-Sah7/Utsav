@@ -277,9 +277,9 @@ export default function HomePage() {
         </motion.section>
 
         {/* 2. MEDIA TRUST & AS FEATURED ON STRIP */}
-        <motion.section initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="w-full bg-white py-10 sm:py-12 overflow-hidden ">
+        <motion.section initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="w-full bg-white py-10 sm:py-12 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-xs sm:text-sm font-extrabold text-[#C85B12]/80 text-center tracking-wider uppercase block mb-8">
+            <p className="text-xs sm:text-sm font-semibold text-[#EA5C26] text-center tracking-wider uppercase block mb-8">
               As featured in leading news & media outlets across India
             </p>
 
@@ -311,7 +311,7 @@ export default function HomePage() {
         </motion.section>
 
         {/* 4. UPCOMING SACRED PUJAS & SEVA */}
-        <motion.section id="discover-pujas" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-white relative border-t border-[#E8D8C5]">
+        <motion.section id="discover-pujas" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             {/* Header & Filter Tabs */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
