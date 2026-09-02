@@ -685,33 +685,33 @@ export default function HomePage() {
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
               <div className="dharmik-text-box space-y-4 text-center md:text-left md:order-1">
-                <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider mb-2 bg-transparent">Store</span>
-                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">Puja & Seva Store</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Store</span>
+                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Puja & Seva Store</h3>
+                <p className="text-xs sm:text-sm text-[#7A676E] leading-relaxed font-normal">
                   Explore authentic puja items, energized yantras, rudraksha and doorstep sacred prasad from top temples.
                 </p>
 
-                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700 font-medium max-w-md mx-auto md:mx-0">
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md mx-auto md:mx-0">
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>100% Authentic Temples Prasad Delivery</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Energized Rudraksha & Sacred Yantras</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Direct Doorstep Express Shipping</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Blessed by Shrine Head Priests</span>
@@ -719,7 +719,7 @@ export default function HomePage() {
                 </ul>
 
                 <div className="pt-3">
-                  <Button asChild className="bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-xs sm:text-sm h-11 px-7 rounded-xl hover:shadow-xs transition-all duration-300">
+                  <Button asChild className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs sm:text-sm h-11 px-7 rounded-xl hover:shadow-xs transition-all duration-300">
                     <Link href="/siddha-store">
                       <span>Explore Seva Store</span>
                     </Link>
@@ -727,7 +727,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-slate-200/80 md:order-2">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5] md:order-2">
                 <img src="/Images/prasad_thali.jpg" alt="Puja Seva Store" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
             </motion.div>
@@ -740,38 +740,38 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-slate-200/80">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
                 <img src="/Images/scripture.jpg" alt="Dharmik Gyan & Scriptures" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
               <div className="dharmik-text-box space-y-4 text-center md:text-left">
-                <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider mb-2 bg-transparent">Scriptures</span>
-                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">Dharmik Gyan & Scriptures</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Scriptures</span>
+                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Dharmik Gyan & Scriptures</h3>
+                <p className="text-xs sm:text-sm text-[#7A676E] leading-relaxed font-normal">
                   Unlock the wisdom of ancient scriptures, puranas, mantras and stories that illuminate your spiritual journey.
                 </p>
 
-                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700 font-medium max-w-md mx-auto md:mx-0">
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md mx-auto md:mx-0">
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Ancient Puranas & Vedic Texts Library</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Daily Mantra & Chalisa Audio Recitations</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Spiritual Stories for Daily Guidance</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Curated by Experienced Vedic Scholars</span>
@@ -779,7 +779,7 @@ export default function HomePage() {
                 </ul>
 
                 <div className="pt-3">
-                  <Button asChild className="bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-xs sm:text-sm h-11 px-7 rounded-xl hover:shadow-xs transition-all duration-300">
+                  <Button asChild className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs sm:text-sm h-11 px-7 rounded-xl hover:shadow-xs transition-all duration-300">
                     <Link href="/gyan">
                       <span>Read Dharmik Gyan</span>
                     </Link>
@@ -797,33 +797,33 @@ export default function HomePage() {
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
               <div className="dharmik-text-box space-y-4 text-center md:text-left md:order-1">
-                <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider mb-2 bg-transparent">Astrology</span>
-                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">Daily Rashifal</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Astrology</span>
+                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Daily Rashifal</h3>
+                <p className="text-xs sm:text-sm text-[#7A676E] leading-relaxed font-normal">
                   Understand your astrological forecasts, daily horoscopes and planetary remedies tailored for your Rashi.
                 </p>
 
-                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700 font-medium max-w-md mx-auto md:mx-0">
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md mx-auto md:mx-0">
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Precise Daily Planetary Transit Forecasts</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Personalized Rashi & Graha Remedies</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Nakshatra-Based Personal Guidance</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Daily Auspicious Color & Gemstone Tips</span>
@@ -831,7 +831,7 @@ export default function HomePage() {
                 </ul>
 
                 <div className="pt-3">
-                  <Button asChild className="bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-xs sm:text-sm h-11 px-7 rounded-xl hover:shadow-xs transition-all duration-300">
+                  <Button asChild className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs sm:text-sm h-11 px-7 rounded-xl hover:shadow-xs transition-all duration-300">
                     <Link href="/rashifal">
                       <span>Check Rashifal</span>
                     </Link>
@@ -839,7 +839,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-slate-200/80 md:order-2">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5] md:order-2">
                 <img src="/Images/temple_diya.jpg" alt="Daily Rashifal" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
             </motion.div>
@@ -852,13 +852,13 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-slate-200/80">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
                 <img src="/Images/Hero/gold-temple-gopuram.jpg" alt="Temples of India" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
               <div className="dharmik-text-box space-y-4 text-center md:text-left">
-                <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider mb-2 bg-transparent">Shrines</span>
-                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">Temples of India</h3>
+                <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Shrines</span>
+                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Temples of India</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                   Discover history, significance, and rituals of thousands of ancient temples across India.
                 </p>
@@ -1240,7 +1240,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="lg:col-span-4 flex flex-col justify-between space-y-4"
               >
-                <h3 className="font-heading text-xl font-extrabold text-slate-900">Latest post</h3>
+                <h3 className="font-heading text-xl font-semibold text-[#6D1344]">Latest post</h3>
 
                 <div className="space-y-4 flex-1 flex flex-col justify-between">
                   {[
@@ -1277,10 +1277,10 @@ export default function HomePage() {
                         />
                       </div>
                       <div className="space-y-1">
-                        <h4 className="font-heading text-xs sm:text-sm font-bold text-slate-900 leading-snug line-clamp-2 group-hover:text-[#C85B12] transition-colors">
+                        <h4 className="font-heading text-xs sm:text-sm font-semibold text-[#6D1344] leading-snug line-clamp-2 group-hover:text-[#EA5C26] transition-colors">
                           {post.title}
                         </h4>
-                        <p className="text-[11px] text-slate-500 font-normal">{post.date}</p>
+                        <p className="text-[11px] text-[#7A676E] font-normal">{post.date}</p>
                       </div>
                     </div>
                   ))}
@@ -1292,12 +1292,12 @@ export default function HomePage() {
             <div className="space-y-8">
               {/* Section Header with Left Title & Right Navigation Arrows */}
               <div className="flex items-center justify-between">
-                <h3 className="font-heading text-2xl font-bold text-slate-900">Blog</h3>
+                <h3 className="font-heading text-2xl font-semibold text-[#6D1344]">Blog</h3>
                 <div className="flex items-center gap-2">
-                  <button className="w-9 h-9 rounded-full border border-[#D0C4AC] flex items-center justify-center text-slate-700 hover:bg-white hover:border-slate-900 transition-all cursor-pointer">
+                  <button className="w-9 h-9 rounded-full border border-[#E8D8C5] flex items-center justify-center text-[#6D1344] hover:bg-white hover:border-[#EA5C26] transition-all cursor-pointer">
                     <ChevronLeft className="w-4 h-4" />
                   </button>
-                  <button className="w-9 h-9 rounded-full border border-[#D0C4AC] flex items-center justify-center text-slate-700 hover:bg-white hover:border-slate-900 transition-all cursor-pointer">
+                  <button className="w-9 h-9 rounded-full border border-[#E8D8C5] flex items-center justify-center text-[#6D1344] hover:bg-white hover:border-[#EA5C26] transition-all cursor-pointer">
                     <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -1347,24 +1347,25 @@ export default function HomePage() {
                       </div>
 
                       {/* Category Pill */}
-                      <span className="bg-white text-slate-800 text-xs font-bold px-3 py-1 rounded-md inline-block w-fit">
+                      <span className="bg-slate-50 text-[#EA5C26] text-xs font-semibold px-3 py-1 rounded-md inline-block w-fit border border-[#E8D8C5]">
                         {card.category}
                       </span>
 
                       {/* Title */}
-                      <h4 className="font-heading text-base font-bold text-slate-900 leading-snug group-hover:text-[#C85B12] transition-colors line-clamp-2">
+                      <h4 className="font-heading text-base font-semibold text-[#6D1344] leading-snug group-hover:text-[#EA5C26] transition-colors line-clamp-2">
                         {card.title}
                       </h4>
 
                       {/* Description */}
-                      <p className="text-xs text-slate-600 font-normal leading-relaxed line-clamp-3">
+                      <p className="text-xs text-[#7A676E] font-normal leading-relaxed line-clamp-3">
                         {card.desc}
                       </p>
                     </div>
 
                     {/* Meta Footer */}
-                    <div className="pt-2 text-xs text-slate-400 font-medium">
-                      {card.date}
+                    <div className="pt-2 border-t border-[#E8D8C5]/60 flex items-center justify-between text-[11px] text-[#7A676E] font-medium">
+                      <span>{card.date}</span>
+                      <span className="text-[#EA5C26] group-hover:translate-x-1 transition-transform">Read →</span>
                     </div>
                   </motion.div>
                 ))}
@@ -1441,10 +1442,10 @@ export default function HomePage() {
 
                 {/* Card Description underneath */}
                 <div className="pt-6 text-center max-w-xs space-y-1.5">
-                  <h3 className="font-heading text-lg font-extrabold text-slate-900">
+                  <h3 className="font-heading text-lg font-semibold text-[#6D1344]">
                     Puja Seva & Mantra Jaap
                   </h3>
-                  <p className="text-xs text-slate-600 font-normal leading-relaxed">
+                  <p className="text-xs text-[#7A676E] font-normal leading-relaxed">
                     Book authentic Pujas, Khatta Dahi Arpan, and Vedic Mantra Jaap Seva at prominent temples.
                   </p>
                 </div>
@@ -1469,10 +1470,10 @@ export default function HomePage() {
 
                 {/* Card Description underneath */}
                 <div className="pt-6 text-center max-w-xs space-y-1.5">
-                  <h3 className="font-heading text-lg font-extrabold text-slate-900">
+                  <h3 className="font-heading text-lg font-semibold text-[#6D1344]">
                     Today's Special & Panchang
                   </h3>
-                  <p className="text-xs text-slate-600 font-normal leading-relaxed">
+                  <p className="text-xs text-[#7A676E] font-normal leading-relaxed">
                     Access daily Panchang, Rashifal horoscopes, Vedic calendar, and life problem solutions.
                   </p>
                 </div>
@@ -1497,10 +1498,10 @@ export default function HomePage() {
 
                 {/* Card Description underneath */}
                 <div className="pt-6 text-center max-w-xs space-y-1.5">
-                  <h3 className="font-heading text-lg font-extrabold text-slate-900">
+                  <h3 className="font-heading text-lg font-semibold text-[#6D1344]">
                     Siddha Store & Healing Bracelets
                   </h3>
-                  <p className="text-xs text-slate-600 font-normal leading-relaxed">
+                  <p className="text-xs text-[#7A676E] font-normal leading-relaxed">
                     Shop energized Money Magnet bracelets, 5 Mukhi Rudraksha, and authentic shrine Prasad.
                   </p>
                 </div>
@@ -1574,8 +1575,8 @@ export default function HomePage() {
                   >
                     <div className="w-full text-left flex items-center justify-between gap-4">
                       <h3
-                        className={`font-heading text-base sm:text-lg font-bold transition-colors ${
-                          isOpen ? "text-[#C85B12]" : "text-slate-900 group-hover:text-[#C85B12]"
+                        className={`font-heading text-base sm:text-lg font-semibold transition-colors ${
+                          isOpen ? "text-[#EA5C26]" : "text-[#6D1344] group-hover:text-[#EA5C26]"
                         }`}
                       >
                         {faq.q}
@@ -1583,7 +1584,7 @@ export default function HomePage() {
 
                       <ChevronDown
                         className={`w-5 h-5 shrink-0 transition-transform duration-300 ${
-                          isOpen ? "rotate-180 text-[#C85B12]" : "text-slate-700 group-hover:text-[#C85B12]"
+                          isOpen ? "rotate-180 text-[#EA5C26]" : "text-[#7A676E] group-hover:text-[#EA5C26]"
                         }`}
                       />
                     </div>
@@ -1597,7 +1598,7 @@ export default function HomePage() {
                           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                           className="overflow-hidden"
                         >
-                          <p className="text-slate-600 text-xs sm:text-sm font-normal leading-relaxed pt-3">
+                          <p className="text-[#7A676E] text-xs sm:text-sm font-normal leading-relaxed pt-3">
                             {faq.a}
                           </p>
                         </motion.div>
@@ -1610,9 +1611,9 @@ export default function HomePage() {
 
             {/* Bottom Contact Support Prompt matching reference */}
             <div className="text-center pt-2">
-              <p className="text-xs sm:text-sm text-slate-500 font-medium">
+              <p className="text-xs sm:text-sm text-[#7A676E] font-medium">
                 Have more questions?{" "}
-                <a href="#support" className="text-[#C85B12] hover:underline font-bold transition-all">
+                <a href="#support" className="text-[#EA5C26] hover:underline font-semibold transition-all">
                   Contact our support
                 </a>
               </p>
@@ -1633,16 +1634,16 @@ export default function HomePage() {
               
               {/* Left Column: Text & Official Download Badges (7 cols) */}
               <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 bg-transparent text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-slate-200/80">
+                <div className="inline-flex items-center gap-2 bg-transparent text-[#6D1344] text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                   <span>Devotion at Your Fingertips</span>
                 </div>
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#6D1344] tracking-tight leading-tight">
                   Your spiritual journey, finally under control.{" "}
-                  <span className="text-[#C85B12]">Download Utsav today</span>
+                  <span className="text-[#EA5C26]">Download Utsav today</span>
                 </h2>
 
-                <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
+                <p className="text-sm sm:text-base text-[#7A676E] font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
                   Utsav brings sacred pujas, live video proof, daily Panchang, and doorstep Mahaprasad together in one smart dashboard — built for how you actually practice your faith.
                 </p>
 
