@@ -420,7 +420,7 @@ export default function PujaDetailPage() {
         </motion.section>
 
         {/* 3. PARTICIPATION / PACKAGE SELECTOR */}
-        <motion.section id="package-selector" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white border-y border-[#E8D8C5]">
+        <motion.section id="package-selector" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider bg-transparent">
@@ -450,7 +450,7 @@ export default function PujaDetailPage() {
                   >
                     <div className="space-y-3">
                       {/* Image Header with Top Badges */}
-                      <div className="relative h-36 w-full overflow-hidden bg-[#F6E1C6]/40">
+                      <div className="relative h-36 w-full overflow-hidden bg-slate-100">
                         <img
                           src={pkg.img}
                           alt={pkg.title}
@@ -526,7 +526,7 @@ export default function PujaDetailPage() {
                     Selected Seva: <span className="font-bold text-[#EA5C26]">{packages[selectedPackage].title} ({packages[selectedPackage].devotees})</span>
                   </p>
                 </div>
-                <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#F6E1C6]/60 text-[#6D1344] w-max border border-[#E8D8C5]">
+                <span className="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-[#6D1344] w-max border border-[#E8D8C5]">
                   Guided Step 2 of 4
                 </span>
               </div>
@@ -541,7 +541,7 @@ export default function PujaDetailPage() {
                     value={devoteeNames}
                     onChange={(e) => setDevoteeNames(e.target.value)}
                     placeholder="e.g. Ramesh Kumar, Sunita Kumar"
-                    className="w-full px-4 py-3 rounded-xl border border-[#E8D8C5] text-sm bg-[#FFF9EF]/50 text-[#2C151B] focus:bg-white focus:outline-none focus:border-[#EA5C26] min-h-[44px] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-[#E8D8C5] text-sm bg-slate-50 text-[#2C151B] focus:bg-white focus:outline-none focus:border-[#EA5C26] min-h-[44px] transition-colors"
                   />
                 </div>
 
@@ -554,7 +554,7 @@ export default function PujaDetailPage() {
                     value={devoteeGotra}
                     onChange={(e) => setDevoteeGotra(e.target.value)}
                     placeholder="e.g. Kashyap / Vatsa (Leave blank if unknown)"
-                    className="w-full px-4 py-3 rounded-xl border border-[#E8D8C5] text-sm bg-[#FFF9EF]/50 text-[#2C151B] focus:bg-white focus:outline-none focus:border-[#EA5C26] min-h-[44px] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-[#E8D8C5] text-sm bg-slate-50 text-[#2C151B] focus:bg-white focus:outline-none focus:border-[#EA5C26] min-h-[44px] transition-colors"
                   />
                 </div>
               </div>
@@ -577,7 +577,7 @@ export default function PujaDetailPage() {
         </motion.section>
 
         {/* 4. WHAT YOU RECEIVE */}
-        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-[#FFF9EF]">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-bold uppercase tracking-wider bg-transparent">
@@ -593,7 +593,7 @@ export default function PujaDetailPage() {
               {inclusions.map((item, idx) => (
                 <div key={idx} className="bg-white rounded-2xl overflow-hidden border border-[#E8D8C5] shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3.5">
-                    <div className="relative h-44 w-full overflow-hidden bg-[#F6E1C6]/30">
+                    <div className="relative h-44 w-full overflow-hidden bg-slate-100">
                       <img
                         src={item.img}
                         alt={item.title}
@@ -616,7 +616,7 @@ export default function PujaDetailPage() {
         </motion.section>
 
         {/* 5. UTSAV PROMISE */}
-        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-10 bg-[#F6E1C6]/30 border-y border-[#E8D8C5]">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-10 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#6D1344] text-[#6D1344] text-[11px] font-bold uppercase bg-transparent">
               <ShieldCheck className="w-4 h-4 text-[#EA5C26]" />
@@ -646,7 +646,7 @@ export default function PujaDetailPage() {
         </motion.section>
 
         {/* 6. ABOUT THE PUJA, MANDIR & BHAGWAN */}
-        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-[#FFF9EF]">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-bold uppercase tracking-wider bg-transparent">
@@ -703,7 +703,7 @@ export default function PujaDetailPage() {
         </motion.section>
 
         {/* 7. PUJA PERFORMED BY */}
-        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-[#F6E1C6]/30 border-y border-[#E8D8C5]">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8D8C5] shadow-xs flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
               <img
@@ -715,7 +715,7 @@ export default function PujaDetailPage() {
                 <div className="space-y-1">
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
                     <h3 className="font-heading text-xl font-bold text-[#6D1344]">Challa Abhiram S.</h3>
-                    <span className="bg-[#FFF9EF] text-[#6D1344] text-[10px] font-bold px-3 py-1 rounded-full border border-[#E8D8C5] flex items-center gap-1">
+                    <span className="bg-slate-50 text-[#6D1344] text-[10px] font-bold px-3 py-1 rounded-full border border-[#E8D8C5] flex items-center gap-1">
                       <UserCheck className="w-3 h-3 text-[#EA5C26]" /> VERIFIED on Utsav since 2023
                     </span>
                   </div>
@@ -740,7 +740,7 @@ export default function PujaDetailPage() {
         </motion.section>
 
         {/* 8. WHY PERFORM THIS PUJA? */}
-        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-[#FFF9EF]">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-bold uppercase tracking-wider bg-transparent">
@@ -755,7 +755,7 @@ export default function PujaDetailPage() {
               {benefitsWithImages.map((item, idx) => (
                 <div key={idx} className="rounded-2xl overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3">
-                    <div className="relative h-32 w-full overflow-hidden bg-[#F6E1C6]/30">
+                    <div className="relative h-32 w-full overflow-hidden bg-slate-100">
                       <img
                         src={item.img}
                         alt={item.title}
@@ -778,7 +778,7 @@ export default function PujaDetailPage() {
         </motion.section>
 
         {/* 9. HOW TO PARTICIPATE */}
-        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-[#F6E1C6]/30 border-y border-[#E8D8C5]">
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="text-center space-y-2">
               <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-bold uppercase tracking-wider bg-transparent">
