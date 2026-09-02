@@ -58,6 +58,12 @@ export default function DesignSystemPage() {
               <span className="bg-slate-100 text-[#6D1344] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-[#E8D8C5]">
                 v2.0 Formal Specification
               </span>
+              <Link
+                href="/checkout-v2/maa-bhadrakali"
+                className="bg-[#6D1344] hover:bg-[#580E36] text-[#FFF9EF] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-[#E8D8C5] inline-flex items-center gap-1 transition-all"
+              >
+                <span>⚡ Test Checkout V2 Prototype →</span>
+              </Link>
             </div>
 
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
