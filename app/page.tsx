@@ -1441,12 +1441,12 @@ export default function HomePage() {
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                   </div>
 
-                  {/* Pure Screen Content (Zoomed 1.38x to remove inner duplicate bezels) */}
+                  {/* Pure Screen Content (Zoomed 1.26x for perfect header & bottom nav alignment) */}
                   <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
                     <img
                       src="/Images/App/screen_puja.jpg"
                       alt="Utsav App Puja Seva Screen"
-                      className="w-full h-full object-cover scale-[1.38] object-[center_42%]"
+                      className="w-full h-full object-cover scale-[1.26] object-[center_48%]"
                     />
                   </div>
 
@@ -1481,12 +1481,12 @@ export default function HomePage() {
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                   </div>
 
-                  {/* Pure Screen Content (Zoomed 1.38x to remove inner duplicate bezels) */}
+                  {/* Pure Screen Content (Zoomed 1.26x for perfect header & bottom nav alignment) */}
                   <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
                     <img
                       src="/Images/App/screen_home.jpg"
                       alt="Utsav App Home Screen"
-                      className="w-full h-full object-cover scale-[1.38] object-[center_42%]"
+                      className="w-full h-full object-cover scale-[1.26] object-[center_48%]"
                     />
                   </div>
 
@@ -1521,12 +1521,12 @@ export default function HomePage() {
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                   </div>
 
-                  {/* Pure Screen Content (Zoomed 1.38x to remove inner duplicate bezels) */}
+                  {/* Pure Screen Content (Zoomed 1.26x for perfect header & bottom nav alignment) */}
                   <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
                     <img
                       src="/Images/App/screen_store.jpg"
                       alt="Utsav App Siddha Store Screen"
-                      className="w-full h-full object-cover scale-[1.38] object-[center_42%]"
+                      className="w-full h-full object-cover scale-[1.26] object-[center_48%]"
                     />
                   </div>
 
