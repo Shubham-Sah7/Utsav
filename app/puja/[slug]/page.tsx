@@ -301,7 +301,7 @@ export default function PujaDetailPage() {
               <ChevronRight className="w-3 h-3 text-[#7A676E]" />
               <Link href="/#discover-pujas" className="hover:text-[#6D1344] transition-colors">Puja Seva</Link>
               <ChevronRight className="w-3 h-3 text-[#7A676E]" />
-              <span className="text-[#6D1344] font-bold">1008 Ganesh Sahastra Archan</span>
+              <span className="text-[#6D1344] font-bold">1008 Ganesh Sahastra Archana</span>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -353,7 +353,7 @@ export default function PujaDetailPage() {
                   </div>
 
                   <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight">
-                    1008 Ganesh Sahastra Archan Path Aivam Ketu Shanti Puja
+                    1008 Ganesh Sahastra Archana Path Aivam Ketu Shanti Puja
                   </h1>
 
                   <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-[#2C151B] font-medium pt-0.5">
