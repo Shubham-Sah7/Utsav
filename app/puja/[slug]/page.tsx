@@ -797,11 +797,11 @@ export default function PujaDetailPage() {
               {benefitsWithImages.map((item, idx) => (
                 <div key={idx} className="rounded-lg overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3">
-                    <div className="relative h-32 w-full overflow-hidden bg-slate-100">
+                    <div className="relative aspect-[4/3] sm:aspect-auto sm:h-36 w-full overflow-hidden bg-slate-100 rounded-t-lg">
                       <img
                         src={item.img}
                         alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                       />
                       <span className="absolute top-2.5 left-2.5 bg-[#6D1344] text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full">
                         0{idx + 1}
@@ -838,11 +838,11 @@ export default function PujaDetailPage() {
               {stepsWithImages.map((step, idx) => (
                 <div key={idx} className="rounded-lg overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3">
-                    <div className="relative h-32 w-full overflow-hidden bg-[#F6E1C6]/30">
+                    <div className="relative aspect-[4/3] sm:aspect-auto sm:h-36 w-full overflow-hidden bg-[#F6E1C6]/30 rounded-t-lg">
                       <img
                         src={step.img}
                         alt={step.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                       />
                       <span className="absolute top-2.5 left-2.5 bg-[#EA5C26] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">
                         {step.num}
