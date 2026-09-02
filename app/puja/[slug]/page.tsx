@@ -47,7 +47,7 @@ export default function PujaDetailPage() {
       originalPrice: 1051,
       badge: null,
       desc: "Single devotee Sankalp & Prasad delivery.",
-      img: "/Images/Avatars/indian_devotee_3_1788330480133.jpg",
+      img: "/Images/Avatars/indian_devotee_1_1788330405371.jpg",
       features: [
         "Sankalp with your Name & Gotra",
         "Full puja video shared with you",
@@ -63,7 +63,7 @@ export default function PujaDetailPage() {
       originalPrice: 1301,
       badge: "Most Chosen",
       desc: "Couple / 2 Family members Sankalp & Prasad.",
-      img: "/Images/Hero/devotee-aarti-blessing.jpg",
+      img: "/Images/Packages/partner_couple.jpg",
       features: [
         "Joint Sankalp for both Names & Gotras",
         "Full puja video shared with you",
@@ -80,7 +80,7 @@ export default function PujaDetailPage() {
       originalPrice: 1801,
       badge: "Best Value",
       desc: "Immediate family members Sankalp & Prasad.",
-      img: "/Images/Avatars/indian_devotee_4_1788330503434.jpg",
+      img: "/Images/Packages/family_group.jpg",
       features: [
         "Family Sankalp for up to 4 members",
         "Full puja video shared with you",
@@ -98,7 +98,7 @@ export default function PujaDetailPage() {
       originalPrice: 2201,
       badge: null,
       desc: "Extended family Sankalp, special ARCHANA & Prasad.",
-      img: "/Images/Hero/vedic-yajna-fire.jpg",
+      img: "/Images/Packages/joint_family_havan.jpg",
       features: [
         "Full Family Sankalp for up to 6 members",
         "Full puja video shared with you",
