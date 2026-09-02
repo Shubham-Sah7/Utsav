@@ -693,35 +693,62 @@ export default function PujaDetailPage() {
           </div>
         </section>
 
-        {/* 11. FAQ ACCORDION (MATCHING HOMEPAGE FAQ CARD STYLE) */}
-        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-            <div className="text-center space-y-2">
-              <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider bg-transparent">
-                FREQUENTLY ASKED QUESTIONS
+        {/* 11. FREQUENTLY ASKED QUESTIONS (EXACT MATCHING HOMEPAGE STYLE) */}
+        <section className="py-12 sm:py-16 bg-white border-t border-slate-200/80">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div className="text-center space-y-3">
+              <span className="inline-block px-3.5 py-1.5 rounded-full border border-slate-200/80 text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider bg-transparent">
+                Frequently Asked Questions
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
-                Puja FAQ
+              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Puja <span className="text-[#C85B12]">FAQ</span>
               </h2>
+              <p className="text-xs sm:text-sm text-slate-600 font-normal max-w-lg mx-auto">
+                Got questions about booking, video proof or doorstep prasad? We've got answers.
+              </p>
             </div>
 
-            <div className="space-y-3">
+            {/* Accordion List with Horizontal Separators matching homepage */}
+            <div className="divide-y divide-slate-200/80 border-t border-b border-slate-200/80">
               {faqs.map((faq, idx) => {
                 const isOpen = openFaqIndex === idx;
                 return (
-                  <div key={idx} className="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-2xs">
-                    <button
-                      onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                      className="w-full text-left p-4 sm:p-5 flex items-center justify-between font-heading text-xs sm:text-sm font-extrabold text-slate-900 cursor-pointer hover:text-[#C85B12] transition-colors"
-                    >
-                      <span>{faq.q}</span>
-                      <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${isOpen ? "rotate-180" : ""}`} />
-                    </button>
-                    {isOpen && (
-                      <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="px-4 pb-5 sm:px-5 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                        {faq.a}
-                      </motion.div>
-                    )}
+                  <div
+                    key={idx}
+                    className="py-5 sm:py-6 cursor-pointer transition-colors group"
+                    onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
+                  >
+                    <div className="w-full text-left flex items-center justify-between gap-4">
+                      <h3
+                        className={`font-heading text-base sm:text-lg font-bold transition-colors ${
+                          isOpen ? "text-[#C85B12]" : "text-slate-900 group-hover:text-[#C85B12]"
+                        }`}
+                      >
+                        {faq.q}
+                      </h3>
+
+                      <ChevronDown
+                        className={`w-5 h-5 shrink-0 transition-transform duration-300 ${
+                          isOpen ? "rotate-180 text-[#C85B12]" : "text-slate-700 group-hover:text-[#C85B12]"
+                        }`}
+                      />
+                    </div>
+
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                          className="overflow-hidden"
+                        >
+                          <p className="text-slate-600 text-xs sm:text-sm font-normal leading-relaxed pt-3">
+                            {faq.a}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 );
               })}
