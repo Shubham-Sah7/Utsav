@@ -486,66 +486,72 @@ export default function PujaDetailPage() {
                         : "border-[#E8D8C5] hover:border-[#EA5C26]/40"
                     }`}
                   >
-                    <div className="space-y-3">
-                      {/* Image Header with Top Badges */}
-                      <div className="relative h-36 w-full overflow-hidden bg-slate-100">
-                        <img
-                          src={pkg.img}
-                          alt={pkg.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                        />
-                        <span className="absolute top-2.5 left-2.5 bg-[#6D1344] text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">
-                          Option 0{pkg.id + 1}
-                        </span>
-                        <span className="absolute top-2.5 right-2.5 bg-white/95 text-[#6D1344] text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs">
-                          {pkg.devotees}
-                        </span>
-                        {pkg.badge && (
-                          <span className="absolute bottom-2.5 left-2.5 bg-[#EA5C26] text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full shadow-xs">
-                            {pkg.badge}
-                          </span>
-                        )}
-                        {isSelected && (
-                          <div className="absolute inset-0 bg-[#EA5C26]/15 flex items-center justify-center backdrop-blur-[1px]">
-                            <span className="w-9 h-9 rounded-full bg-[#EA5C26] text-white flex items-center justify-center text-sm font-bold shadow-md">
-                              ✓
-                            </span>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Card Content Body */}
-                      <div className="p-4 pt-1 space-y-2.5">
-                        <div className="space-y-1">
-                          <h3 className="font-heading text-base font-bold text-[#6D1344] leading-tight">{pkg.title}</h3>
-                          <p className="text-xs text-[#7A676E] font-normal leading-relaxed">{pkg.desc}</p>
+                    <div>
+                      {/* HEADER SECTION MATCHING REFERENCE SCREENSHOT */}
+                      <div className="relative p-4 bg-[#FAF4EC] min-h-[110px] flex items-center justify-between border-b border-[#E8D8C5]/50 overflow-hidden">
+                        {/* Golden Mandala Background SVG Motif */}
+                        <div className="absolute -top-4 -right-4 w-32 h-32 opacity-20 pointer-events-none">
+                          <svg viewBox="0 0 100 100" className="w-full h-full fill-none stroke-[#C85B12]" strokeWidth="1">
+                            <circle cx="50" cy="50" r="45" />
+                            <circle cx="50" cy="50" r="32" />
+                            <circle cx="50" cy="50" r="18" />
+                            <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" />
+                          </svg>
                         </div>
 
-                        {/* Feature Bullet Points */}
-                        <ul className="space-y-1.5 pt-1 text-[11px] text-[#2C151B] font-medium">
+                        {/* Title, Subtitle, Price & Badge */}
+                        <div className="relative z-10 space-y-1 pr-2">
+                          <h3 className="font-heading text-sm sm:text-base font-semibold text-[#6D1344] leading-snug">
+                            {pkg.title}
+                          </h3>
+                          <p className="text-xs text-[#7A676E] font-medium">{pkg.devotees}</p>
+                          <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                            <span className="text-base font-bold text-[#6D1344]">₹{pkg.price.toLocaleString("en-IN")}</span>
+                            {pkg.badge && (
+                              <span
+                                className={`text-[10px] font-bold px-2 py-0.5 rounded-full text-white ${
+                                  pkg.badge === "Most Chosen" ? "bg-[#EA5C26]" : "bg-[#10B981]"
+                                }`}
+                              >
+                                {pkg.badge}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Top-Right Devotee Portrait Cutout Image */}
+                        <div className="relative z-10 w-20 h-20 shrink-0 rounded-xl overflow-hidden border border-[#E8D8C5]/80 bg-white/80 shadow-2xs">
+                          <img
+                            src={pkg.img}
+                            alt={pkg.title}
+                            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                      </div>
+
+                      {/* CARD BODY WITH GREEN CHECKMARKS */}
+                      <div className="p-4 space-y-3">
+                        <ul className="space-y-2 text-xs text-[#2C151B] font-normal leading-tight">
                           {pkg.features.map((feat, idx) => (
-                            <li key={idx} className="flex items-start gap-1.5">
-                              <Check className="w-3.5 h-3.5 text-[#EA5C26] shrink-0 mt-0.5 stroke-[2.5]" />
-                              <span>{feat}</span>
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-[#10B981] shrink-0 font-bold text-xs mt-0.5">✓</span>
+                              <span className="text-[#3D262D]">{feat}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
 
-                    <div className="p-4 pt-0 space-y-3">
-                      <div className="flex items-baseline justify-between border-t border-[#E8D8C5]/60 pt-3">
-                        <span className="text-xs font-semibold text-[#7A676E]">Dakshina</span>
-                        <div className="flex items-baseline gap-1.5">
-                          <span className="text-xs text-[#7A676E]/60 line-through font-medium">₹{pkg.originalPrice}</span>
-                          <span className="text-xl font-bold text-[#6D1344]">₹{pkg.price}</span>
-                        </div>
-                      </div>
-
-                      <Button className={`w-full text-xs font-bold min-h-[44px] rounded-xl cursor-pointer transition-colors ${
-                        isSelected ? "bg-[#EA5C26] text-white" : "bg-[#F6E1C6]/60 text-[#6D1344] hover:bg-[#F6E1C6]"
-                      }`}>
-                        <span>{isSelected ? "Selected ✓" : "Select Seva"}</span>
+                    {/* FOOTER CTA BUTTON */}
+                    <div className="p-4 pt-0">
+                      <Button
+                        className={`w-full text-xs font-semibold h-11 rounded-xl cursor-pointer transition-all duration-300 ${
+                          isSelected
+                            ? "bg-[#FF6B50] hover:bg-[#EA5C26] text-white shadow-xs"
+                            : "bg-[#FF6B50] hover:bg-[#EA5C26] text-white"
+                        }`}
+                      >
+                        <span>Book Now</span>
                       </Button>
                     </div>
                   </div>
