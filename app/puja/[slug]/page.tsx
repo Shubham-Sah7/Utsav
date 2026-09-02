@@ -480,18 +480,18 @@ export default function PujaDetailPage() {
                   <div
                     key={pkg.id}
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className={`rounded-2xl overflow-hidden border transition-all duration-300 cursor-pointer flex flex-col justify-between group bg-white shadow-2xs relative ${
+                    className={`rounded-lg overflow-hidden border transition-all duration-300 cursor-pointer flex flex-col justify-between group bg-white shadow-2xs relative ${
                       isSelected
                         ? "border-[#EA5C26] ring-2 ring-[#EA5C26]/20 shadow-md"
                         : "border-[#E8D8C5] hover:border-[#EA5C26]/40"
                     }`}
                   >
                     <div>
-                      {/* HEADER SECTION MATCHING REFERENCE SCREENSHOT */}
-                      <div className="relative p-4 bg-[#FAF4EC] min-h-[110px] flex items-center justify-between border-b border-[#E8D8C5]/50 overflow-hidden">
+                      {/* HEADER SECTION WITH ENLARGED PRIMARY IMAGE & REDUCED CORNER RADIUS */}
+                      <div className="relative p-4 bg-[#FAF4EC] min-h-[135px] flex items-center justify-between border-b border-[#E8D8C5]/50 overflow-hidden rounded-t-lg">
                         {/* Golden Mandala Background SVG Motif */}
-                        <div className="absolute -top-4 -right-4 w-32 h-32 opacity-20 pointer-events-none">
-                          <svg viewBox="0 0 100 100" className="w-full h-full fill-none stroke-[#C85B12]" strokeWidth="1">
+                        <div className="absolute -top-6 -right-6 w-40 h-40 opacity-15 pointer-events-none">
+                          <svg viewBox="0 0 100 100" className="w-full h-full fill-none stroke-[#C85B12]" strokeWidth="0.8">
                             <circle cx="50" cy="50" r="45" />
                             <circle cx="50" cy="50" r="32" />
                             <circle cx="50" cy="50" r="18" />
@@ -499,9 +499,9 @@ export default function PujaDetailPage() {
                           </svg>
                         </div>
 
-                        {/* Title, Subtitle, Price & Badge */}
-                        <div className="relative z-10 space-y-1 pr-2">
-                          <h3 className="font-heading text-sm sm:text-base font-semibold text-[#6D1344] leading-snug">
+                        {/* Left Metadata: Title, Subtitle, Price & Badge */}
+                        <div className="relative z-10 space-y-1 pr-2 flex-1 min-w-0">
+                          <h3 className="font-heading text-sm sm:text-base font-semibold text-[#6D1344] leading-tight truncate">
                             {pkg.title}
                           </h3>
                           <p className="text-xs text-[#7A676E] font-medium">{pkg.devotees}</p>
@@ -509,7 +509,7 @@ export default function PujaDetailPage() {
                             <span className="text-base font-bold text-[#6D1344]">₹{pkg.price.toLocaleString("en-IN")}</span>
                             {pkg.badge && (
                               <span
-                                className={`text-[10px] font-bold px-2 py-0.5 rounded-full text-white ${
+                                className={`text-[10px] font-bold px-2 py-0.5 rounded-md text-white ${
                                   pkg.badge === "Most Chosen" ? "bg-[#EA5C26]" : "bg-[#10B981]"
                                 }`}
                               >
@@ -519,12 +519,12 @@ export default function PujaDetailPage() {
                           </div>
                         </div>
 
-                        {/* Top-Right Devotee Portrait Cutout Image */}
-                        <div className="relative z-10 w-20 h-20 shrink-0 rounded-xl overflow-hidden border border-[#E8D8C5]/80 bg-white/80 shadow-2xs">
+                        {/* Top-Right PRIMARY ENLARGED IMAGE CONTAINER */}
+                        <div className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 shrink-0 rounded-lg overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs">
                           <img
                             src={pkg.img}
                             alt={pkg.title}
-                            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
                       </div>
@@ -542,10 +542,10 @@ export default function PujaDetailPage() {
                       </div>
                     </div>
 
-                    {/* FOOTER CTA BUTTON */}
+                    {/* FOOTER CTA BUTTON WITH REDUCED CORNER RADIUS */}
                     <div className="p-4 pt-0">
                       <Button
-                        className={`w-full text-xs font-semibold h-11 rounded-xl cursor-pointer transition-all duration-300 ${
+                        className={`w-full text-xs font-semibold h-10 rounded-lg cursor-pointer transition-all duration-300 ${
                           isSelected
                             ? "bg-[#FF6B50] hover:bg-[#EA5C26] text-white shadow-xs"
                             : "bg-[#FF6B50] hover:bg-[#EA5C26] text-white"
@@ -560,7 +560,7 @@ export default function PujaDetailPage() {
             </div>
 
             {/* Sankalp Details Form */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8D8C5] shadow-xs space-y-6">
+            <div className="bg-white rounded-lg p-6 sm:p-8 border border-[#E8D8C5] shadow-xs space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-1 border-b border-[#E8D8C5]/60">
                 <div>
                   <h3 className="font-heading text-lg font-bold text-[#6D1344]">
