@@ -489,16 +489,6 @@ export default function PujaDetailPage() {
                     <div>
                       {/* HEADER SECTION WITH ENLARGED PRIMARY IMAGE & REDUCED CORNER RADIUS */}
                       <div className="relative p-4 bg-[#FAF4EC] min-h-[135px] flex items-center justify-between border-b border-[#E8D8C5]/50 overflow-hidden rounded-t-lg">
-                        {/* Golden Mandala Background SVG Motif */}
-                        <div className="absolute -top-6 -right-6 w-40 h-40 opacity-15 pointer-events-none">
-                          <svg viewBox="0 0 100 100" className="w-full h-full fill-none stroke-[#C85B12]" strokeWidth="0.8">
-                            <circle cx="50" cy="50" r="45" />
-                            <circle cx="50" cy="50" r="32" />
-                            <circle cx="50" cy="50" r="18" />
-                            <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" />
-                          </svg>
-                        </div>
-
                         {/* Left Metadata: Title, Subtitle, Price & Badge */}
                         <div className="relative z-10 space-y-1 pr-2 flex-1 min-w-0">
                           <h3 className="font-heading text-sm sm:text-base font-semibold text-[#6D1344] leading-tight truncate">
@@ -663,17 +653,6 @@ export default function PujaDetailPage() {
         <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-8 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative bg-[#EAF5EC] border border-[#C8E6C9] rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden shadow-2xs">
-              
-              {/* Background Mandala Watermark SVG */}
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-64 h-64 opacity-15 pointer-events-none transform translate-x-16">
-                <svg viewBox="0 0 100 100" className="w-full h-full fill-none stroke-[#1B5E20]" strokeWidth="0.8">
-                  <circle cx="50" cy="50" r="45" />
-                  <circle cx="50" cy="50" r="32" />
-                  <circle cx="50" cy="50" r="18" />
-                  <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" />
-                </svg>
-              </div>
-
               {/* Left: Shield Icon + Title */}
               <div className="flex items-center gap-3.5 shrink-0 z-10">
                 <div className="w-11 h-11 rounded-full bg-[#C8E6C9]/80 text-[#1B5E20] flex items-center justify-center border border-[#A5D6A7] shadow-2xs">
