@@ -659,32 +659,51 @@ export default function PujaDetailPage() {
           </div>
         </motion.section>
 
-        {/* 5. UTSAV PROMISE */}
-        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-10 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#6D1344] text-[#6D1344] text-[11px] font-bold uppercase bg-transparent">
-              <ShieldCheck className="w-4 h-4 text-[#EA5C26]" />
-              <span>GUARANTEED AUTHENTICITY</span>
-            </div>
+        {/* 5. UTSAV PROMISE BANNER MATCHING REFERENCE */}
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-8 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative bg-[#EAF5EC] border border-[#C8E6C9] rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden shadow-2xs">
+              
+              {/* Background Mandala Watermark SVG */}
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-64 h-64 opacity-15 pointer-events-none transform translate-x-16">
+                <svg viewBox="0 0 100 100" className="w-full h-full fill-none stroke-[#1B5E20]" strokeWidth="0.8">
+                  <circle cx="50" cy="50" r="45" />
+                  <circle cx="50" cy="50" r="32" />
+                  <circle cx="50" cy="50" r="18" />
+                  <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" />
+                </svg>
+              </div>
 
-            <h2 className="font-heading text-xl sm:text-2xl font-bold text-[#6D1344]">
-              The Utsav Sacred Promise
-            </h2>
+              {/* Left: Shield Icon + Title */}
+              <div className="flex items-center gap-3.5 shrink-0 z-10">
+                <div className="w-11 h-11 rounded-2xl bg-[#C8E6C9]/70 text-[#1B5E20] flex items-center justify-center border border-[#A5D6A7] shadow-2xs">
+                  <ShieldCheck className="w-6 h-6 stroke-[2.2]" />
+                </div>
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-[#1B5E20] tracking-tight">
+                  Utsav Promise
+                </h3>
+              </div>
 
-            <p className="text-xs sm:text-sm text-[#7A676E] font-normal max-w-2xl mx-auto leading-relaxed">
-              If puja is not performed, or video proof is not delivered — we assure you a 100% refund. No questions asked.
-            </p>
+              {/* Center: Guarantee Copy + Pill Badges */}
+              <div className="space-y-3 text-center md:text-left z-10 flex-1 max-w-2xl">
+                <p className="text-xs sm:text-sm text-[#2E7D32] font-medium leading-relaxed">
+                  If puja is not performed, or video is not delivered — we assure you a 100% refund. No questions asked.
+                </p>
 
-            <div className="pt-2 flex flex-wrap justify-center gap-6 text-xs font-bold text-[#6D1344]">
-              <span className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-[#EA5C26] stroke-[3]" /> 100% Refund Assurance
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-[#EA5C26] stroke-[3]" /> Verified Video Proof
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-[#EA5C26] stroke-[3]" /> Doorstep Prasad Delivery
-              </span>
+                {/* Pill Badges */}
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
+                  <span className="inline-flex items-center gap-1.5 bg-white px-3.5 py-1 rounded-full border border-[#C8E6C9] text-xs font-semibold text-[#1B5E20] shadow-2xs">
+                    <span className="text-[#10B981] font-bold">✓</span> 100% Refund
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 bg-white px-3.5 py-1 rounded-full border border-[#C8E6C9] text-xs font-semibold text-[#1B5E20] shadow-2xs">
+                    <span className="text-[#10B981] font-bold">✓</span> Guaranteed Video
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 bg-white px-3.5 py-1 rounded-full border border-[#C8E6C9] text-xs font-semibold text-[#1B5E20] shadow-2xs">
+                    <span className="text-[#10B981] font-bold">✓</span> No Questions Asked
+                  </span>
+                </div>
+              </div>
+
             </div>
           </div>
         </motion.section>
