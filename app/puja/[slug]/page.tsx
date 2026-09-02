@@ -40,28 +40,32 @@ export default function PujaDetailPage() {
       title: "Individual Puja",
       devotees: "1 Devotee",
       price: 951,
-      desc: "Single devotee Sankalp & Prasad delivery."
+      desc: "Single devotee Sankalp & Prasad delivery.",
+      img: "/Images/Avatars/indian_devotee_3_1788330480133.jpg"
     },
     {
       id: 1,
       title: "Partner Puja",
       devotees: "Up to 2 Devotees",
       price: 1201,
-      desc: "Couple / 2 Family members Sankalp & Prasad."
+      desc: "Couple / 2 Family members Sankalp & Prasad.",
+      img: "/Images/Hero/devotee-aarti-blessing.jpg"
     },
     {
       id: 2,
       title: "Family Puja",
       devotees: "Up to 4 Devotees",
       price: 1601,
-      desc: "Immediate family members Sankalp & Prasad."
+      desc: "Immediate family members Sankalp & Prasad.",
+      img: "/Images/Avatars/indian_devotee_4_1788330503434.jpg"
     },
     {
       id: 3,
       title: "Joint Family Puja",
       devotees: "Up to 6 Devotees",
       price: 2001,
-      desc: "Extended family Sankalp, special ARCHANA & Prasad."
+      desc: "Extended family Sankalp, special ARCHANA & Prasad.",
+      img: "/Images/Hero/vedic-yajna-fire.jpg"
     }
   ];
 
@@ -296,38 +300,54 @@ export default function PujaDetailPage() {
             </div>
 
             {/* Package Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {packages.map((pkg) => {
                 const isSelected = selectedPackage === pkg.id;
                 return (
                   <div
                     key={pkg.id}
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className={`rounded-xl p-5 border transition-all cursor-pointer flex flex-col justify-between space-y-4 ${
+                    className={`rounded-lg overflow-hidden border transition-all duration-300 cursor-pointer flex flex-col justify-between group bg-white shadow-2xs ${
                       isSelected
-                        ? "bg-white border-[#C85B12] shadow-xs ring-2 ring-[#C85B12]/20"
-                        : "bg-white border-slate-200/80 hover:border-slate-300"
+                        ? "border-[#C85B12] ring-2 ring-[#C85B12]/20 shadow-xs"
+                        : "border-slate-200/80 hover:border-slate-300"
                     }`}
                   >
-                    <div className="space-y-2.5">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono font-bold text-slate-400">0{pkg.id + 1}</span>
+                    <div className="space-y-3">
+                      {/* Image Header with Reduced Corner Radius & Top Badges */}
+                      <div className="relative h-36 w-full overflow-hidden bg-slate-100">
+                        <img
+                          src={pkg.img}
+                          alt={pkg.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                        />
+                        <span className="absolute top-2.5 left-2.5 bg-slate-900/90 text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-sm">
+                          0{pkg.id + 1}
+                        </span>
+                        <span className="absolute top-2.5 right-2.5 bg-white/95 text-[#C85B12] text-[10px] font-extrabold px-2.5 py-0.5 rounded-sm shadow-xs">
+                          {pkg.devotees}
+                        </span>
                         {isSelected && (
-                          <span className="w-5 h-5 rounded-full bg-[#C85B12] text-white flex items-center justify-center text-xs font-bold">
-                            ✓
-                          </span>
+                          <div className="absolute inset-0 bg-[#C85B12]/15 flex items-center justify-center backdrop-blur-[1px]">
+                            <span className="w-8 h-8 rounded-full bg-[#C85B12] text-white flex items-center justify-center text-sm font-extrabold shadow-md">
+                              ✓
+                            </span>
+                          </div>
                         )}
                       </div>
-                      <h3 className="font-heading text-base font-extrabold text-slate-900">{pkg.title}</h3>
-                      <span className="text-xs font-bold text-[#C85B12] block bg-[#C85B12]/10 px-2.5 py-1 rounded-sm w-max">
-                        {pkg.devotees}
-                      </span>
-                      <p className="text-xs text-slate-500 font-normal leading-relaxed">{pkg.desc}</p>
+
+                      {/* Card Content Body */}
+                      <div className="p-4 pt-1 space-y-1.5">
+                        <h3 className="font-heading text-base font-extrabold text-slate-900 leading-tight">{pkg.title}</h3>
+                        <p className="text-xs text-slate-500 font-normal leading-relaxed">{pkg.desc}</p>
+                      </div>
                     </div>
 
-                    <div className="pt-3 border-t border-slate-100 flex items-baseline justify-between">
-                      <span className="text-xs font-medium text-slate-500">Dakshina</span>
-                      <span className="text-xl font-extrabold text-slate-900">₹{pkg.price}</span>
+                    <div className="p-4 pt-0">
+                      <div className="pt-3 border-t border-slate-100 flex items-baseline justify-between">
+                        <span className="text-xs font-semibold text-slate-500">Dakshina</span>
+                        <span className="text-xl font-extrabold text-slate-900">₹{pkg.price}</span>
+                      </div>
                     </div>
                   </div>
                 );
