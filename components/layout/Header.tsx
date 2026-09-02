@@ -49,12 +49,12 @@ export function Header() {
           isScrolled ? "pt-2 sm:pt-3" : "pt-0"
         }`}
       >
-        {/* Nav Container: Clean full-width header at start, floating rounded pill on scroll */}
+        {/* Nav Container: Glassmorphism header, floating pill on scroll */}
         <div
           className={`pointer-events-auto transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center justify-between gap-2 sm:gap-3 ${
             isScrolled
-              ? "w-[96%] sm:w-[94%] lg:w-[92%] max-w-7xl rounded-full bg-[#FFF9EF]/95 backdrop-blur-2xl px-4 sm:px-6 h-14 shadow-xs border border-[#F6E1C6]"
-              : "w-full rounded-none bg-[#FFF9EF]/90 backdrop-blur-md border-b border-[#F6E1C6] px-4 sm:px-8 lg:px-12 h-16 shadow-none"
+              ? "w-[96%] sm:w-[94%] lg:w-[92%] max-w-7xl rounded-full bg-white/85 backdrop-blur-2xl px-4 sm:px-6 h-14 shadow-xs border border-slate-200/80"
+              : "w-full rounded-none bg-white/70 backdrop-blur-xl border-b border-slate-200/60 px-4 sm:px-8 lg:px-12 h-16 shadow-none"
           }`}
         >
           {/* Logo */}
@@ -76,8 +76,8 @@ export function Header() {
                   href={link.href}
                   className={`text-xs font-semibold px-3 py-1.5 rounded-full whitespace-nowrap transition-all duration-300 ${
                     isActive
-                      ? "bg-[#F6E1C6] text-[#EA5C26] font-bold"
-                      : "text-[#6D1344] hover:text-[#EA5C26] hover:bg-[#F6E1C6]/50"
+                      ? "bg-slate-100 text-[#EA5C26] font-semibold"
+                      : "text-[#6D1344] hover:text-[#EA5C26] hover:bg-slate-50"
                   }`}
                 >
                   {link.name}
@@ -94,23 +94,23 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="flex items-center gap-1 text-xs font-semibold text-[#6D1344] bg-[#F6E1C6]/60 rounded-xl px-2.5 py-1.5 hover:bg-[#F6E1C6] shrink-0"
+                  className="flex items-center gap-1 text-xs font-semibold text-[#6D1344] bg-slate-100 rounded-full px-3 py-1.5 hover:bg-slate-200/60 shrink-0 border border-slate-200/60"
                 >
                   <Globe className="w-3.5 h-3.5 text-[#6D1344]" />
                   <span>{language === "EN" ? "Hindi" : "English"}</span>
                   <ChevronDown className="w-3 h-3 text-[#6D1344]/70" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-36 bg-[#FFF9EF] backdrop-blur-xl rounded-xl border border-[#F6E1C6]">
+              <DropdownMenuContent align="end" className="w-36 bg-white/95 backdrop-blur-xl rounded-xl border border-slate-200 shadow-md">
                 <DropdownMenuItem
                   onClick={() => setLanguage("HI")}
-                  className="text-xs cursor-pointer font-medium hover:bg-[#F6E1C6] text-[#6D1344]"
+                  className="text-xs cursor-pointer font-medium hover:bg-slate-100 text-[#6D1344]"
                 >
                   हिंदी (Hindi)
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => setLanguage("EN")}
-                  className="text-xs cursor-pointer font-medium hover:bg-[#F6E1C6] text-[#6D1344]"
+                  className="text-xs cursor-pointer font-medium hover:bg-slate-100 text-[#6D1344]"
                 >
                   English
                 </DropdownMenuItem>
@@ -122,7 +122,7 @@ export function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setIsLoginOpen(true)}
-              className="hidden md:flex items-center gap-1.5 text-xs font-bold text-[#6D1344] hover:text-[#EA5C26] px-3 py-1.5 rounded-xl hover:bg-[#F6E1C6]/60 shrink-0"
+              className="hidden md:flex items-center gap-1.5 text-xs font-semibold text-[#6D1344] hover:text-[#EA5C26] px-3 py-1.5 rounded-full hover:bg-slate-100 shrink-0"
             >
               <User className="w-3.5 h-3.5 text-[#6D1344]" />
               <span>Login</span>
@@ -132,7 +132,7 @@ export function Header() {
             <Button
               asChild
               size="sm"
-              className="bg-[#C85B12] hover:bg-[#A84B0E] text-white font-bold text-xs sm:text-sm h-10 px-4 rounded-xl shadow-xs transition-all duration-300 shrink-0"
+              className="bg-[#EA5C26] hover:bg-[#D44B17] text-white font-semibold text-xs sm:text-sm h-10 px-4 rounded-xl shadow-xs transition-all duration-300 shrink-0"
             >
               <Link href="#discover-pujas" className="flex items-center gap-1.5">
                 <CalendarCheck className="w-3.5 h-3.5 text-white stroke-[2.5]" />
