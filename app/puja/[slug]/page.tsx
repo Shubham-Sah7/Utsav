@@ -456,7 +456,7 @@ export default function PujaDetailPage() {
         {/* 5. UTSAV PROMISE */}
         <section className="py-10 bg-slate-50/60 border-y border-slate-200/80">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-emerald-600 text-emerald-700 text-[11px] font-extrabold uppercase bg-emerald-50/50">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-emerald-600 text-emerald-700 text-[11px] font-extrabold uppercase bg-transparent">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>GUARANTEED AUTHENTICITY</span>
             </div>
@@ -538,7 +538,7 @@ export default function PujaDetailPage() {
                 <div className="space-y-1">
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
                     <h3 className="font-heading text-xl font-extrabold text-slate-900">Challa Abhiram S.</h3>
-                    <span className="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1">
+                    <span className="bg-transparent text-emerald-700 text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-emerald-600/40 flex items-center gap-1">
                       <UserCheck className="w-3 h-3" /> Verified Pandit
                     </span>
                   </div>
