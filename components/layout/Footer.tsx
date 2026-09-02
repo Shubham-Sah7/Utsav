@@ -22,7 +22,7 @@ export function Footer() {
           <div className="lg:col-span-7 space-y-4">
             <Link href="/" className="inline-block">
               <img
-                src="/Logo.png"
+                src="/logo.png"
                 alt="Utsav Logo"
                 className="h-10 sm:h-11 object-contain brightness-0 invert"
               />

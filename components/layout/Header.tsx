@@ -67,7 +67,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0 group">
             <img
-              src="/Logo.png"
+              src="/logo.png"
               alt="Utsav Logo"
               className="h-6 sm:h-7 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
@@ -168,7 +168,7 @@ export function Header() {
               <SheetContent side="right" className="bg-white p-6 w-[300px] border-none shadow-xs">
                 <SheetHeader className="text-left pb-4 mb-4">
                   <SheetTitle className="text-lg font-bold flex items-center">
-                    <img src="/Logo.png" alt="Utsav" className="h-6" />
+                    <img src="/logo.png" alt="Utsav" className="h-6" />
                   </SheetTitle>
                 </SheetHeader>
 

@@ -16,7 +16,7 @@ export default function Loading() {
           {/* Central Utsav Om Logo */}
           <div className="w-14 h-14 rounded-full bg-white shadow-md border border-[#E8D8C5] flex items-center justify-center p-2.5 animate-pulse">
             <img
-              src="/Logo.png"
+              src="/logo.png"
               alt="Utsav Om Logo Loading"
               className="w-full h-full object-contain"
             />
