@@ -242,25 +242,25 @@ export default function PujaDetailPage() {
       num: "01",
       title: "Select Puja",
       desc: "Select a puja and bhet daan options",
-      img: "/Images/Hero/ganga-aarti-flame.jpg"
+      img: "/Images/Steps/step1_select_puja.jpg"
     },
     {
       num: "02",
       title: "Pay Dakshina",
       desc: "Securely pay your dakshina using UPI/Card",
-      img: "/Images/scripture.jpg"
+      img: "/Images/Steps/step2_pay_dakshina.jpg"
     },
     {
       num: "03",
       title: "Fill Sankalp Form",
       desc: "Enter offering name(s), gotra & address",
-      img: "/Images/Avatars/indian_devotee_1_1788330405371.jpg"
+      img: "/Images/Steps/step3_fill_sankalp.jpg"
     },
     {
       num: "04",
       title: "Watch Puja Video",
       desc: "Full video with name-gotra on WhatsApp",
-      img: "/Images/Hero/devotee-aarti-blessing.jpg"
+      img: "/Images/Steps/step4_watch_video.jpg"
     },
     {
       num: "05",
