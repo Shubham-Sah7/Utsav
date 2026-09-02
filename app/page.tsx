@@ -1433,25 +1433,25 @@ export default function HomePage() {
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center group w-full"
               >
-                {/* Sleek Single iPhone Device Frame */}
-                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[42px] p-2.5 shadow-2xl border-[3.5px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
-                  {/* iPhone Top Dynamic Island Notch */}
-                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-24 h-4.5 bg-black rounded-full z-30 flex items-center justify-end px-2.5 gap-1.5 shadow-xs">
-                    <div className="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-800" />
+                {/* 100% Single iPhone Device Frame */}
+                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[40px] p-2.5 shadow-2xl border-[3px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
+                  {/* Dynamic Island Notch */}
+                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 gap-1.5 shadow-xs pointer-events-none">
+                    <div className="w-2 h-2 rounded-full bg-slate-900 border border-slate-800" />
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                   </div>
 
-                  {/* App Screen Content */}
-                  <div className="w-full h-full rounded-[34px] overflow-hidden relative bg-white border border-slate-800/40">
+                  {/* Pure Screen Content (Zoomed 1.38x to remove inner duplicate bezels) */}
+                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
                     <img
                       src="/Images/App/screen_puja.jpg"
                       alt="Utsav App Puja Seva Screen"
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover scale-[1.38] object-[center_42%]"
                     />
                   </div>
 
                   {/* Bottom Home Indicator Bar */}
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30" />
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30 pointer-events-none" />
                 </div>
 
                 {/* Card Description underneath */}
@@ -1473,25 +1473,25 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center group w-full"
               >
-                {/* Sleek Single iPhone Device Frame */}
-                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[42px] p-2.5 shadow-2xl border-[3.5px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
-                  {/* iPhone Top Dynamic Island Notch */}
-                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-24 h-4.5 bg-black rounded-full z-30 flex items-center justify-end px-2.5 gap-1.5 shadow-xs">
-                    <div className="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-800" />
+                {/* 100% Single iPhone Device Frame */}
+                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[40px] p-2.5 shadow-2xl border-[3px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
+                  {/* Dynamic Island Notch */}
+                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 gap-1.5 shadow-xs pointer-events-none">
+                    <div className="w-2 h-2 rounded-full bg-slate-900 border border-slate-800" />
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                   </div>
 
-                  {/* App Screen Content */}
-                  <div className="w-full h-full rounded-[34px] overflow-hidden relative bg-white border border-slate-800/40">
+                  {/* Pure Screen Content (Zoomed 1.38x to remove inner duplicate bezels) */}
+                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
                     <img
                       src="/Images/App/screen_home.jpg"
                       alt="Utsav App Home Screen"
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover scale-[1.38] object-[center_42%]"
                     />
                   </div>
 
                   {/* Bottom Home Indicator Bar */}
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30" />
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30 pointer-events-none" />
                 </div>
 
                 {/* Card Description underneath */}
@@ -1513,25 +1513,25 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center group w-full"
               >
-                {/* Sleek Single iPhone Device Frame */}
-                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[42px] p-2.5 shadow-2xl border-[3.5px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
-                  {/* iPhone Top Dynamic Island Notch */}
-                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-24 h-4.5 bg-black rounded-full z-30 flex items-center justify-end px-2.5 gap-1.5 shadow-xs">
-                    <div className="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-800" />
+                {/* 100% Single iPhone Device Frame */}
+                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[40px] p-2.5 shadow-2xl border-[3px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
+                  {/* Dynamic Island Notch */}
+                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 gap-1.5 shadow-xs pointer-events-none">
+                    <div className="w-2 h-2 rounded-full bg-slate-900 border border-slate-800" />
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
                   </div>
 
-                  {/* App Screen Content */}
-                  <div className="w-full h-full rounded-[34px] overflow-hidden relative bg-white border border-slate-800/40">
+                  {/* Pure Screen Content (Zoomed 1.38x to remove inner duplicate bezels) */}
+                  <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
                     <img
                       src="/Images/App/screen_store.jpg"
                       alt="Utsav App Siddha Store Screen"
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover scale-[1.38] object-[center_42%]"
                     />
                   </div>
 
                   {/* Bottom Home Indicator Bar */}
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30" />
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30 pointer-events-none" />
                 </div>
 
                 {/* Card Description underneath */}
