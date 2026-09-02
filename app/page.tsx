@@ -311,12 +311,12 @@ export default function HomePage() {
         </motion.section>
 
         {/* 4. UPCOMING SACRED PUJAS & SEVA */}
-        <motion.section id="discover-pujas" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-[#FFF9EF] relative border-t border-[#E8D8C5]">
+        <motion.section id="discover-pujas" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-white relative border-t border-[#E8D8C5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             {/* Header & Filter Tabs */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-3.5 text-center md:text-left">
-                <div className="inline-flex items-center gap-2 bg-[#F6E1C6]/60 text-[#6D1344] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
+                <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
                   <span>Auspicious Rituals</span>
                 </div>
                 <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#6D1344] leading-tight">
@@ -328,14 +328,14 @@ export default function HomePage() {
               </div>
 
               {/* Filter Tabs */}
-              <div className="inline-flex flex-wrap items-center justify-center p-1.5 rounded-full bg-white border border-[#E8D8C5] shadow-2xs">
+              <div className="inline-flex flex-wrap items-center justify-center p-1.5 rounded-full bg-slate-50 border border-[#E8D8C5] shadow-2xs">
                 {["All Pujas", "Pradosh Vrat", "Shaktipeeth", "Jyotirlinga"].map((tab, i) => (
                   <button
                     key={tab}
                     className={`text-xs font-bold px-4 sm:px-5 py-2 rounded-full transition-all duration-300 cursor-pointer whitespace-nowrap ${
                       i === 0
                         ? "bg-[#EA5C26] text-white"
-                        : "text-[#6D1344] hover:text-[#EA5C26] hover:bg-[#F6E1C6]/40"
+                        : "text-[#6D1344] hover:text-[#EA5C26] hover:bg-white"
                     }`}
                   >
                     {tab}
@@ -393,7 +393,7 @@ export default function HomePage() {
                   className="puja-card-item bg-white rounded-2xl p-4 flex flex-col justify-between group hover:border-[#EA5C26]/40 hover:shadow-md transition-all duration-300 border border-[#E8D8C5]"
                 >
                   <div className="space-y-3.5">
-                    <div className="relative h-60 sm:h-64 w-full rounded-xl overflow-hidden bg-[#F6E1C6]/30">
+                    <div className="relative h-60 sm:h-64 w-full rounded-xl overflow-hidden bg-slate-100">
                       <img
                         src={card.img}
                         alt={card.title}
@@ -405,7 +405,7 @@ export default function HomePage() {
                       </span>
 
                       <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                        <span className="bg-[#2C151B]/90 text-[#FFF9EF] text-xs font-semibold px-3 py-1 rounded-full inline-flex items-center gap-1.5 max-w-full">
+                        <span className="bg-[#2C151B]/90 text-white text-xs font-semibold px-3 py-1 rounded-full inline-flex items-center gap-1.5 max-w-full">
                           <MapPin className="w-3.5 h-3.5 text-[#FAA531] shrink-0" />
                           <span className="truncate">{card.loc}</span>
                         </span>
@@ -418,7 +418,7 @@ export default function HomePage() {
                       </h3>
 
                       <div className="flex items-center justify-between text-xs text-[#7A676E] font-medium pt-0.5">
-                        <span className="flex items-center gap-1.5 font-bold text-[#6D1344] bg-[#FFF9EF] px-2.5 py-1 rounded-lg border border-[#E8D8C5]">
+                        <span className="flex items-center gap-1.5 font-bold text-[#6D1344] bg-slate-50 px-2.5 py-1 rounded-lg border border-[#E8D8C5]">
                           <Calendar className="w-3.5 h-3.5 text-[#EA5C26]" />
                           {card.date}
                         </span>
@@ -448,7 +448,7 @@ export default function HomePage() {
         </motion.section>
 
         {/* 5. HOW YOUR PUJA & SANKALP IS PERFORMED */}
-        <motion.section id="how-it-works" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-[#F6E1C6]/30 border-y border-[#E8D8C5]">
+        <motion.section id="how-it-works" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-white border-y border-[#E8D8C5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -456,7 +456,7 @@ export default function HomePage() {
               {/* Left Column */}
               <div className="lg:col-span-5 space-y-8">
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 bg-[#FFF9EF] text-[#6D1344] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
+                  <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                     <span>Transparent Process</span>
                   </div>
 
@@ -482,12 +482,12 @@ export default function HomePage() {
                         className={`w-full text-left transition-all duration-300 flex items-center justify-between px-5 py-3.5 rounded-xl border cursor-pointer ${
                           isActive
                             ? "bg-white text-[#EA5C26] border-[#EA5C26]/40 shadow-xs font-bold"
-                            : "bg-[#FFF9EF] hover:bg-white text-[#6D1344] border-[#E8D8C5] font-semibold"
+                            : "bg-slate-50 hover:bg-white text-[#6D1344] border-[#E8D8C5] font-semibold"
                         }`}
                       >
                         <div className="flex items-center gap-3.5">
                           <span className={`text-xs font-mono font-bold px-2.5 py-0.5 rounded-full ${
-                            isActive ? "bg-[#EA5C26]/15 text-[#EA5C26]" : "bg-[#F6E1C6]/60 text-[#7A676E]"
+                            isActive ? "bg-[#EA5C26]/15 text-[#EA5C26]" : "bg-slate-200/80 text-[#7A676E]"
                           }`}>
                             {step.num}
                           </span>
@@ -518,7 +518,7 @@ export default function HomePage() {
                     className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8D8C5] shadow-xs space-y-6"
                   >
                     <div className="space-y-2">
-                      <span className="text-xs font-mono font-bold text-[#EA5C26] bg-[#F6E1C6]/60 px-3 py-1 rounded-full border border-[#E8D8C5]">
+                      <span className="text-xs font-mono font-bold text-[#EA5C26] bg-slate-100 px-3 py-1 rounded-full border border-[#E8D8C5]">
                         STEP 0{activeStepIndex + 1} OF 04
                       </span>
                       <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#6D1344]">
@@ -539,7 +539,7 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <div className="w-full h-64 sm:h-72 rounded-xl overflow-hidden relative border border-[#E8D8C5] bg-[#F6E1C6]/30">
+                    <div className="w-full h-64 sm:h-72 rounded-xl overflow-hidden relative border border-[#E8D8C5] bg-slate-100">
                       <img
                         src={[
                           "/Images/Hero/ganga-aarti-flame.jpg",
