@@ -213,27 +213,27 @@ export default function PujaDetailPage() {
     {
       title: "Financial Prosperity",
       desc: "Attract wealth and blessings for overall financial well-being",
-      img: "/Images/prasad_thali.jpg"
+      img: "/Images/Benefits/financial_prosperity.jpg"
     },
     {
       title: "Fame & Success",
       desc: "Opens doors to success and popularity in your career pursuits",
-      img: "/Images/Hero/kashi-golden-shikhara.jpg"
+      img: "/Images/Benefits/fame_success.jpg"
     },
     {
       title: "Removal of Ketu Dosh",
       desc: "Balance planetary influences to bring peace & clarity",
-      img: "/Images/scripture.jpg"
+      img: "/Images/Benefits/ketu_dosh_removal.jpg"
     },
     {
       title: "Career Growth",
       desc: "Remove professional hurdles and open new doors",
-      img: "/Images/Hero/ganga-aarti-flame.jpg"
+      img: "/Images/Benefits/career_growth.jpg"
     },
     {
       title: "Business Growth",
       desc: "Attracts financial prosperity for the overall growth of business",
-      img: "/Images/panchang.jpg"
+      img: "/Images/Benefits/business_growth.jpg"
     }
   ];
 
