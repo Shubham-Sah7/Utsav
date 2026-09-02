@@ -329,9 +329,9 @@ export default function PujaDetailPage() {
       {/* 1. STICKY HEADER */}
       <Header />
 
-      <main className="flex-grow pt-16 sm:pt-20">
+      <main className="flex-grow pt-14 sm:pt-16">
         {/* 2. PUJA HERO SECTION */}
-        <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="py-6 sm:py-10 bg-[#FFF9EF]">
+        <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="pt-2 sm:pt-3 pb-6 sm:pb-8 bg-[#FFF9EF]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-xs text-[#7A676E] mb-4 font-medium">
