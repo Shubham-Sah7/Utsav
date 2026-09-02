@@ -381,10 +381,10 @@ export default function PujaDetailPage() {
               <div className="lg:col-span-6 space-y-5">
                 <div className="space-y-2.5">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider bg-transparent">
-                      AUSPICIOUS PUJA SEVA
+                    <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-bold uppercase tracking-wider bg-transparent">
+                      SACRED CALENDAR RITUAL
                     </span>
-                    <span className="text-xs font-semibold text-[#7C112F] flex items-center gap-1.5 bg-slate-50 px-3 py-1 rounded-full border border-[#E8D8C5]">
+                    <span className="text-xs font-semibold text-[#6D1344] flex items-center gap-1.5 bg-[#FFF9EF] px-3 py-1 rounded-full border border-[#E8D8C5]">
                       <ShieldCheck className="w-3.5 h-3.5 text-[#EA5C26]" />
                       {pujaBadge}
                     </span>
@@ -394,16 +394,22 @@ export default function PujaDetailPage() {
                     {pujaTitle}
                   </h1>
 
-                  <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-[#2C151B] font-medium pt-0.5">
-                    <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-[#E8D8C5]">
-                      <MapPin className="w-4 h-4 text-[#EA5C26]" />
-                      <span className="font-medium">{pujaLocation}</span>
+                  <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-[#2C151B] font-medium pt-0.5">
+                    <div className="flex items-center gap-2 bg-[#FFF9EF] px-3.5 py-1.5 rounded-xl border border-[#E8D8C5]">
+                      <MapPin className="w-4 h-4 text-[#EA5C26] shrink-0" />
+                      <span className="font-semibold text-[#6D1344]">{pujaLocation}</span>
                     </div>
-                    <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-[#E8D8C5]">
-                      <Calendar className="w-4 h-4 text-[#EA5C26]" />
-                      <span className="font-medium">{pujaDate}</span>
+                    <div className="flex items-center gap-2 bg-[#FFF9EF] px-3.5 py-1.5 rounded-xl border border-[#E8D8C5]">
+                      <Calendar className="w-4 h-4 text-[#EA5C26] shrink-0" />
+                      <span className="font-semibold text-[#6D1344]">{pujaDate}</span>
+                      <span className="text-[#EA5C26] font-bold">• {isKaliPuja ? "Amavasya Visesh" : "Budhvar Visesh"}</span>
                     </div>
                   </div>
+
+                  {/* Factual Booking Cutoff Notice */}
+                  <p className="text-[11px] text-[#7A676E] font-medium pt-0.5">
+                    Booking for this Puja closes before the sacred ritual begins on {pujaDate}.
+                  </p>
 
                   {/* Rating & Devotee Stats */}
                   <div className="flex items-center gap-3 pt-0.5">
