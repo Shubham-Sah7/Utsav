@@ -1678,7 +1678,7 @@ export default function HomePage() {
 
                 <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#6D1344] tracking-tight leading-tight">
                   Your spiritual journey, finally under control.{" "}
-                  <span className="text-[#EA5C26]">Download Utsav today</span>
+                  <span className="text-[#EA5C26] block font-semibold pt-1 sm:pt-1.5">Download Utsav today</span>
                 </h2>
 
                 <p className="text-sm sm:text-base text-[#7A676E] font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -1697,20 +1697,35 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Right Column: 100% Unclipped Mobile Mockup Graphic (5 cols) */}
+              {/* Right Column: 100% Single iPhone Device Frame (5 cols) */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
                 <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                  className="w-full max-w-[300px] sm:max-w-[320px] transform lg:translate-y-10 group hover:-translate-y-1 transition-transform duration-500 flex justify-center"
+                  className="w-full flex justify-center"
                 >
-                  <img
-                    src="/Images/App/utsav_app_screen_1.jpg"
-                    alt="Utsav Mobile App Showcase Screen"
-                    className="w-full h-auto object-contain drop-shadow-xs"
-                  />
+                  {/* 100% Single iPhone Device Frame */}
+                  <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[40px] p-2.5 shadow-2xl border-[3px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden hover:-translate-y-1 transition-all duration-500">
+                    {/* Dynamic Island Notch */}
+                    <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 gap-1.5 shadow-xs pointer-events-none">
+                      <div className="w-2 h-2 rounded-full bg-slate-900 border border-slate-800" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
+                    </div>
+
+                    {/* Pure Screen Content (Zoomed 1.26x to crop inner duplicate bezels) */}
+                    <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-white">
+                      <img
+                        src="/Images/App/screen_puja.jpg"
+                        alt="Utsav Mobile App Showcase Screen"
+                        className="w-full h-full object-cover scale-[1.26] object-[center_48%]"
+                      />
+                    </div>
+
+                    {/* Bottom Home Indicator Bar */}
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30 pointer-events-none" />
+                  </div>
                 </motion.div>
               </div>
 
