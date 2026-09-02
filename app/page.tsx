@@ -236,7 +236,7 @@ export default function HomePage() {
                   ].map((imgUrl, idx) => (
                     <div
                       key={idx}
-                      className="w-72 sm:w-80 h-80 sm:h-88 rounded-2xl overflow-hidden relative group shrink-0 hover:shadow-xs transition-all duration-500 cursor-pointer border border-slate-200/60"
+                      className="w-72 sm:w-80 h-80 sm:h-88 rounded-lg overflow-hidden relative group shrink-0 hover:shadow-xs transition-all duration-500 cursor-pointer border border-slate-200/60"
                     >
                       <img
                         src={imgUrl}
@@ -259,7 +259,7 @@ export default function HomePage() {
                   ].map((imgUrl, idx) => (
                     <div
                       key={`dup-${idx}`}
-                      className="w-72 sm:w-80 h-80 sm:h-88 rounded-2xl overflow-hidden relative group shrink-0 hover:shadow-xs transition-all duration-500 cursor-pointer border border-slate-200/60"
+                      className="w-72 sm:w-80 h-80 sm:h-88 rounded-lg overflow-hidden relative group shrink-0 hover:shadow-xs transition-all duration-500 cursor-pointer border border-slate-200/60"
                     >
                       <img
                         src={imgUrl}
@@ -393,10 +393,10 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="puja-card-item bg-white rounded-2xl p-4 flex flex-col justify-between group hover:border-[#EA5C26]/40 hover:shadow-md transition-all duration-300 border border-[#E8D8C5]"
+                  className="puja-card-item bg-white rounded-lg p-4 flex flex-col justify-between group hover:border-[#EA5C26]/40 hover:shadow-md transition-all duration-300 border border-[#E8D8C5]"
                 >
                   <div className="space-y-3.5">
-                    <div className="relative h-60 sm:h-64 w-full rounded-xl overflow-hidden bg-slate-100">
+                    <div className="relative h-60 sm:h-64 w-full rounded-md overflow-hidden bg-slate-100">
                       <img
                         src={card.img}
                         alt={card.title}
@@ -554,7 +554,7 @@ export default function HomePage() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-white rounded-2xl p-6 sm:p-7 border border-[#E8D8C5] shadow-xs space-y-5"
+                    className="bg-white rounded-lg p-6 sm:p-7 border border-[#E8D8C5] shadow-xs space-y-5"
                   >
                     <div className="space-y-1.5">
                       <span className="inline-block text-xs font-mono font-semibold text-[#EA5C26] bg-slate-100 px-3.5 py-1 rounded-full border border-[#E8D8C5]">
@@ -579,7 +579,7 @@ export default function HomePage() {
                     </div>
 
                     {/* EXPANDED UN-CROPPED STEP IMAGE CONTAINER */}
-                    <div className="w-full h-80 sm:h-96 lg:h-[380px] rounded-xl overflow-hidden relative border border-[#E8D8C5] bg-slate-100">
+                    <div className="w-full h-80 sm:h-96 lg:h-[380px] rounded-md overflow-hidden relative border border-[#E8D8C5] bg-slate-100">
                       <img
                         src={[
                           "/Images/Hero/ganga-aarti-flame.jpg",
@@ -631,7 +631,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
                 <img src="/Images/panchang.jpg" alt="Sacred Panchang Guide" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
@@ -730,7 +730,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5] md:order-2">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5] md:order-2">
                 <img src="/Images/prasad_thali.jpg" alt="Puja Seva Store" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
             </motion.div>
@@ -743,7 +743,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
                 <img src="/Images/scripture.jpg" alt="Dharmik Gyan & Scriptures" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
@@ -842,7 +842,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5] md:order-2">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5] md:order-2">
                 <img src="/Images/temple_diya.jpg" alt="Daily Rashifal" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
             </motion.div>
@@ -855,7 +855,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
                 <img src="/Images/Hero/gold-temple-gopuram.jpg" alt="Temples of India" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
@@ -1008,7 +1008,7 @@ export default function HomePage() {
                 ].map((rev, idx) => (
                   <div
                     key={`row1-${idx}`}
-                    className="w-[320px] sm:w-[360px] shrink-0 flex flex-col justify-between bg-white rounded-2xl p-6 border border-slate-200/80 shadow-2xs group"
+                    className="w-[320px] sm:w-[360px] shrink-0 flex flex-col justify-between bg-white rounded-lg p-6 border border-slate-200/80 shadow-2xs group"
                   >
                     <div>
                       <span className="text-2xl font-serif text-[#C85B12]/40 font-extrabold leading-none block mb-2 select-none">
@@ -1111,7 +1111,7 @@ export default function HomePage() {
                 ].map((rev, idx) => (
                   <div
                     key={`row2-${idx}`}
-                    className="w-[320px] sm:w-[360px] shrink-0 flex flex-col justify-between bg-white rounded-2xl p-6 border border-slate-200/80 shadow-2xs group"
+                    className="w-[320px] sm:w-[360px] shrink-0 flex flex-col justify-between bg-white rounded-lg p-6 border border-slate-200/80 shadow-2xs group"
                   >
                     <div>
                       <span className="text-2xl font-serif text-[#C85B12]/40 font-extrabold leading-none block mb-2 select-none">

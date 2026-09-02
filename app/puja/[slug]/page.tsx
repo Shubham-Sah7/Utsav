@@ -346,7 +346,7 @@ export default function PujaDetailPage() {
               {/* LEFT COLUMN: Gallery */}
               <div className="lg:col-span-6 space-y-3">
                 {/* Main Active Image Frame */}
-                <div className="w-full h-80 sm:h-96 lg:h-[440px] rounded-2xl overflow-hidden relative border border-[#E8D8C5] bg-[#2C151B] group shadow-xs">
+                <div className="w-full h-80 sm:h-96 lg:h-[440px] rounded-lg overflow-hidden relative border border-[#E8D8C5] bg-[#2C151B] group shadow-xs">
                   <motion.img
                     key={selectedImgIndex}
                     src={galleryImages[selectedImgIndex].src}
@@ -367,7 +367,7 @@ export default function PujaDetailPage() {
                     <button
                       key={idx}
                       onClick={() => setSelectedImgIndex(idx)}
-                      className={`h-20 rounded-xl overflow-hidden border-2 transition-all cursor-pointer relative ${
+                      className={`h-20 rounded-md overflow-hidden border-2 transition-all cursor-pointer relative ${
                         selectedImgIndex === idx ? "border-[#EA5C26] opacity-100" : "border-[#E8D8C5] opacity-70 hover:opacity-100"
                       }`}
                     >
@@ -635,7 +635,7 @@ export default function PujaDetailPage() {
             {/* Feature Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
               {inclusions.map((item, idx) => (
-                <div key={idx} className="bg-white rounded-2xl overflow-hidden border border-[#E8D8C5] shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
+                <div key={idx} className="bg-white rounded-lg overflow-hidden border border-[#E8D8C5] shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3.5">
                     <div className="relative h-44 w-full overflow-hidden bg-slate-100">
                       <img
@@ -768,11 +768,11 @@ export default function PujaDetailPage() {
         {/* 7. PUJA PERFORMED BY */}
         <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.5 }} className="py-12 sm:py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8D8C5] shadow-xs flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
+            <div className="bg-white rounded-lg p-6 sm:p-8 border border-[#E8D8C5] shadow-xs flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
               <img
                 src="/Images/Hero/devotee-aarti-blessing.jpg"
                 alt="Challa Abhiram S. Vedic Acharya"
-                className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover shrink-0 border border-[#E8D8C5]"
+                className="w-28 h-28 sm:w-32 sm:h-32 rounded-lg object-cover shrink-0 border border-[#E8D8C5]"
               />
               <div className="space-y-3 text-center md:text-left flex-1">
                 <div className="space-y-1">
@@ -816,7 +816,7 @@ export default function PujaDetailPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
               {benefitsWithImages.map((item, idx) => (
-                <div key={idx} className="rounded-2xl overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
+                <div key={idx} className="rounded-lg overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3">
                     <div className="relative h-32 w-full overflow-hidden bg-slate-100">
                       <img
@@ -857,7 +857,7 @@ export default function PujaDetailPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
               {stepsWithImages.map((step, idx) => (
-                <div key={idx} className="rounded-2xl overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
+                <div key={idx} className="rounded-lg overflow-hidden border border-[#E8D8C5] bg-white shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3">
                     <div className="relative h-32 w-full overflow-hidden bg-[#F6E1C6]/30">
                       <img
@@ -895,7 +895,7 @@ export default function PujaDetailPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {userReviews.map((rev, idx) => (
-                <div key={idx} className="p-6 rounded-2xl border border-[#E8D8C5] bg-white shadow-2xs flex flex-col justify-between space-y-4">
+                <div key={idx} className="p-6 rounded-lg border border-[#E8D8C5] bg-white shadow-2xs flex flex-col justify-between space-y-4">
                   <div>
                     <span className="text-2xl font-serif text-[#EA5C26]/40 font-bold leading-none block mb-2 select-none">
                       “
