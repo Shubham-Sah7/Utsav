@@ -5,6 +5,16 @@ import { Phone, Mail, MapPin, Share2, Globe, MessageCircle, ArrowRight } from "l
 export function Footer() {
   return (
     <footer className="bg-[#6D1344] text-[#FFF9EF] pt-16 pb-0 relative overflow-hidden border-t border-[#7C112F]">
+      {/* AUTHENTIC BLENDED TEMPLE GOPURAM SILHOUETTE AT BOTTOM */}
+      <div className="absolute bottom-0 left-0 right-0 h-72 sm:h-96 pointer-events-none z-0 overflow-hidden select-none opacity-25">
+        <img
+          src="/Images/Hero/gold-temple-gopuram.jpg"
+          alt="Temple Gopuram Silhouette"
+          className="w-full h-full object-cover object-bottom mix-blend-luminosity filter brightness-110 contrast-125"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#6D1344] via-[#6D1344]/60 to-[#6D1344]" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         {/* TOP TIER: BRAND INFO + NEWSLETTER SUBSCRIBE */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
