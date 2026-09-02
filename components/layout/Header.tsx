@@ -49,15 +49,15 @@ export function Header() {
           isScrolled ? "pt-2 sm:pt-3" : "pt-0"
         }`}
       >
-        {/* Nav Container: Clean full-width glassmorphism header at start, floating rounded pill on scroll */}
+        {/* Nav Container: Clean full-width header at start, floating rounded pill on scroll */}
         <div
           className={`pointer-events-auto transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center justify-between gap-2 sm:gap-3 ${
             isScrolled
-              ? "w-[96%] sm:w-[94%] lg:w-[92%] max-w-7xl rounded-full bg-white/90 backdrop-blur-2xl px-4 sm:px-6 h-14 shadow-xs border border-white/80"
-              : "w-full rounded-none bg-white/80 backdrop-blur-md border-b border-slate-200/80 px-4 sm:px-8 lg:px-12 h-16 shadow-none"
+              ? "w-[96%] sm:w-[94%] lg:w-[92%] max-w-7xl rounded-full bg-[#FFF9EF]/95 backdrop-blur-2xl px-4 sm:px-6 h-14 shadow-xs border border-[#F6E1C6]"
+              : "w-full rounded-none bg-[#FFF9EF]/90 backdrop-blur-md border-b border-[#F6E1C6] px-4 sm:px-8 lg:px-12 h-16 shadow-none"
           }`}
         >
-          {/* Logo (Reduced Size) */}
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0 group">
             <img
               src="/Logo.png"
@@ -66,18 +66,18 @@ export function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation Links (Single Line Guaranteed) */}
-          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-xs font-extrabold px-2.5 sm:px-3 py-1.5 rounded-full whitespace-nowrap transition-all duration-300 ${
+                  className={`text-xs font-semibold px-3 py-1.5 rounded-full whitespace-nowrap transition-all duration-300 ${
                     isActive
-                      ? "bg-slate-100 text-[#C85B12] font-extrabold"
-                      : "text-slate-700 hover:text-[#C85B12] hover:bg-slate-100/60"
+                      ? "bg-[#F6E1C6] text-[#EA5C26] font-bold"
+                      : "text-[#6D1344] hover:text-[#EA5C26] hover:bg-[#F6E1C6]/50"
                   }`}
                 >
                   {link.name}
@@ -85,8 +85,6 @@ export function Header() {
               )
             })}
           </nav>
-
-
 
           {/* Right Action Controls */}
           <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
@@ -96,23 +94,23 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="flex items-center gap-1 text-xs font-semibold text-slate-700 bg-slate-100/80 rounded-xl px-2.5 py-1.5 hover:bg-slate-100 shrink-0"
+                  className="flex items-center gap-1 text-xs font-semibold text-[#6D1344] bg-[#F6E1C6]/60 rounded-xl px-2.5 py-1.5 hover:bg-[#F6E1C6] shrink-0"
                 >
-                  <Globe className="w-3.5 h-3.5 text-slate-500" />
+                  <Globe className="w-3.5 h-3.5 text-[#6D1344]" />
                   <span>{language === "EN" ? "Hindi" : "English"}</span>
-                  <ChevronDown className="w-3 h-3 text-slate-400" />
+                  <ChevronDown className="w-3 h-3 text-[#6D1344]/70" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-36 bg-white/95 backdrop-blur-xl rounded-xl border-none">
+              <DropdownMenuContent align="end" className="w-36 bg-[#FFF9EF] backdrop-blur-xl rounded-xl border border-[#F6E1C6]">
                 <DropdownMenuItem
                   onClick={() => setLanguage("HI")}
-                  className="text-xs cursor-pointer font-medium hover:bg-slate-100 text-slate-800"
+                  className="text-xs cursor-pointer font-medium hover:bg-[#F6E1C6] text-[#6D1344]"
                 >
                   हिंदी (Hindi)
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => setLanguage("EN")}
-                  className="text-xs cursor-pointer font-medium hover:bg-slate-100 text-slate-800"
+                  className="text-xs cursor-pointer font-medium hover:bg-[#F6E1C6] text-[#6D1344]"
                 >
                   English
                 </DropdownMenuItem>
@@ -124,9 +122,9 @@ export function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setIsLoginOpen(true)}
-              className="hidden md:flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-[#C85B12] px-3 py-1.5 rounded-xl hover:bg-slate-100 shrink-0"
+              className="hidden md:flex items-center gap-1.5 text-xs font-bold text-[#6D1344] hover:text-[#EA5C26] px-3 py-1.5 rounded-xl hover:bg-[#F6E1C6]/60 shrink-0"
             >
-              <User className="w-3.5 h-3.5 text-slate-500" />
+              <User className="w-3.5 h-3.5 text-[#6D1344]" />
               <span>Login</span>
             </Button>
 

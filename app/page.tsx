@@ -63,7 +63,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-amber-100 selection:text-amber-900">
+    <div className="min-h-screen bg-[#FFF9EF] text-[#2C151B] flex flex-col font-sans selection:bg-amber-200 selection:text-amber-900">
       {/* 0. 2-SECOND OM LOADING SPLASH REVEAL ANIMATION */}
       <AnimatePresence>
         {isLoading && (
@@ -72,61 +72,62 @@ export default function HomePage() {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, scale: 1.05 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center pointer-events-auto"
+            className="fixed inset-0 z-[100] bg-[#FFF9EF] flex flex-col items-center justify-center pointer-events-auto"
           >
             {/* Ambient Radiant Rotating Dashed Ring & Pulsing Om Badge */}
             <div className="relative flex items-center justify-center">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-                className="absolute w-36 h-36 rounded-full border border-dashed border-[#C85B12]/30"
+                className="absolute w-36 h-36 rounded-full border border-dashed border-[#EA5C26]/30"
               />
               
               <motion.div
                 initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: [0.92, 1.08, 1], opacity: 1 }}
                 transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-                className="w-24 h-24 rounded-full bg-slate-100 border border-slate-200/80 flex items-center justify-center relative z-10"
+                className="w-24 h-24 rounded-full bg-white border border-[#E8D8C5] flex items-center justify-center relative z-10 shadow-sm"
               >
-                {/* Sacred Saffron Om Symbol */}
-                <span className="font-serif text-5xl font-extrabold text-[#C85B12] drop-shadow-xs select-none">
+                {/* Sacred Om Symbol */}
+                <span className="font-serif text-5xl font-bold text-[#EA5C26] drop-shadow-xs select-none">
                   ॐ
                 </span>
               </motion.div>
             </div>
 
-            {/* Sub-Brand Text & Animated Saffron Progress Bar */}
+            {/* Sub-Brand Text & Animated Progress Bar */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
               className="mt-7 text-center space-y-3"
             >
-              <span className="font-heading font-extrabold text-slate-900 tracking-[0.25em] text-sm uppercase block">
+              <span className="font-heading font-bold text-[#6D1344] tracking-[0.25em] text-sm uppercase block">
                 UTSAV
               </span>
-              <span className="text-xs font-bold text-[#C85B12] tracking-wider block">
+              <span className="text-xs font-bold text-[#EA5C26] tracking-wider block">
                 Connecting You with Sacred Shrines...
               </span>
 
-              <div className="w-36 h-1 bg-slate-200/70 rounded-full mx-auto overflow-hidden">
+              <div className="w-36 h-1 bg-[#F6E1C6] rounded-full mx-auto overflow-hidden">
                 <motion.div
                   initial={{ x: "-100%" }}
                   animate={{ x: "0%" }}
                   transition={{ duration: 1.8, ease: "easeInOut" }}
-                  className="w-full h-full bg-[#C85B12] rounded-full"
+                  className="w-full h-full bg-[#EA5C26] rounded-full"
                 />
               </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+
       {/* 1. HEADER */}
       <Header />
 
       <main className="flex-1">
         {/* HERO SECTION: CENTERED MOVING HERITAGE GALLERY WITH TEMPLE PILLARS */}
-        <motion.section id="hero-section" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14 ">
+        <motion.section id="hero-section" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="relative overflow-hidden bg-[#FFF9EF] py-10 sm:py-12 lg:py-14">
           {/* Left-Most Authentic Temple Pillar */}
           <div className="absolute top-0 left-0 bottom-0 pointer-events-none z-10 select-none hidden lg:block w-44 xl:w-56 opacity-90">
             <img
@@ -147,7 +148,7 @@ export default function HomePage() {
 
           <div id="hero-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-20">
             {/* Trusted Devotees Pill Badge */}
-            <div className="inline-flex items-center gap-3 bg-white border border-slate-200/80 px-4 py-1.5 rounded-full mb-1">
+            <div className="inline-flex items-center gap-3 bg-white border border-[#E8D8C5] px-4 py-1.5 rounded-full mb-1 shadow-2xs">
               <div className="flex items-center -space-x-2.5 shrink-0">
                 <img
                   src="/Images/Avatars/indian_devotee_1_1788330405371.jpg"
@@ -166,44 +167,44 @@ export default function HomePage() {
                 />
               </div>
 
-              <span className="text-xs sm:text-sm font-semibold text-slate-700 tracking-tight whitespace-nowrap">
-                Trusted by <span className="font-bold text-[#C85B12]">100,000+</span> devotees
+              <span className="text-xs sm:text-sm font-semibold text-[#6D1344] tracking-tight whitespace-nowrap">
+                Trusted by <span className="font-bold text-[#EA5C26]">100,000+</span> devotees
               </span>
             </div>
 
-            {/* Soft, Elegant, Non-Harsh Headline */}
-            <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-800 tracking-tight leading-[1.15]">
+            {/* Main Headline */}
+            <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-[#6D1344] tracking-tight leading-[1.15]">
               Connecting Devotees to Sacred Shrines across{" "}
-              <span className="text-[#C85B12]">India 🛕</span>
+              <span className="text-[#EA5C26]">India 🛕</span>
             </h1>
 
-            {/* Soft, Gentle Subtitle Text */}
-            <p className="text-sm sm:text-base text-slate-500 font-normal leading-relaxed max-w-xl mx-auto">
-              Connect with India's revered temples from your home. Receive personalized video proof and blessed prasad delivered safely to your doorstep.
+            {/* Subtitle Text */}
+            <p className="text-sm sm:text-base text-[#7A676E] font-normal leading-relaxed max-w-xl mx-auto">
+              Participate in authentic temple Pujas even when you cannot physically be there. Receive personalized video proof and blessed prasad delivered safely to your doorstep.
             </p>
 
-            {/* Soft Trust Badges */}
-            <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-slate-600">
-              <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80">
-                <Star className="w-3.5 h-3.5 fill-[#C85B12] text-[#C85B12]" />
-                <span className="font-bold text-slate-800">4.8 Rating</span>
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-[#6D1344]">
+              <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
+                <Star className="w-3.5 h-3.5 fill-[#FAA531] text-[#FAA531]" />
+                <span className="font-bold text-[#6D1344]">4.8 Rating</span>
               </span>
-              <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#C85B12]" />
-                <span className="font-bold text-slate-800">100k+ Devotees Blessed</span>
+              <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#EA5C26]" />
+                <span className="font-bold text-[#6D1344]">100k+ Devotees Blessed</span>
               </span>
             </div>
 
-            {/* Soft Pill CTA Buttons (No Horizontal Line) */}
+            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 <Button
                   asChild
                   size="lg"
-                  className="w-full sm:w-auto bg-[#C85B12] hover:bg-[#B34E0E] text-white font-bold text-sm sm:text-base h-12 px-8 rounded-full shadow-xs transition-all"
+                  className="w-full sm:w-auto bg-[#EA5C26] hover:bg-[#D44B17] text-white font-bold text-sm sm:text-base min-h-[48px] px-8 rounded-xl shadow-xs transition-all"
                 >
                   <Link href="#discover-pujas">
-                    <span>Book Puja Now</span>
+                    <span>Participate in Puja</span>
                   </Link>
                 </Button>
               </motion.div>
@@ -212,10 +213,10 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full sm:w-auto bg-[#2D3748] hover:bg-[#1A202C] text-white font-bold text-sm sm:text-base h-12 px-8 rounded-full shadow-xs transition-all"
+                  className="w-full sm:w-auto bg-white hover:bg-[#F6E1C6]/50 text-[#6D1344] border border-[#6D1344]/30 font-bold text-sm sm:text-base min-h-[48px] px-8 rounded-xl shadow-xs transition-all"
                 >
                   <Link href="#download-banner" className="flex items-center gap-2">
-                    <Download className="w-4 h-4 text-white stroke-[2.5]" />
+                    <Download className="w-4 h-4 text-[#6D1344] stroke-[2.5]" />
                     <span>Download App</span>
                   </Link>
                 </Button>
@@ -309,32 +310,32 @@ export default function HomePage() {
           </div>
         </motion.section>
 
-        {/* 4. UPCOMING SACRED PUJAS & SEVA (Interactive 2 Options Layout) */}
-        <motion.section id="discover-pujas" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-white relative">
+        {/* 4. UPCOMING SACRED PUJAS & SEVA */}
+        <motion.section id="discover-pujas" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-[#FFF9EF] relative border-t border-[#E8D8C5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             {/* Header & Filter Tabs */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-3.5 text-center md:text-left">
-                <div className="inline-flex items-center gap-2 bg-transparent text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-slate-200/80 mb-3.5">
+                <div className="inline-flex items-center gap-2 bg-[#F6E1C6]/60 text-[#6D1344] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
                   <span>Auspicious Rituals</span>
                 </div>
-                <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
-                  Upcoming <span className="text-[#C85B12]">Sacred Temple Pujas</span>
+                <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#6D1344] leading-tight">
+                  Upcoming <span className="text-[#EA5C26]">Sacred Temple Pujas</span>
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600 font-normal max-w-xl pt-1">
+                <p className="text-xs sm:text-sm text-[#7A676E] font-normal max-w-xl pt-1">
                   Select an upcoming Puja at India's prominent shrines to receive live Sankalp video proof and doorstep Prasad.
                 </p>
               </div>
 
-              {/* Segmented Master Pill Container */}
-              <div className="inline-flex flex-wrap items-center justify-center p-1.5 rounded-full bg-white border border-slate-200/80">
+              {/* Filter Tabs */}
+              <div className="inline-flex flex-wrap items-center justify-center p-1.5 rounded-full bg-white border border-[#E8D8C5] shadow-2xs">
                 {["All Pujas", "Pradosh Vrat", "Shaktipeeth", "Jyotirlinga"].map((tab, i) => (
                   <button
                     key={tab}
-                    className={`text-xs font-extrabold px-4 sm:px-5 py-2 rounded-full transition-all duration-300 cursor-pointer whitespace-nowrap ${
+                    className={`text-xs font-bold px-4 sm:px-5 py-2 rounded-full transition-all duration-300 cursor-pointer whitespace-nowrap ${
                       i === 0
-                        ? "bg-[#C85B12] text-white"
-                        : "text-slate-700 hover:text-slate-900 hover:bg-white/70"
+                        ? "bg-[#EA5C26] text-white"
+                        : "text-[#6D1344] hover:text-[#EA5C26] hover:bg-[#F6E1C6]/40"
                     }`}
                   >
                     {tab}
@@ -343,7 +344,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* MASTERPIECE ULTRA-LUXURY PUJA CARDS GRID */}
+            {/* PUJA CARDS GRID */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
               {[
                 {
@@ -351,7 +352,7 @@ export default function HomePage() {
                   tag: "Special Pradosh",
                   loc: "Kashi Vishwanath, Varanasi",
                   date: "Sep 05, Friday",
-                  booked: "4.8k Booked",
+                  booked: "4.8k Participated",
                   price: "₹851",
                   img: "/Images/Hero/ganga-aarti-flame.jpg"
                 },
@@ -360,7 +361,7 @@ export default function HomePage() {
                   tag: "Shaktipeeth Seva",
                   loc: "Kamakhya Temple, Assam",
                   date: "Sep 08, Monday",
-                  booked: "6.1k Booked",
+                  booked: "6.1k Participated",
                   price: "₹1,250",
                   img: "/Images/Pujas/devi-shaktipeeth-aarti.jpg"
                 },
@@ -369,7 +370,7 @@ export default function HomePage() {
                   tag: "Ganapati Seva",
                   loc: "Ashtavinayak, Maharashtra",
                   date: "Sep 11, Thursday",
-                  booked: "2.9k Booked",
+                  booked: "2.9k Participated",
                   price: "₹1,100",
                   img: "/Images/Pujas/ganesha-idol-puja.jpg"
                 },
@@ -378,7 +379,7 @@ export default function HomePage() {
                   tag: "Bhasma Aarti",
                   loc: "Mahakaleshwar, Ujjain",
                   date: "Sep 15, Monday",
-                  booked: "8.4k Booked",
+                  booked: "8.4k Participated",
                   price: "₹751",
                   img: "/Images/Hero/vedic-yajna-fire.jpg"
                 }
@@ -389,58 +390,53 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="puja-card-item bg-white rounded-lg p-3.5 sm:p-4 flex flex-col justify-between group hover:shadow-xs transition-all duration-300 border border-slate-200/60"
+                  className="puja-card-item bg-white rounded-2xl p-4 flex flex-col justify-between group hover:border-[#EA5C26]/40 hover:shadow-md transition-all duration-300 border border-[#E8D8C5]"
                 >
                   <div className="space-y-3.5">
-                    {/* Temple Photo Frame (Reduced Corner Radius) */}
-                    <div className="relative h-60 sm:h-64 w-full rounded-md overflow-hidden bg-slate-100">
+                    <div className="relative h-60 sm:h-64 w-full rounded-xl overflow-hidden bg-[#F6E1C6]/30">
                       <img
                         src={card.img}
                         alt={card.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                       />
                       
-                      {/* Top Right Special Badge */}
-                      <span className="absolute top-2.5 right-2.5 bg-white/95 text-slate-900 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-sm">
+                      <span className="absolute top-2.5 right-2.5 bg-[#6D1344] text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full border border-white/20">
                         {card.tag}
                       </span>
 
-                      {/* Bottom Left Shrine Location Badge */}
                       <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                        <span className="bg-slate-900/90 text-white text-xs font-semibold px-2.5 py-1 rounded-sm inline-flex items-center gap-1.5 max-w-full">
-                          <MapPin className="w-3.5 h-3.5 text-white shrink-0" />
+                        <span className="bg-[#2C151B]/90 text-[#FFF9EF] text-xs font-semibold px-3 py-1 rounded-full inline-flex items-center gap-1.5 max-w-full">
+                          <MapPin className="w-3.5 h-3.5 text-[#FAA531] shrink-0" />
                           <span className="truncate">{card.loc}</span>
                         </span>
                       </div>
                     </div>
 
-                    {/* Card Info Body */}
                     <div className="px-0.5 space-y-2.5">
-                      <h3 className="font-heading font-extrabold text-sm sm:text-base text-slate-900 leading-snug line-clamp-2 min-h-[2.75rem] group-hover:text-[#C85B12] transition-colors">
+                      <h3 className="font-heading font-bold text-sm sm:text-base text-[#6D1344] leading-snug line-clamp-2 min-h-[2.75rem] group-hover:text-[#EA5C26] transition-colors">
                         {card.title}
                       </h3>
 
-                      <div className="flex items-center justify-between text-xs text-slate-700 font-semibold pt-0.5">
-                        <span className="flex items-center gap-1.5 font-bold text-slate-800 bg-slate-100 px-2.5 py-1 rounded-sm">
-                          <Calendar className="w-3.5 h-3.5 text-[#C85B12]" />
+                      <div className="flex items-center justify-between text-xs text-[#7A676E] font-medium pt-0.5">
+                        <span className="flex items-center gap-1.5 font-bold text-[#6D1344] bg-[#FFF9EF] px-2.5 py-1 rounded-lg border border-[#E8D8C5]">
+                          <Calendar className="w-3.5 h-3.5 text-[#EA5C26]" />
                           {card.date}
                         </span>
-                        <span className="text-slate-500 font-medium text-[11px]">
+                        <span className="text-[#7A676E] font-semibold text-[11px]">
                           {card.booked}
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Prominent Bottom Price & Full-Width CTA Section */}
-                  <div className="px-0.5 pt-3 space-y-2.5">
+                  <div className="px-0.5 pt-3 space-y-2.5 border-t border-[#E8D8C5]/60 mt-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">Starting Seva</span>
-                      <span className="font-heading text-lg font-extrabold text-slate-900">{card.price}</span>
+                      <span className="text-[10px] text-[#7A676E] font-bold uppercase tracking-wider">Starting Seva</span>
+                      <span className="font-heading text-lg font-bold text-[#6D1344]">{card.price}</span>
                     </div>
 
                     <Link href="/puja/ganesh-sahastra-archan" className="block w-full">
-                      <Button className="w-full bg-[#C85B12] hover:bg-[#A84A0E] text-white font-extrabold text-xs h-9 rounded-md transition-colors cursor-pointer">
+                      <Button className="w-full bg-[#EA5C26] hover:bg-[#D44B17] text-white font-bold text-xs min-h-[44px] rounded-xl transition-colors cursor-pointer">
                         <span>Participate in Puja →</span>
                       </Button>
                     </Link>
@@ -451,27 +447,26 @@ export default function HomePage() {
           </div>
         </motion.section>
 
-        {/* 5. HOW YOUR PUJA & SANKALP IS PERFORMED (INTERACTIVE AUTO-CHANGING STEP SHOWCASE) */}
-        <motion.section id="how-it-works" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-white ">
+        {/* 5. HOW YOUR PUJA & SANKALP IS PERFORMED */}
+        <motion.section id="how-it-works" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.15 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-[#F6E1C6]/30 border-y border-[#E8D8C5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
-            {/* 2-Column Main Layout: Left Main Headline & Vertical Step List, Right Dynamic Text & Image Frame */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               
-              {/* Left Column: Big Headline & Interactive Vertical Step List (5 cols) */}
+              {/* Left Column */}
               <div className="lg:col-span-5 space-y-8">
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 bg-transparent text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-slate-200/80">
+                  <div className="inline-flex items-center gap-2 bg-[#FFF9EF] text-[#6D1344] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5]">
                     <span>Transparent Process</span>
                   </div>
 
-                  <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                  <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#6D1344] tracking-tight leading-tight">
                     Vedic Rituals performed with{" "}
-                    <span className="text-[#C85B12]">100% Transparency</span>
+                    <span className="text-[#EA5C26]">100% Transparency</span>
                   </h2>
                 </div>
 
-                {/* Vertical Step Tab List matching reference image */}
+                {/* Vertical Step Tab List */}
                 <div className="space-y-3">
                   {[
                     { id: 0, num: "01", label: "Select Preferred Seva" },
@@ -484,15 +479,15 @@ export default function HomePage() {
                       <button
                         key={step.id}
                         onClick={() => setActiveStepIndex(step.id)}
-                        className={`w-full text-left transition-all duration-300 flex items-center justify-between px-5 py-3.5 rounded-[2px] border cursor-pointer ${
+                        className={`w-full text-left transition-all duration-300 flex items-center justify-between px-5 py-3.5 rounded-xl border cursor-pointer ${
                           isActive
-                            ? "bg-white text-[#C85B12] border-slate-200 shadow-xs font-bold"
-                            : "bg-slate-50/70 hover:bg-white text-slate-700 border-slate-200/50 hover:border-slate-200 font-semibold"
+                            ? "bg-white text-[#EA5C26] border-[#EA5C26]/40 shadow-xs font-bold"
+                            : "bg-[#FFF9EF] hover:bg-white text-[#6D1344] border-[#E8D8C5] font-semibold"
                         }`}
                       >
                         <div className="flex items-center gap-3.5">
-                          <span className={`text-xs font-mono font-bold px-2 py-0.5 rounded-[2px] ${
-                            isActive ? "bg-[#C85B12]/10 text-[#C85B12]" : "bg-slate-200/60 text-slate-500"
+                          <span className={`text-xs font-mono font-bold px-2.5 py-0.5 rounded-full ${
+                            isActive ? "bg-[#EA5C26]/15 text-[#EA5C26]" : "bg-[#F6E1C6]/60 text-[#7A676E]"
                           }`}>
                             {step.num}
                           </span>
@@ -500,191 +495,72 @@ export default function HomePage() {
                             {step.label}
                           </span>
                         </div>
-                        <span className={`text-xs font-semibold transition-transform duration-300 ${
-                          isActive ? "text-[#C85B12] translate-x-0.5" : "text-slate-400 opacity-0 group-hover:opacity-100"
-                        }`}>
-                          →
-                        </span>
+                        <ChevronRight
+                          className={`w-4 h-4 transition-transform duration-300 ${
+                            isActive ? "text-[#EA5C26] translate-x-0.5" : "text-[#7A676E] opacity-0 group-hover:opacity-100"
+                          }`}
+                        />
                       </button>
                     );
                   })}
                 </div>
               </div>
 
-              {/* Right Column: Dynamic Title, Subtitle & Auto-Changing Showcase Image (7 cols) */}
-              <div className="lg:col-span-7 space-y-6">
+              {/* Right Column: Dynamic Step Showcase */}
+              <div className="lg:col-span-7">
                 <AnimatePresence mode="wait">
-                  {/* Step 0: Select Preferred Seva */}
-                  {activeStepIndex === 0 && (
-                    <motion.div
-                      key="step-0"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                      className="space-y-6"
-                    >
-                      <div className="space-y-2">
-                        <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
-                          100+ Sacred Temples Seva Selection
-                        </h3>
-                        <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-xl">
-                          Choose from upcoming auspicious pujas at Varanasi, Ujjain, Kamakhya, Haridwar, and major Jyotirlingas tailored for your family's personal intentions.
-                        </p>
+                  <motion.div
+                    key={activeStepIndex}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.4 }}
+                    className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E8D8C5] shadow-xs space-y-6"
+                  >
+                    <div className="space-y-2">
+                      <span className="text-xs font-mono font-bold text-[#EA5C26] bg-[#F6E1C6]/60 px-3 py-1 rounded-full border border-[#E8D8C5]">
+                        STEP 0{activeStepIndex + 1} OF 04
+                      </span>
+                      <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#6D1344]">
+                        {[
+                          "Select Your Preferred Seva & Offering",
+                          "Enter Devotee Name & Gotra for Sankalp",
+                          "Receive HD Live Video Proof on WhatsApp",
+                          "Receive Blessed Pure Temple Prasad at Doorstep"
+                        ][activeStepIndex]}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-[#7A676E] font-normal leading-relaxed">
+                        {[
+                          "Choose from individual, couple, or family puja packages at India's sacred shrines.",
+                          "Your family names and Gotra are explicitly recited by Vedic Pandits during the holy Sankalp.",
+                          "Watch live video footage of your ritual being performed at the sanctum with your name chanted clearly.",
+                          "Pure, sanctified temple prasad along with sacred Thread, Kumkum, and Vibhuti is packed and shipped to your home."
+                        ][activeStepIndex]}
+                      </p>
+                    </div>
+
+                    <div className="w-full h-64 sm:h-72 rounded-xl overflow-hidden relative border border-[#E8D8C5] bg-[#F6E1C6]/30">
+                      <img
+                        src={[
+                          "/Images/Hero/ganga-aarti-flame.jpg",
+                          "/Images/scripture.jpg",
+                          "/Images/Hero/devotee-aarti-blessing.jpg",
+                          "/Images/prasad_thali.jpg"
+                        ][activeStepIndex]}
+                        alt="Step Proof"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#2C151B]/80 via-transparent to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-semibold">
+                        {[
+                          "Varanasi & Ujjain Shrines • Pradosh Archana",
+                          "Kashi & Kamakhya Mandap • Naam & Gotra Recited",
+                          "WhatsApp HD Video Clip • Direct Sanctum Feed",
+                          "Doorstep Express Delivery • Blessed Prasad Box"
+                        ][activeStepIndex]}
                       </div>
-
-                      <div className="w-full h-88 sm:h-96 lg:h-[420px] rounded-2xl overflow-hidden relative bg-slate-950 border border-slate-200/80 flex items-center justify-center group">
-                        <img
-                          src="/Images/panchang.jpg"
-                          alt="Select Preferred Seva"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                        {/* Overlay Glass Widget */}
-                        <div className="absolute bottom-5 left-5 right-5 z-10 bg-slate-950/85 backdrop-blur-xl border border-white/15 rounded-xl p-4 text-white shadow-xs space-y-1.5">
-                          <div className="flex items-center justify-between text-xs">
-                            <span className="font-extrabold text-white">Varanasi & Ujjain Shrines</span>
-                            <span className="bg-[#C85B12] text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">
-                              Step 1 Active
-                            </span>
-                          </div>
-                          <p className="text-xs text-slate-200 font-medium">
-                            Kashi Vishwanath Special Pradosh Archana • Sep 05
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-
-                  {/* Step 1: Recite Name & Gotra */}
-                  {activeStepIndex === 1 && (
-                    <motion.div
-                      key="step-1"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                      className="space-y-6"
-                    >
-                      <div className="space-y-2">
-                        <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
-                          Vedic Sankalp Name & Gotra Chanting
-                        </h3>
-                        <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-xl">
-                          Your family's name and gotra are formally chanted by head priests inside the temple sanctum during authentic Vedic ritual chanting.
-                        </p>
-                      </div>
-
-                      <div className="w-full h-88 sm:h-96 lg:h-[420px] rounded-2xl overflow-hidden relative bg-slate-950 border border-slate-200/80 flex items-center justify-center group">
-                        <img
-                          src="/Images/scripture.jpg"
-                          alt="Recite Name & Gotra"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                        {/* Overlay Glass Widget */}
-                        <div className="absolute bottom-5 left-5 right-5 z-10 bg-slate-950/85 backdrop-blur-xl border border-white/15 rounded-xl p-4 text-white shadow-xs space-y-1.5">
-                          <div className="flex items-center justify-between text-xs">
-                            <span className="font-extrabold text-white">Kamakhya & Puri Mandap</span>
-                            <span className="bg-[#C85B12] text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">
-                              Step 2 Active
-                            </span>
-                          </div>
-                          <p className="text-xs text-slate-200 font-medium">
-                            Shubham Sah & Family • Kashyap Gotra Recited
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-
-                  {/* Step 2: Live Video Proof */}
-                  {activeStepIndex === 2 && (
-                    <motion.div
-                      key="step-2"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                      className="space-y-6"
-                    >
-                      <div className="space-y-2">
-                        <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
-                          HD WhatsApp Video Proof Delivery
-                        </h3>
-                        <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-xl">
-                          Watch high-definition video proof of your Sankalp recorded live inside the temple mandap, delivered directly to your WhatsApp.
-                        </p>
-                      </div>
-
-                      <div className="w-full h-88 sm:h-96 lg:h-[420px] rounded-2xl overflow-hidden relative bg-slate-950 border border-slate-200/80 flex items-center justify-center group">
-                        <img
-                          src="/Images/Hero/ganga-aarti-flame.jpg"
-                          alt="Live Video Proof"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                        {/* Overlay Glass Widget */}
-                        <div className="absolute bottom-5 left-5 right-5 z-10 bg-slate-950/85 backdrop-blur-xl border border-white/15 rounded-xl p-4 text-white shadow-xs space-y-1.5">
-                          <div className="flex items-center justify-between text-xs">
-                            <span className="font-extrabold text-white">⚡ WhatsApp Instant Alert</span>
-                            <span className="bg-[#C85B12] text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">
-                              Step 3 Active
-                            </span>
-                          </div>
-                          <p className="text-xs text-slate-200 font-medium">
-                            Live Sankalp Clip Recorded at Kashi Vishwanath Sanctum
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-
-                  {/* Step 3: Doorstep Prasad Delivery */}
-                  {activeStepIndex === 3 && (
-                    <motion.div
-                      key="step-3"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                      className="space-y-6"
-                    >
-                      <div className="space-y-2">
-                        <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
-                          Doorstep Express Sacred Prasad Delivery
-                        </h3>
-                        <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-xl">
-                          Sacred Prasad thali, holy Bhasma, Roli, Kumkum, and energized yantras are safely packed and dispatched directly to your doorstep.
-                        </p>
-                      </div>
-
-                      <div className="w-full h-88 sm:h-96 lg:h-[420px] rounded-2xl overflow-hidden relative bg-slate-950 border border-slate-200/80 flex items-center justify-center group">
-                        <img
-                          src="/Images/prasad_thali.jpg"
-                          alt="Doorstep Prasad Delivery"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                        {/* Overlay Glass Widget */}
-                        <div className="absolute bottom-5 left-5 right-5 z-10 bg-slate-950/85 backdrop-blur-xl border border-white/15 rounded-xl p-4 text-white shadow-xs space-y-1.5">
-                          <div className="flex items-center justify-between text-xs">
-                            <span className="font-extrabold text-white">Puri Jagannath Mahaprasad</span>
-                            <span className="bg-[#C85B12] text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">
-                              Step 4 Active
-                            </span>
-                          </div>
-                          <p className="text-xs text-slate-200 font-medium">
-                            SpeedPost Tracking #UTS98214 • Out for Delivery
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
+                    </div>
+                  </motion.div>
                 </AnimatePresence>
               </div>
 
