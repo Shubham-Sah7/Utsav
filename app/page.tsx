@@ -1424,22 +1424,34 @@ export default function HomePage() {
             </div>
 
             {/* 3 iPhone Mockup Screen Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-stretch justify-items-center">
               {/* Phone Card 1: Live Video Proof */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col items-center group"
+                className="flex flex-col items-center group w-full"
               >
-                {/* 100% Unclipped Mobile Mockup Graphic */}
-                <div className="w-full max-w-[280px] sm:max-w-[300px] hover:-translate-y-2 transition-all duration-500 flex justify-center">
-                  <img
-                    src="/Images/App/utsav_app_screen_1.png"
-                    alt="Utsav App Live Video Proof Screen"
-                    className="w-full h-auto object-contain drop-shadow-xs"
-                  />
+                {/* Sleek Single iPhone Device Frame */}
+                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[42px] p-2.5 shadow-2xl border-[3.5px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
+                  {/* iPhone Top Dynamic Island Notch */}
+                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-24 h-4.5 bg-black rounded-full z-30 flex items-center justify-end px-2.5 gap-1.5 shadow-xs">
+                    <div className="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-800" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
+                  </div>
+
+                  {/* App Screen Content */}
+                  <div className="w-full h-full rounded-[34px] overflow-hidden relative bg-white border border-slate-800/40">
+                    <img
+                      src="/Images/App/screen_puja.jpg"
+                      alt="Utsav App Puja Seva Screen"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+
+                  {/* Bottom Home Indicator Bar */}
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30" />
                 </div>
 
                 {/* Card Description underneath */}
@@ -1459,15 +1471,27 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col items-center group"
+                className="flex flex-col items-center group w-full"
               >
-                {/* 100% Unclipped Mobile Mockup Graphic */}
-                <div className="w-full max-w-[280px] sm:max-w-[300px] hover:-translate-y-2 transition-all duration-500 flex justify-center">
-                  <img
-                    src="/Images/App/utsav_app_screen_2.png"
-                    alt="Utsav App Home & Today's Special Screen"
-                    className="w-full h-auto object-contain drop-shadow-xs"
-                  />
+                {/* Sleek Single iPhone Device Frame */}
+                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[42px] p-2.5 shadow-2xl border-[3.5px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
+                  {/* iPhone Top Dynamic Island Notch */}
+                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-24 h-4.5 bg-black rounded-full z-30 flex items-center justify-end px-2.5 gap-1.5 shadow-xs">
+                    <div className="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-800" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
+                  </div>
+
+                  {/* App Screen Content */}
+                  <div className="w-full h-full rounded-[34px] overflow-hidden relative bg-white border border-slate-800/40">
+                    <img
+                      src="/Images/App/screen_home.jpg"
+                      alt="Utsav App Home Screen"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+
+                  {/* Bottom Home Indicator Bar */}
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30" />
                 </div>
 
                 {/* Card Description underneath */}
@@ -1487,15 +1511,27 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col items-center group"
+                className="flex flex-col items-center group w-full"
               >
-                {/* 100% Unclipped Mobile Mockup Graphic */}
-                <div className="w-full max-w-[280px] sm:max-w-[300px] hover:-translate-y-2 transition-all duration-500 flex justify-center">
-                  <img
-                    src="/Images/App/utsav_app_screen_3.png"
-                    alt="Utsav App Siddha Store Screen"
-                    className="w-full h-auto object-contain drop-shadow-xs"
-                  />
+                {/* Sleek Single iPhone Device Frame */}
+                <div className="relative w-[260px] sm:w-[275px] h-[520px] sm:h-[550px] bg-slate-950 rounded-[42px] p-2.5 shadow-2xl border-[3.5px] border-slate-800 ring-1 ring-slate-700/40 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 transition-all duration-500">
+                  {/* iPhone Top Dynamic Island Notch */}
+                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-24 h-4.5 bg-black rounded-full z-30 flex items-center justify-end px-2.5 gap-1.5 shadow-xs">
+                    <div className="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-800" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-950/80" />
+                  </div>
+
+                  {/* App Screen Content */}
+                  <div className="w-full h-full rounded-[34px] overflow-hidden relative bg-white border border-slate-800/40">
+                    <img
+                      src="/Images/App/screen_store.jpg"
+                      alt="Utsav App Siddha Store Screen"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+
+                  {/* Bottom Home Indicator Bar */}
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-400/50 rounded-full z-30" />
                 </div>
 
                 {/* Card Description underneath */}
