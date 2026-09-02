@@ -424,14 +424,11 @@ export default function HomePage() {
                         {card.title}
                       </h3>
 
-                      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 pt-0.5">
-                        <span className="inline-flex items-center gap-1.5 font-semibold text-[#6D1344] text-[11px] sm:text-xs bg-[#FFF9EF] px-2.5 py-1 rounded-lg border border-[#E8D8C5] shrink-0 whitespace-nowrap">
+                      <div className="pt-0.5">
+                        <span className="inline-flex items-center gap-1.5 font-semibold text-[#6D1344] text-[11px] bg-[#FFF9EF] px-2.5 py-1 rounded-lg border border-[#E8D8C5] max-w-full">
                           <Calendar className="w-3.5 h-3.5 text-[#EA5C26] shrink-0" />
-                          <span>{card.date}</span>
-                          <span className="text-[#EA5C26] font-bold">• {card.tag}</span>
-                        </span>
-                        <span className="text-[#7A676E] font-medium text-[11px] shrink-0 text-right">
-                          {card.booked}
+                          <span className="truncate">{card.date}</span>
+                          <span className="text-[#EA5C26] font-bold truncate">• {card.tag}</span>
                         </span>
                       </div>
                     </div>
@@ -439,7 +436,7 @@ export default function HomePage() {
 
                   <div className="px-0.5 pt-3 space-y-2.5 mt-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] text-[#7A676E] font-medium uppercase tracking-wider">Starting Seva</span>
+                      <span className="text-[11px] text-[#7A676E] font-medium">{card.booked}</span>
                       <span className="font-heading text-lg font-semibold text-[#6D1344]">{card.price}</span>
                     </div>
 
