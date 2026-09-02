@@ -571,17 +571,17 @@ export default function HomePage() {
           </div>
         </motion.section>
 
-        {/* 6. A GUIDE THROUGH YOUR DHARMIK PATH (Meenakshi Architectural Gallery) */}
-        <motion.section initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-white ">
+        {/* 6. A GUIDE THROUGH YOUR DHARMIK PATH */}
+        <motion.section initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.1 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="py-10 sm:py-12 lg:py-14 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
             <div className="text-center space-y-3.5">
-              <div className="inline-flex items-center gap-2 bg-transparent text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-slate-200/80 mb-3.5">
+              <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-medium uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
                 <span>Sacred Heritage</span>
               </div>
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
-                A guide through your <span className="text-[#C85B12]">Dharmik Path</span>
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight">
+                A guide through your <span className="text-[#EA5C26]">Dharmik Path</span>
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 font-normal max-w-lg mx-auto pt-1">
+              <p className="text-xs sm:text-sm text-[#7A676E] font-normal max-w-lg mx-auto pt-1">
                 Discover rituals, mantras and ancient wisdom tailored for your spiritual journey
               </p>
             </div>
@@ -594,26 +594,26 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="dharmik-row-item grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
             >
-              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-slate-200/80">
+              <div className="w-full h-80 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden relative group flex items-center justify-center border border-[#E8D8C5]">
                 <img src="/Images/panchang.jpg" alt="Sacred Panchang Guide" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
 
               <div className="dharmik-text-box space-y-4 text-center md:text-left">
-                <span className="inline-block px-3.5 py-1 rounded-full border border-[#C85B12] text-[#C85B12] text-[11px] font-extrabold uppercase tracking-wider mb-2 bg-transparent">Panchang</span>
-                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">Today's Sacred Panchang</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <span className="inline-block px-3.5 py-1 rounded-full border border-[#EA5C26] text-[#EA5C26] text-[11px] font-semibold uppercase tracking-wider mb-2 bg-transparent">Panchang</span>
+                <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344]">Today's Sacred Panchang</h3>
+                <p className="text-xs sm:text-sm text-[#7A676E] leading-relaxed font-normal">
                   Check today's Tithi, Nakshatra, Auspicious Muhurat and Rahukaal for planning daily sacred rituals.
                 </p>
 
-                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700 font-medium max-w-md mx-auto md:mx-0">
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#2C151B] font-medium max-w-md mx-auto md:mx-0">
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Daily Tithi, Nakshatra & Rahukaal Timings</span>
                   </li>
                   <li className="flex items-center gap-2.5 justify-center md:justify-start">
-                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#C85B12] flex items-center justify-center text-[#C85B12] shrink-0">
+                    <span className="w-4 h-4 rounded-[4px] border-2 border-[#EA5C26] flex items-center justify-center text-[#EA5C26] shrink-0">
                       <Check className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span>Auspicious Choghadiya & Abhijit Muhurat</span>
@@ -874,13 +874,13 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
               {/* Left Column: Heading & Subtitle */}
               <div className="space-y-3.5 text-left">
-                <div className="inline-flex items-center gap-2 bg-transparent text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-slate-200/80 mb-3.5">
+                <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-medium uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
                   <span>Devotee Experiences</span>
                 </div>
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                  What devotees <span className="text-[#C85B12]">are saying.</span>
+                <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight">
+                  What devotees <span className="text-[#EA5C26]">are saying.</span>
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600 font-normal pt-1">
+                <p className="text-xs sm:text-sm text-[#7A676E] font-normal pt-1">
                   Over 100,000+ satisfied devotees across India & worldwide.
                 </p>
               </div>
@@ -1113,13 +1113,13 @@ export default function HomePage() {
             
             {/* Unified Section Header */}
             <div className="text-center space-y-3.5">
-              <div className="inline-flex items-center gap-2 bg-transparent text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-slate-200/80 mb-3.5">
+              <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-medium uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
                 <span>Spiritual Wisdom & Gyan</span>
               </div>
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
-                Collection of <span className="text-[#C85B12]">Dharmik Gyan</span>
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight">
+                Collection of <span className="text-[#EA5C26]">Dharmik Gyan</span>
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 font-normal max-w-xl mx-auto pt-1">
+              <p className="text-xs sm:text-sm text-[#7A676E] font-normal max-w-xl mx-auto pt-1">
                 Explore ancient scriptures, daily panchang, chalisa, mantras, and spiritual reads tailored for your journey.
               </p>
             </div>
@@ -1374,14 +1374,14 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
             {/* Header Section */}
             <div className="text-center space-y-3.5 max-w-2xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-transparent text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-slate-200/80 mb-3.5">
+              <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-medium uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
                 <span>Spiritual Devotion Anywhere</span>
               </div>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-2xl mx-auto">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight max-w-2xl mx-auto">
                 Experience Devotion on <br />
-                <span className="text-[#C85B12] whitespace-nowrap">Utsav App</span>
+                <span className="text-[#EA5C26] whitespace-nowrap">Utsav App</span>
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 font-normal max-w-xl mx-auto pt-1">
+              <p className="text-xs sm:text-sm text-[#7A676E] font-normal max-w-xl mx-auto pt-1">
                 Book Pujas, watch HD live video proof, read Panchang, and receive blessed Prasad directly from your phone.
               </p>
             </div>
@@ -1492,13 +1492,13 @@ export default function HomePage() {
             
             {/* Header Section */}
             <div className="text-center space-y-3.5 max-w-2xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-transparent text-slate-800 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-slate-200/80 mb-3.5">
+              <div className="inline-flex items-center gap-2 bg-slate-50 text-[#6D1344] text-[10px] sm:text-xs font-medium uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#E8D8C5] mb-1">
                 <span>Frequently Asked Questions</span>
               </div>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                Frequently Asked <span className="text-[#C85B12]">Questions</span>
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight">
+                Frequently Asked <span className="text-[#EA5C26]">Questions</span>
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 font-normal max-w-lg mx-auto pt-1">
+              <p className="text-xs sm:text-sm text-[#7A676E] font-normal max-w-lg mx-auto pt-1">
                 Got questions about booking, video proof or doorstep prasad? We've got answers.
               </p>
             </div>
