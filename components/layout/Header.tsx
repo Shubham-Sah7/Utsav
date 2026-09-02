@@ -32,7 +32,14 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const navLinks = [
+  const navLinks = language === "HI" ? [
+    { name: "पूजा सेवा", href: "/puja/ganesh-sahastra-archan" },
+    { name: "भेट अर्पण", href: "/#discover-pujas" },
+    { name: "सिद्ध स्टोर", href: "/#discover-pujas" },
+    { name: "पंचांग", href: "/#panchang" },
+    { name: "राशिफल", href: "/#panchang" },
+    { name: "ज्ञान", href: "/#gyan" },
+  ] : [
     { name: "Pujas", href: "/puja/ganesh-sahastra-archan" },
     { name: "Bhet", href: "/#discover-pujas" },
     { name: "Store", href: "/#discover-pujas" },
