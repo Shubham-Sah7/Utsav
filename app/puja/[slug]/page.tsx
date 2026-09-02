@@ -676,8 +676,8 @@ export default function PujaDetailPage() {
 
               {/* Left: Shield Icon + Title */}
               <div className="flex items-center gap-3.5 shrink-0 z-10">
-                <div className="w-11 h-11 rounded-2xl bg-[#C8E6C9]/70 text-[#1B5E20] flex items-center justify-center border border-[#A5D6A7] shadow-2xs">
-                  <ShieldCheck className="w-6 h-6 stroke-[2.2]" />
+                <div className="w-11 h-11 rounded-full bg-[#C8E6C9]/80 text-[#1B5E20] flex items-center justify-center border border-[#A5D6A7] shadow-2xs">
+                  <ShieldCheck className="w-5.5 h-5.5 stroke-[2.2]" />
                 </div>
                 <h3 className="font-heading text-lg sm:text-xl font-bold text-[#1B5E20] tracking-tight">
                   Utsav Promise
@@ -693,13 +693,13 @@ export default function PujaDetailPage() {
                 {/* Pill Badges */}
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
                   <span className="inline-flex items-center gap-1.5 bg-white px-3.5 py-1 rounded-full border border-[#C8E6C9] text-xs font-semibold text-[#1B5E20] shadow-2xs">
-                    <span className="text-[#10B981] font-bold">✓</span> 100% Refund
+                    <span className="text-[#10B981] font-bold text-xs">✓</span> 100% Refund
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-white px-3.5 py-1 rounded-full border border-[#C8E6C9] text-xs font-semibold text-[#1B5E20] shadow-2xs">
-                    <span className="text-[#10B981] font-bold">✓</span> Guaranteed Video
+                    <span className="text-[#10B981] font-bold text-xs">✓</span> Guaranteed Video
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-white px-3.5 py-1 rounded-full border border-[#C8E6C9] text-xs font-semibold text-[#1B5E20] shadow-2xs">
-                    <span className="text-[#10B981] font-bold">✓</span> No Questions Asked
+                    <span className="text-[#10B981] font-bold text-xs">✓</span> No Questions Asked
                   </span>
                 </div>
               </div>
