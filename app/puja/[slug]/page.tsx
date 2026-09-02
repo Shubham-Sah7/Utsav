@@ -15,7 +15,10 @@ import {
   ChevronRight,
   UserCheck,
   Award,
-  Clock
+  Clock,
+  Video,
+  Package,
+  BookOpen
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -244,22 +247,22 @@ export default function PujaDetailPage() {
 
                 {/* Quick Benefit Badges */}
                 <div className="grid grid-cols-2 gap-3 pt-2">
-                  <div className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200/80 bg-slate-50/50">
-                    <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" />
-                    <span className="text-xs font-bold text-slate-800">HD Video Proof</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200/80 bg-slate-50/50">
-                    <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" />
-                    <span className="text-xs font-bold text-slate-800">Doorstep Prasad</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200/80 bg-slate-50/50">
-                    <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" />
-                    <span className="text-xs font-bold text-slate-800">Name & Gotra Recited</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200/80 bg-slate-50/50">
-                    <Check className="w-4 h-4 text-[#C85B12] stroke-[3]" />
-                    <span className="text-xs font-bold text-slate-800">100% Refund Assurance</span>
-                  </div>
+                  {[
+                    { label: "HD Video Proof", icon: Video },
+                    { label: "Doorstep Prasad", icon: Package },
+                    { label: "Name & Gotra Recited", icon: BookOpen },
+                    { label: "100% Refund Assurance", icon: ShieldCheck }
+                  ].map((item, idx) => {
+                    const IconComp = item.icon;
+                    return (
+                      <div key={idx} className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl border border-slate-200/80 bg-white shadow-2xs">
+                        <div className="w-7 h-7 rounded-full bg-[#C85B12]/10 text-[#C85B12] flex items-center justify-center shrink-0">
+                          <IconComp className="w-3.5 h-3.5 stroke-[2.5]" />
+                        </div>
+                        <span className="text-xs font-extrabold text-slate-900">{item.label}</span>
+                      </div>
+                    );
+                  })}
                 </div>
 
                 {/* Primary Hero CTA */}
