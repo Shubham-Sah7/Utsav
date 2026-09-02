@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -23,13 +24,50 @@ import {
 import { Button } from "@/components/ui/button";
 
 export default function PujaDetailPage() {
+  const params = useParams();
+  const rawSlug = (params?.slug as string) || "ganesh-sahastra-archan";
+  const isKaliPuja = rawSlug.toLowerCase().includes("kali");
+
+  // Dynamic Content Resolution
+  const pujaTitle = isKaliPuja
+    ? "Maa Dakshina Kali Mahayajna & Shatru Badha Shanti Puja"
+    : "1008 Ganesh Sahastra Archana Path Aivam Ketu Shanti Puja";
+
+  const breadcrumbName = isKaliPuja
+    ? "Maa Dakshina Kali Mahayajna"
+    : "1008 Ganesh Sahastra Archana";
+
+  const pujaLocation = isKaliPuja
+    ? "Maa Kali Shaktipeeth, Kalighat"
+    : "Chintamani Ganesh, Kashi";
+
+  const pujaDate = isKaliPuja
+    ? "Fri · Sep 11, 2026 · Amavasya Visesh"
+    : "Wed · Sep 09, 2026 · Budhvar Visesh";
+
+  const pujaBadge = isKaliPuja
+    ? "SHAKTIPEETH MAHAYAJNA"
+    : "Special Ketu Graha Shanti Remedy";
+
+  const pujaDesc = isKaliPuja
+    ? "A sacred Maa Dakshina Kali Chandi Path and Shatru Badha Nivaran Mahayajna performed at Kalighat Shaktipeeth. Protects family from negative energies, evil eye, and bestows divine health & victory."
+    : "A sacred 1008-name Ganesh Archana and Ketu Shanti Puja performed at Sri Chintamani Ganesh Mandir, Kashi. Removes life obstacles, financial stress, and bestows peace & career growth.";
+
   // State for Gallery
-  const galleryImages = [
-    { src: "/Images/panchang.jpg", alt: "Chintamani Ganesh Mandir Sanctum Kashi" },
-    { src: "/Images/Hero/ganga-aarti-flame.jpg", alt: "Ganga Aarti Flame Kashi" },
-    { src: "/Images/scripture.jpg", alt: "Vedic Sahastra Archan Chanting" },
-    { src: "/Images/Hero/kashi-golden-shikhara.jpg", alt: "Kashi Temple Shikhara" }
-  ];
+  const galleryImages = isKaliPuja
+    ? [
+        { src: "/Images/Pujas/devi-shaktipeeth-aarti.jpg", alt: "Maa Kali Sanctum Kalighat" },
+        { src: "/Images/Hero/ganga-aarti-flame.jpg", alt: "Sacred Chandi Path Aarti" },
+        { src: "/Images/scripture.jpg", alt: "Vedic Mantra Jaap & Tantra Shanti" },
+        { src: "/Images/gopuram-artwork.jpg", alt: "Kalighat Temple Sanctum" }
+      ]
+    : [
+        { src: "/Images/panchang.jpg", alt: "Chintamani Ganesh Mandir Sanctum Kashi" },
+        { src: "/Images/Hero/ganga-aarti-flame.jpg", alt: "Ganga Aarti Flame Kashi" },
+        { src: "/Images/scripture.jpg", alt: "Vedic Sahastra Archan Chanting" },
+        { src: "/Images/Hero/kashi-golden-shikhara.jpg", alt: "Kashi Temple Shikhara" }
+      ];
+
   const [selectedImgIndex, setSelectedImgIndex] = useState(0);
 
   // State for Package Selection
@@ -301,7 +339,7 @@ export default function PujaDetailPage() {
               <ChevronRight className="w-3 h-3 text-[#7A676E]" />
               <Link href="/#discover-pujas" className="hover:text-[#6D1344] transition-colors">Puja Seva</Link>
               <ChevronRight className="w-3 h-3 text-[#7A676E]" />
-              <span className="text-[#6D1344] font-bold">1008 Ganesh Sahastra Archana</span>
+              <span className="text-[#6D1344] font-bold">{breadcrumbName}</span>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -348,22 +386,22 @@ export default function PujaDetailPage() {
                     </span>
                     <span className="text-xs font-semibold text-[#7C112F] flex items-center gap-1.5 bg-slate-50 px-3 py-1 rounded-full border border-[#E8D8C5]">
                       <ShieldCheck className="w-3.5 h-3.5 text-[#EA5C26]" />
-                      Special Ketu Graha Shanti Remedy
+                      {pujaBadge}
                     </span>
                   </div>
 
                   <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6D1344] leading-tight">
-                    1008 Ganesh Sahastra Archana Path Aivam Ketu Shanti Puja
+                    {pujaTitle}
                   </h1>
 
                   <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-[#2C151B] font-medium pt-0.5">
                     <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-[#E8D8C5]">
                       <MapPin className="w-4 h-4 text-[#EA5C26]" />
-                      <span className="font-medium">Chintamani Ganesh, Kashi</span>
+                      <span className="font-medium">{pujaLocation}</span>
                     </div>
                     <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-[#E8D8C5]">
                       <Calendar className="w-4 h-4 text-[#EA5C26]" />
-                      <span className="font-medium">Wed · Sep 09, 2026 · Budhvar Visesh</span>
+                      <span className="font-medium">{pujaDate}</span>
                     </div>
                   </div>
 
@@ -381,7 +419,7 @@ export default function PujaDetailPage() {
                 </div>
 
                 <p className="text-xs sm:text-sm text-[#3D262D] font-normal leading-relaxed">
-                  A sacred 1008-name Ganesh Archana and Ketu Shanti Puja performed at Sri Chintamani Ganesh Mandir, Kashi. Removes life obstacles, financial stress, and bestows peace & career growth.
+                  {pujaDesc}
                 </p>
 
                 {/* Quick Benefit Badges */}
