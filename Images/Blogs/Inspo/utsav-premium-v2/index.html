@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Utsav — A closer connection to India's sacred temples</title>
+<meta name="description" content="Utsav brings authentic temple rituals, pujas, seva and prasad closer to home.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+<style>
+@font-face{
+  font-family:SatishSans;
+  src:local("SatishSans"),local("Satish Sans");
+  font-display:swap;
+}
+:root{
+ --bg:#f5f0e7; --paper:#fbf9f4; --ink:#251f1a; --muted:#776e63;
+ --brown:#4a211c; --accent:#b9572e; --gold:#9e7845; --line:#d9d0c1;
+ --max:1240px; --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:auto}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:SatishSans,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");z-index:99}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 64px));margin:auto}
+.eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1,h2,h3,p{margin:0}
+h1{font-size:clamp(52px,7.6vw,112px);line-height:.88;letter-spacing:-.07em;font-weight:650}
+h2{font-size:clamp(38px,5vw,72px);line-height:.92;letter-spacing:-.06em;font-weight:650}
+h3{font-size:21px;line-height:1.08}
+p{color:var(--muted);line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:18px;border:1px solid var(--ink);padding:13px 17px 13px 18px;border-radius:100px;font-size:12px;font-weight:650;transition:transform .4s var(--ease),background .4s,color .4s}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{transform:translateY(-3px)}
+.btn .arr{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.16);transition:transform .4s var(--ease)}
+.btn:hover .arr{transform:translateX(4px) rotate(-10deg)}
+/* header */
+.header{position:fixed;z-index:50;top:0;left:0;width:100%;padding:22px 0;transition:padding .5s var(--ease)}
+.header:after{content:"";position:absolute;inset:0;background:rgba(245,240,231,.76);backdrop-filter:blur(16px);border-bottom:1px solid transparent;z-index:-1;opacity:0;transition:.5s}
+.header.scrolled{padding:12px 0}
+.header.scrolled:after{opacity:1;border-color:rgba(80,55,35,.1)}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.brand{font-size:28px;font-weight:750;letter-spacing:-.08em;color:var(--accent)}
+.navlinks{display:flex;gap:28px;align-items:center;justify-content:center;font-size:12px}
+.navlinks a{position:relative;padding:8px 0;color:#403a34}
+.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:var(--accent);transition:right .45s var(--ease)}
+.navlinks a:hover:after{right:0}
+.actions{display:flex;justify-content:flex-end;align-items:center;gap:18px;font-size:12px}
+.login{color:#4b443d}.menu{display:none;border:0;background:none;font-size:23px}
+/* hero */
+.hero{min-height:100svh;padding:145px 0 55px;display:flex;align-items:center;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.hero-copy{position:relative;z-index:2}
+.kicker{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.32);border-radius:100px;padding:7px 10px;font-size:10px;color:#5e554b}
+.kicker i{width:6px;height:6px;border-radius:50%;background:var(--accent);display:block}
+.hero h1{margin:25px 0 28px;max-width:720px}
+.hero h1 .line2{color:var(--accent)}
+.hero-copy>p{font-size:15px;max-width:510px}
+.hero-actions{display:flex;gap:10px;margin-top:30px}
+.hero-proof{display:flex;gap:22px;margin-top:30px;align-items:center}
+.proof{font-size:10px;color:#655c52}.proof strong{color:var(--ink);font-size:13px}
+.hero-visual{position:relative}
+.hero-image-wrap{height:min(72vh,720px);min-height:570px;overflow:hidden;border-radius:4px;position:relative}
+.hero-image{width:100%;height:115%;object-fit:cover;object-position:center;transform:translateY(-7%) scale(1.03)}
+.hero-image-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,15,10,.02),rgba(25,15,10,.22))}
+.hero-caption{position:absolute;bottom:22px;left:22px;right:22px;color:white;z-index:2;display:flex;justify-content:space-between;align-items:end}
+.hero-caption strong{font-size:14px}.hero-caption span{font-size:10px;opacity:.78}
+.floating-seal{position:absolute;left:-43px;bottom:50px;width:90px;height:90px;border-radius:50%;background:var(--paper);display:grid;place-items:center;border:1px solid var(--line);z-index:4;box-shadow:0 15px 40px rgba(50,30,15,.1)}
+.floating-seal div{width:68px;height:68px;border:1px solid #cdbda7;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)}
+/* ticker */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:#eee8dd}
+.ticker-track{display:flex;width:max-content;animation:marquee 26s linear infinite}
+.ticker-item{padding:15px 35px;display:flex;gap:12px;align-items:center;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#62594f}
+.ticker-item b{font-size:16px;color:var(--accent);font-family:Georgia,serif}
+@keyframes marquee{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:125px 0}
+.section-head{display:grid;grid-template-columns:1fr .7fr;align-items:end;gap:60px;margin-bottom:48px}
+.section-head p{font-size:13px;max-width:390px}
+.section-head .right{justify-self:end}
+/* categories */
+.categories{padding-top:55px}
+.cat-rail{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cat{padding:25px 12px 28px;border-right:1px solid var(--line);position:relative;overflow:hidden;transition:.5s var(--ease)}
+.cat:last-child{border-right:0}
+.cat:before{content:"";position:absolute;inset:auto 0 0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:.5s var(--ease)}
+.cat:hover{background:#eee7dc}.cat:hover:before{transform:scaleX(1)}
+.cat-number{font-size:10px;color:#a09588;margin-bottom:34px}.cat h3{font-size:17px}.cat p{font-size:10px;margin-top:7px}
+/* pujas */
+.puja-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);overflow:hidden;position:relative}
+.card-image{height:275px;overflow:hidden;position:relative}
+.card-image img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease);filter:saturate(.88)}
+.card:hover .card-image img{transform:scale(1.06)}
+.card-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(25,15,10,.18))}
+.card-body{padding:18px 18px 20px}
+.card-tag{font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:var(--accent);font-weight:700}
+.card h3{font-size:19px;margin:9px 0 8px;letter-spacing:-.025em}
+.card-meta{font-size:10px;color:var(--muted)}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:13px;border-top:1px solid var(--line)}
+.card-price{font-size:13px;font-weight:700}
+.card-link{font-size:10px;color:var(--accent);font-weight:700}
+/* ritual */
+.ritual{background:var(--brown);color:#fff8ee;overflow:hidden}
+.ritual .section-head p{color:#cdb9ae}
+.ritual-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.steps{border-top:1px solid rgba(255,255,255,.16)}
+.step{display:grid;grid-template-columns:45px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.16);transition:.4s}
+.step:hover{padding-left:10px}
+.step-no{font-size:11px;color:#e39a6f;padding-top:2px}.step h3{font-size:18px}.step p{font-size:11px;color:#bdaaa0;margin-top:5px}
+.ritual-media{height:570px;position:relative;overflow:hidden}
+.ritual-media img{width:100%;height:115%;object-fit:cover;transform:translateY(-8%);filter:saturate(.72)}
+.ritual-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(75,33,28,.3),transparent 60%)}
+.play{position:absolute;z-index:2;right:24px;bottom:24px;width:62px;height:62px;border:1px solid rgba(255,255,255,.5);border-radius:50%;display:grid;place-items:center;color:white;background:rgba(75,33,28,.25);backdrop-filter:blur(8px)}
+/* journey */
+.journey{background:var(--paper)}
+.journey-list{display:grid;gap:0}
+.journey-row{display:grid;grid-template-columns:1fr 1fr;min-height:420px;border-top:1px solid var(--line);align-items:center}
+.journey-row:last-child{border-bottom:1px solid var(--line)}
+.journey-row:nth-child(even) .j-copy{order:2}.journey-row:nth-child(even) .j-image{order:1}
+.j-copy{padding:55px;position:relative}
+.j-index{font-size:10px;color:#a69a8b;letter-spacing:.12em}
+.j-copy h3{font-size:34px;letter-spacing:-.04em;margin:12px 0 15px}
+.j-copy p{font-size:12px;max-width:390px}
+.j-link{display:inline-flex;margin-top:22px;font-size:11px;font-weight:700;color:var(--accent);gap:10px}
+.j-image{height:360px;overflow:hidden}.j-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.78);transition:transform 1s var(--ease)}.journey-row:hover .j-image img{transform:scale(1.04)}
+/* temple */
+.temple-section{background:var(--bg)}
+.temple-layout{position:relative;height:720px;overflow:hidden}
+.temple-bg{position:absolute;inset:0;width:100%;height:120%;object-fit:cover;object-position:center;filter:saturate(.72)}
+.temple-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(33,20,15,.72),rgba(33,20,15,.05) 70%),linear-gradient(0deg,rgba(33,20,15,.3),transparent 45%)}
+.temple-copy{position:absolute;z-index:2;left:7%;top:50%;transform:translateY(-50%);color:#fff;max-width:610px}
+.temple-copy .eyebrow{color:#e2a47d}.temple-copy h2{font-size:clamp(48px,6vw,82px);margin:17px 0 22px}.temple-copy p{color:#e6d8cf;max-width:460px;font-size:14px}
+/* reviews */
+.reviews{background:#eee7dc}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.review{padding:27px;border:1px solid #d4c9b9;background:rgba(251,249,244,.55);min-height:245px;display:flex;flex-direction:column}
+.review .stars{color:var(--gold);font-size:11px;letter-spacing:3px}.review blockquote{font-family:Georgia,serif;font-size:19px;line-height:1.35;margin:28px 0;color:#3c2d26}.reviewer{margin-top:auto;font-size:10px;color:#81776c}.reviewer strong{color:var(--ink);font-size:12px}
+/* knowledge */
+.knowledge-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:42px}
+.pills{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.pill{padding:9px 13px;border:1px solid var(--line);border-radius:100px;font-size:10px;color:#645c53;transition:.35s}.pill:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.article-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-template-rows:250px 250px;gap:14px}
+.article{position:relative;overflow:hidden;background:#ddd}.article:first-child{grid-row:1/3}.article img{width:100%;height:100%;object-fit:cover;filter:saturate(.78);transition:transform 1s var(--ease)}.article:hover img{transform:scale(1.05)}
+.article:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(25,15,10,.7),transparent 65%)}
+.article-copy{position:absolute;z-index:2;left:18px;right:18px;bottom:18px;color:white}.article-copy .tag{font-size:9px;color:#e6a37c}.article-copy h3{font-size:18px;margin-top:6px}.article:first-child .article-copy h3{font-size:28px}
+/* faq */
+.faq{background:var(--paper)}
+.faq-grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:100px}
+.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;padding:24px 0;border:0;background:none;display:flex;justify-content:space-between;text-align:left;color:var(--ink);cursor:pointer;font-size:15px;font-weight:650}
+.faq-q i{font-style:normal;font-size:23px;font-weight:300;transition:transform .4s var(--ease)}
+.faq-item.open .faq-q i{transform:rotate(45deg)}
+.faq-a{height:0;overflow:hidden}.faq-a p{font-size:12px;padding:0 45px 22px 0}
+/* footer */
+footer{background:#171412;color:#d7cec4;padding:80px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.4fr .7fr .7fr .8fr;gap:50px}
+.footer-brand{font-size:32px;letter-spacing:-.08em;color:#df6f3c;font-weight:750}.footer-grid p{font-size:11px;color:#928a82;max-width:280px;margin-top:13px}
+footer h4{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#eee5dc;margin:0 0 14px}
+footer a{font-size:11px;color:#9d958d;line-height:2.2}
+.copyright{border-top:1px solid #332e2a;margin-top:60px;padding-top:18px;display:flex;justify-content:space-between;color:#756e68;font-size:9px}
+/* reveal */
+.reveal{opacity:0;transform:translateY(35px)}
+.word{display:inline-block;overflow:hidden}.word>span{display:inline-block;transform:translateY(110%)}
+@media(max-width:1000px){
+ .wrap{width:min(var(--max),calc(100% - 40px))}
+ .nav{grid-template-columns:1fr auto}.navlinks{display:none}.actions .login,.actions .lang{display:none}.menu{display:block}
+ .hero-grid,.ritual-grid,.faq-grid{grid-template-columns:1fr}.hero{padding-top:125px}.hero-image-wrap{min-height:520px}
+ .cat-rail{grid-template-columns:repeat(3,1fr)}.cat:nth-child(3){border-right:0}.cat:nth-child(n+4){border-top:1px solid var(--line)}
+ .puja-grid{grid-template-columns:repeat(2,1fr)}.journey-row{grid-template-columns:1fr}.journey-row:nth-child(even) .j-copy,.journey-row:nth-child(even) .j-image{order:initial}.j-copy{padding:45px 0}.j-image{height:330px}
+ .ritual-media{height:450px}.temple-layout{height:620px}.review-grid{grid-template-columns:1fr}.article-grid{grid-template-columns:1fr 1fr;grid-template-rows:280px 280px}.article:first-child{grid-row:auto}.article:first-child .article-copy h3{font-size:21px}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ section{padding:82px 0}.hero{padding-bottom:45px}.hero h1{font-size:52px}.hero-grid{gap:42px}.hero-image-wrap{height:470px;min-height:0}.floating-seal{left:15px;bottom:18px}.hero-proof{gap:12px;flex-wrap:wrap}
+ .section-head{display:block;margin-bottom:30px}.section-head p{margin-top:16px}.cat-rail{grid-template-columns:repeat(2,1fr)}.cat:nth-child(3){border-right:1px solid var(--line)}.cat:nth-child(2n){border-right:0}.cat:nth-child(n+3){border-top:1px solid var(--line)}
+ .puja-grid{grid-template-columns:1fr}.card-image{height:240px}.ritual-grid{gap:40px}.ritual-media{height:370px}
+ .j-copy h3{font-size:30px}.temple-layout{height:570px}.temple-copy{left:25px;right:25px}.temple-copy h2{font-size:50px}
+ .article-grid{grid-template-columns:1fr;grid-template-rows:300px 240px 240px}.article:first-child{grid-row:auto}
+ .faq-grid{gap:45px}.footer-grid{grid-template-columns:1fr}.copyright{display:block}.copyright span{display:block;margin-top:8px}
+}
+</style>
+</head>
+<body>
+<header class="header" id="header">
+ <div class="wrap nav">
+  <a class="brand" href="#">Utsav</a>
+  <div class="navlinks">
+   <a href="#pujas">Puja</a><a href="#pujas">Bhet</a><a href="#temples">Temples</a><a href="#journey">Panchang</a><a href="#journey">Rashifal</a><a href="#knowledge">Gyan</a>
+  </div>
+  <div class="actions"><span class="lang">EN / HI</span><a class="login" href="#">Login</a><a class="btn primary magnetic" href="#pujas">Book Puja <span class="arr">↗</span></a><button class="menu" aria-label="Menu">☰</button></div>
+ </div>
+</header>
+
+<main>
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div class="hero-copy">
+   <div class="kicker reveal"><i></i> Authentic temple pujas · Prasad delivered</div>
+   <h1><span class="word"><span>Stay</span></span> <span class="word"><span>close</span></span><br><span class="word"><span>to what</span></span> <span class="word"><span class="line2">matters.</span></span></h1>
+   <p class="reveal">Experience sacred rituals from India's revered temples, wherever you are. Choose a Puja, add your family's sankalp, and receive the moments that make the ritual personal.</p>
+   <div class="hero-actions reveal"><a class="btn primary magnetic" href="#pujas">Explore Pujas <span class="arr">↗</span></a><a class="btn" href="#temples">Explore Temples <span class="arr">↗</span></a></div>
+   <div class="hero-proof reveal"><div class="proof"><strong>4.8/5</strong><br>from devotees</div><div class="proof"><strong>100% authentic</strong><br>temple rituals</div><div class="proof"><strong>Prasad</strong><br>delivered home</div></div>
+  </div>
+  <div class="hero-visual reveal">
+   <div class="hero-image-wrap"><img class="hero-image" src="assets/temple.jpg" alt="Historic Indian temple interior"></div>
+   <div class="hero-caption"><div><strong>A moment of stillness.</strong><br><span>Real temples. Real rituals.</span></div><span>01 / 06</span></div>
+   <div class="floating-seal"><div>India's<br>sacred<br>temples</div></div>
+  </div>
+ </div>
+</section>
+
+<div class="ticker"><div class="ticker-track">
+ <div class="ticker-item"><b>✦</b> Authentic temple experiences</div><div class="ticker-item"><b>✦</b> Personalized sankalp</div><div class="ticker-item"><b>✦</b> Prasad delivered</div><div class="ticker-item"><b>✦</b> Trusted by devotees</div><div class="ticker-item"><b>✦</b> Authentic temple experiences</div><div class="ticker-item"><b>✦</b> Personalized sankalp</div><div class="ticker-item"><b>✦</b> Prasad delivered</div><div class="ticker-item"><b>✦</b> Trusted by devotees</div>
+</div></div>
+
+<section class="categories">
+ <div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">Find your reason</div><h2>Choose a blessing.</h2></div><p>Start with what is on your heart. Discover rituals and temple offerings chosen around life's important moments.</p></div>
+  <div class="cat-rail">
+   <a class="cat reveal" href="#pujas"><div class="cat-number">01</div><h3>Prosperity</h3><p>Wealth · Growth</p></a>
+   <a class="cat reveal" href="#pujas"><div class="cat-number">02</div><h3>Peace</h3><p>Calm · Clarity</p></a>
+   <a class="cat reveal" href="#pujas"><div class="cat-number">03</div><h3>Protection</h3><p>Family · Safety</p></a>
+   <a class="cat reveal" href="#pujas"><div class="cat-number">04</div><h3>Health</h3><p>Wellbeing · Strength</p></a>
+   <a class="cat reveal" href="#pujas"><div class="cat-number">05</div><h3>Relationships</h3><p>Love · Harmony</p></a>
+   <a class="cat reveal" href="#pujas"><div class="cat-number">06</div><h3>Success</h3><p>Career · Purpose</p></a>
+  </div>
+ </div>
+</section>
+
+<section id="pujas">
+ <div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">Upcoming & auspicious</div><h2>Sacred pujas, from sacred places.</h2></div><div class="right"><p>Handpicked rituals from temples across India, with clear details before you book.</p><a class="j-link" href="#">View all Pujas ↗</a></div></div>
+  <div class="puja-grid">
+   <article class="card reveal"><div class="card-image"><img src="assets/puja1.jpg" alt="Temple puja"></div><div class="card-body"><div class="card-tag">Special Puja</div><h3>9000 Budh Mool Mantra Jaap</h3><div class="card-meta">Budheshwar Mandir · Prayagraj</div><div class="card-foot"><span class="card-price">₹1,251</span><a class="card-link" href="#">Book Puja ↗</a></div></div></article>
+   <article class="card reveal"><div class="card-image"><img src="assets/puja2.jpg" alt="Graha Shanti Puja"></div><div class="card-body"><div class="card-tag">Mahapuja</div><h3>Graha Shanti Mahapuja</h3><div class="card-meta">Navgraha Mandir · Ujjain</div><div class="card-foot"><span class="card-price">₹1,100</span><a class="card-link" href="#">Book Puja ↗</a></div></div></article>
+   <article class="card reveal"><div class="card-image"><img src="assets/puja3.jpg" alt="Ganesh Puja"></div><div class="card-body"><div class="card-tag">Weekly Seva</div><h3>Chintamani Ganesh Ketu Shanti</h3><div class="card-meta">Chintamani Ganesh Mandir · Kashi</div><div class="card-foot"><span class="card-price">₹1,350</span><a class="card-link" href="#">Book Puja ↗</a></div></div></article>
+   <article class="card reveal"><div class="card-image"><img src="assets/puja4.jpg" alt="Sacred ritual"></div><div class="card-body"><div class="card-tag">Monthly Seva</div><h3>Ganesh Blessings Puja</h3><div class="card-meta">Sacred temple seva · Kashi</div><div class="card-foot"><span class="card-price">₹1,250</span><a class="card-link" href="#">Book Puja ↗</a></div></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="ritual">
+ <div class="wrap">
+  <div class="ritual-grid">
+   <div class="reveal"><div class="eyebrow" style="color:#e0a079">A simple sacred ritual</div><h2 style="margin-top:15px">The temple is closer than you think.</h2><div class="steps">
+    <div class="step"><div class="step-no">01</div><div><h3>Choose your Puja</h3><p>Find a ritual from a temple that resonates with you.</p></div></div>
+    <div class="step"><div class="step-no">02</div><div><h3>Make it personal</h3><p>Add the devotee names and details for the sankalp.</p></div></div>
+    <div class="step"><div class="step-no">03</div><div><h3>The temple performs it</h3><p>Your chosen ritual takes place at the temple.</p></div></div>
+    <div class="step"><div class="step-no">04</div><div><h3>Receive the moment</h3><p>Get applicable photos/video updates and Prasad delivered home.</p></div></div>
+   </div></div>
+   <div class="ritual-media reveal"><img src="assets/temple2.jpg" alt="Indian temple architecture"><div class="play">↗</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="journey" class="journey">
+ <div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">Beyond the booking</div><h2>Your Dharmik Path.</h2></div><p>A quieter place to discover India's calendars, rituals, stories and sacred places.</p></div>
+  <div class="journey-list">
+   <div class="journey-row reveal"><div class="j-copy"><div class="j-index">01 / PANCHANG</div><h3>Know the day.<br>Choose the moment.</h3><p>Explore tithi, nakshatra, muhurat and other daily details to understand the rhythm of the Hindu calendar.</p><a class="j-link" href="#">Explore Panchang ↗</a></div><div class="j-image"><img src="assets/puja4.jpg" alt="Diya and ritual"></div></div>
+   <div class="journey-row reveal"><div class="j-copy"><div class="j-index">02 / GYAN</div><h3>Read the stories<br>behind the rituals.</h3><p>Discover scripture, traditions, mantras and the stories that have travelled through generations.</p><a class="j-link" href="#">Explore Dharmik Gyan ↗</a></div><div class="j-image"><img src="assets/temple2.jpg" alt="Temple heritage"></div></div>
+   <div class="journey-row reveal"><div class="j-copy"><div class="j-index">03 / TEMPLES</div><h3>Meet the temples<br>behind the devotion.</h3><p>Explore India's sacred places, their history, architecture, deities and living traditions.</p><a class="j-link" href="#">Discover Temples ↗</a></div><div class="j-image"><img src="assets/temple.jpg" alt="Historic temple interior"></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="temples" class="temple-section">
+ <div class="wrap">
+  <div class="temple-layout reveal"><img class="temple-bg" src="assets/temple2.jpg" alt="Indian temple"><div class="temple-overlay"></div>
+   <div class="temple-copy"><div class="eyebrow">Temples of India</div><h2>Every temple has a story.</h2><p>From ancient stone to living rituals, discover the places where India's devotional traditions are still practiced every day.</p><a class="btn primary magnetic" href="#" style="margin-top:28px">Explore the temples <span class="arr">↗</span></a></div>
+  </div>
+ </div>
+</section>
+
+<section class="reviews">
+ <div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">From the community</div><h2>Devotion, from home.</h2></div><p>Real experiences from people who wanted to stay connected to a temple, a ritual or a family tradition.</p></div>
+  <div class="review-grid">
+   <article class="review reveal"><div class="stars">★★★★★</div><blockquote>“It didn't feel like an online transaction. It felt like I had found a simple way to be part of the Puja.”</blockquote><div class="reviewer"><strong>Suresh Kumar</strong><br>Varanasi</div></article>
+   <article class="review reveal"><div class="stars">★★★★★</div><blockquote>“The temple details and Puja updates gave our family a sense of connection even from another city.”</blockquote><div class="reviewer"><strong>Meenakshi Sharma</strong><br>Delhi</div></article>
+   <article class="review reveal"><div class="stars">★★★★★</div><blockquote>“Everything was easy to understand. I could choose the ritual, add my parents' names and follow what happened.”</blockquote><div class="reviewer"><strong>Rakesh Sharma</strong><br>Mumbai</div></article>
+  </div>
+ </div>
+</section>
+
+<section id="knowledge">
+ <div class="wrap">
+  <div class="knowledge-head reveal"><div><div class="eyebrow">Dharmik Gyan</div><h2>Stay curious.</h2></div><div class="pills"><a class="pill" href="#">Temples</a><a class="pill" href="#">Mantra</a><a class="pill" href="#">Festivals</a><a class="pill" href="#">Aarti</a><a class="pill" href="#">Chalisa</a></div></div>
+  <div class="article-grid">
+   <a class="article reveal" href="#"><img src="assets/temple2.jpg" alt=""><div class="article-copy"><div class="tag">Temples</div><h3>Why India's temples are more than places of worship</h3></div></a>
+   <a class="article reveal" href="#"><img src="assets/puja4.jpg" alt=""><div class="article-copy"><div class="tag">Rituals</div><h3>The meaning behind aarti</h3></div></a>
+   <a class="article reveal" href="#"><img src="assets/temple.jpg" alt=""><div class="article-copy"><div class="tag">Journey</div><h3>A guide to sacred temple spaces</h3></div></a>
+   <a class="article reveal" href="#"><img src="assets/puja1.jpg" alt=""><div class="article-copy"><div class="tag">Mantra</div><h3>How mantras became part of daily devotion</h3></div></a>
+   <a class="article reveal" href="#"><img src="assets/puja3.jpg" alt=""><div class="article-copy"><div class="tag">Festivals</div><h3>The festivals that bring communities together</h3></div></a>
+  </div>
+ </div>
+</section>
+
+<section class="faq">
+ <div class="wrap faq-grid">
+  <div class="reveal"><div class="eyebrow">Need to know</div><h2 style="margin-top:15px">Before you begin.</h2><p style="margin-top:18px;max-width:350px">Simple answers to the questions devotees ask before their first booking.</p></div>
+  <div class="faq-list reveal">
+   <div class="faq-item"><button class="faq-q"><span>How does booking a Puja work?</span><i>+</i></button><div class="faq-a"><p>Choose your Puja, add the requested devotee details, complete payment and follow the booking updates. The selected temple performs the ritual.</p></div></div>
+   <div class="faq-item"><button class="faq-q"><span>Are the Pujas performed at real temples?</span><i>+</i></button><div class="faq-a"><p>Each Puja should clearly show the temple or authorized location where the ritual is performed before you book.</p></div></div>
+   <div class="faq-item"><button class="faq-q"><span>Will I receive Prasad and Puja updates?</span><i>+</i></button><div class="faq-a"><p>Where included with the selected Puja, applicable photos/video updates and Prasad delivery details are provided.</p></div></div>
+   <div class="faq-item"><button class="faq-q"><span>Can I book for my family?</span><i>+</i></button><div class="faq-a"><p>Yes. The booking flow can collect the family/devotee information required for the selected ritual.</p></div></div>
+   <div class="faq-item"><button class="faq-q"><span>How do I get support?</span><i>+</i></button><div class="faq-a"><p>Use Utsav's support/contact channels for questions about your booking, Puja status or delivery.</p></div></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="footer-grid">
+   <div><div class="footer-brand">Utsav</div><p>A more peaceful way to stay connected with India's temples, rituals and living traditions.</p></div>
+   <div><h4>Explore</h4><a href="#pujas">Pujas</a><br><a href="#temples">Temples</a><br><a href="#journey">Panchang</a><br><a href="#knowledge">Gyan</a></div>
+   <div><h4>Support</h4><a href="#">Track booking</a><br><a href="#">Prasad delivery</a><br><a href="#">Contact us</a><br><a href="#">FAQs</a></div>
+   <div><h4>Company</h4><a href="#">About Utsav</a><br><a href="#">Careers</a><br><a href="#">Terms</a><br><a href="#">Privacy</a></div>
+  </div>
+  <div class="copyright"><span>© 2026 Utsav. All rights reserved.</span><span>Made with devotion.</span></div>
+ </div>
+</footer>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+const header=document.getElementById('header');
+ScrollTrigger.create({
+ start: "top -40",
+ end: 99999,
+ onUpdate:self=>header.classList.toggle('scrolled',self.scroll()>40)
+});
+
+// Hero word reveal
+gsap.to(".hero h1 .word>span",{
+ y:"0%",duration:1.15,ease:"power4.out",stagger:.09,delay:.15
+});
+gsap.to(".hero .reveal",{opacity:1,y:0,duration:.9,ease:"power3.out",stagger:.09,delay:.35});
+
+// Universal reveals
+document.querySelectorAll(".reveal:not(.hero-copy .reveal)").forEach(el=>{
+ gsap.to(el,{
+  opacity:1,y:0,duration:.85,ease:"power3.out",
+  scrollTrigger:{trigger:el,start:"top 88%",once:true}
+ });
+});
+
+// Parallax image movement
+document.querySelectorAll(".hero-image,.ritual-media img,.temple-bg").forEach(img=>{
+ gsap.to(img,{
+  yPercent:8,ease:"none",
+  scrollTrigger:{trigger:img.parentElement,start:"top bottom",end:"bottom top",scrub:1.2}
+ });
+});
+
+// Card image subtle scroll scale
+document.querySelectorAll(".card-image img,.j-image img").forEach(img=>{
+ gsap.fromTo(img,{scale:1.03},{scale:1,ease:"none",scrollTrigger:{trigger:img,start:"top 90%",end:"bottom 35%",scrub:1}});
+});
+
+// Magnetic CTAs
+document.querySelectorAll(".magnetic").forEach(btn=>{
+ btn.addEventListener("mousemove",e=>{
+  const r=btn.getBoundingClientRect(), x=(e.clientX-r.left-r.width/2)*.12, y=(e.clientY-r.top-r.height/2)*.12;
+  gsap.to(btn,{x,y,duration:.35,ease:"power3.out"});
+ });
+ btn.addEventListener("mouseleave",()=>gsap.to(btn,{x:0,y:0,duration:.5,ease:"elastic.out(1,.55)"}));
+});
+
+// FAQ
+document.querySelectorAll(".faq-item").forEach(item=>{
+ const q=item.querySelector(".faq-q"), a=item.querySelector(".faq-a");
+ q.addEventListener("click",()=>{
+  const isOpen=item.classList.contains("open");
+  document.querySelectorAll(".faq-item.open").forEach(other=>{
+   other.classList.remove("open");
+   gsap.to(other.querySelector(".faq-a"),{height:0,duration:.35,ease:"power2.out"});
+  });
+  if(!isOpen){
+   item.classList.add("open");
+   gsap.to(a,{height:a.scrollHeight,duration:.45,ease:"power3.out"});
+  }
+ });
+});
+
+// Smooth anchor navigation
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+ a.addEventListener("click",e=>{
+  const target=document.querySelector(a.getAttribute("href"));
+  if(target){e.preventDefault();gsap.to(window,{scrollTo:{y:target,offsetY:75},duration:1.1,ease:"power3.inOut"});}
+ });
+});
+
+// Respect reduced motion
+if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+ gsap.globalTimeline.timeScale(0);
+ document.querySelectorAll(".reveal").forEach(el=>{el.style.opacity=1;el.style.transform="none"});
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollToPlugin.min.js"></script>
+</body>
+</html>
