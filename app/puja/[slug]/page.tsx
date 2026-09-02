@@ -627,11 +627,11 @@ export default function PujaDetailPage() {
               {inclusions.map((item, idx) => (
                 <div key={idx} className="bg-white rounded-lg overflow-hidden border border-[#E8D8C5] shadow-2xs group flex flex-col justify-between hover:shadow-xs transition-all duration-300">
                   <div className="space-y-3.5">
-                    <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                    <div className="relative aspect-[4/3] sm:aspect-auto sm:h-48 w-full overflow-hidden bg-slate-100 rounded-t-lg">
                       <img
                         src={item.img}
                         alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                       />
                       <span className="absolute top-2.5 right-2.5 bg-white/95 text-[#6D1344] text-[10px] font-bold uppercase px-2.5 py-1 rounded-full shadow-xs">
                         {item.tag}
