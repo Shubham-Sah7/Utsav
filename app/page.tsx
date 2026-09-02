@@ -350,7 +350,7 @@ export default function HomePage() {
                   title: "1008 Ganesh Sahastra Archana & Ketu Shanti Puja",
                   tag: "Special Budhvar",
                   loc: "Chintamani Ganesh, Kashi",
-                  date: "Sep 09, Wednesday",
+                  date: "Sep 09, Wed",
                   booked: "10 Lakh+ Devotees",
                   price: "₹951",
                   img: "/Images/panchang.jpg",
@@ -360,7 +360,7 @@ export default function HomePage() {
                   title: "Maa Dakshina Kali Mahayajna & Shatru Badha Shanti",
                   tag: "Shaktipeeth Seva",
                   loc: "Kalighat Shaktipeeth, Kolkata",
-                  date: "Sep 11, Friday",
+                  date: "Sep 11, Fri",
                   booked: "6.1k Participated",
                   price: "₹951",
                   img: "/Images/Pujas/kali_sanctum_hero.jpg",
@@ -370,7 +370,7 @@ export default function HomePage() {
                   title: "1008 Archana Seva & Special Bilva Patra Abhishekam",
                   tag: "Special Pradosh",
                   loc: "Kashi Vishwanath, Varanasi",
-                  date: "Sep 15, Tuesday",
+                  date: "Sep 15, Tue",
                   booked: "4.8k Participated",
                   price: "₹851",
                   img: "/Images/Hero/ganga-aarti-flame.jpg",
@@ -380,7 +380,7 @@ export default function HomePage() {
                   title: "Mahamrityunjaya Jaap & Bhasma Aarti Seva",
                   tag: "Bhasma Aarti",
                   loc: "Mahakaleshwar, Ujjain",
-                  date: "Sep 18, Friday",
+                  date: "Sep 18, Fri",
                   booked: "8.4k Participated",
                   price: "₹751",
                   img: "/Images/Hero/vedic-yajna-fire.jpg",
@@ -420,12 +420,12 @@ export default function HomePage() {
                         {card.title}
                       </h3>
 
-                      <div className="flex items-center justify-between text-xs text-[#7A676E] font-medium pt-0.5">
-                        <span className="flex items-center gap-1.5 font-semibold text-[#6D1344] bg-slate-50 px-2.5 py-1 rounded-lg border border-[#E8D8C5]">
-                          <Calendar className="w-3.5 h-3.5 text-[#EA5C26]" />
+                      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 pt-0.5">
+                        <span className="inline-flex items-center gap-1.5 font-semibold text-[#6D1344] text-[11px] sm:text-xs bg-slate-50 px-2.5 py-1 rounded-lg border border-[#E8D8C5] shrink-0 whitespace-nowrap">
+                          <Calendar className="w-3.5 h-3.5 text-[#EA5C26] shrink-0" />
                           {card.date}
                         </span>
-                        <span className="text-[#7A676E] font-medium text-[11px]">
+                        <span className="text-[#7A676E] font-medium text-[11px] shrink-0 text-right">
                           {card.booked}
                         </span>
                       </div>
