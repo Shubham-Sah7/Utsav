@@ -427,7 +427,7 @@ export default function PujaDetailPage() {
                         </div>
 
                         {/* Feature Bullet Points */}
-                        <ul className="space-y-1.5 pt-1 text-[11px] text-slate-700 font-medium border-t border-slate-100">
+                        <ul className="space-y-1.5 pt-1 text-[11px] text-slate-700 font-medium">
                           {pkg.features.map((feat, idx) => (
                             <li key={idx} className="flex items-start gap-1.5">
                               <Check className="w-3.5 h-3.5 text-[#C85B12] shrink-0 mt-0.5 stroke-[2.5]" />
@@ -439,7 +439,7 @@ export default function PujaDetailPage() {
                     </div>
 
                     <div className="p-4 pt-0 space-y-3">
-                      <div className="pt-3 border-t border-slate-100 flex items-baseline justify-between">
+                      <div className="flex items-baseline justify-between">
                         <span className="text-xs font-semibold text-slate-500">Dakshina</span>
                         <div className="flex items-baseline gap-1.5">
                           <span className="text-xs text-slate-400 line-through font-medium">₹{pkg.originalPrice}</span>
@@ -460,7 +460,7 @@ export default function PujaDetailPage() {
 
             {/* Sankalp Details Form */}
             <div className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200/80 shadow-2xs space-y-6">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-1">
                 <div>
                   <h3 className="font-heading text-lg font-extrabold text-slate-900">
                     Enter Sankalp Details
@@ -502,7 +502,7 @@ export default function PujaDetailPage() {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="pt-1 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-left space-y-0.5">
                   <span className="text-xs text-slate-500 font-semibold block">Total Seva Amount</span>
                   <div className="flex items-baseline gap-2">
